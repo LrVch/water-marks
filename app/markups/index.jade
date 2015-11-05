@@ -1,0 +1,48 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charser="UTF-8")
+		meta(http-equiv="X-UA-Compatibl",content="IE=edge")
+		meta(name="viewport" content="device-width")
+		title 
+		link(href="fonts/segoe.css" rel='stylesheet' type='text/css')
+		link(rel="stylesheet",href="css/main.css")
+	body
+		.wrapper
+			.block-left
+				.block-left__title Генератор водяных знаков
+				.block-left__main
+					.block-left__wrapper-img
+						.block-left__img
+							img(src='' alt='#')
+			form.block-right
+				.block-right__title Настройки
+				.block-right__form
+					-var items=['Исходное изображение','Водяной знак']
+						each item in items
+							label.block-right__lbl=item
+							label.block-right__fileupload
+								input#fileupload.fileupload(type="file" name="files[]" placeholder="Image.jpg")
+								input#fileurl.fileurl(type="hidden" name="fileurl" placeholder="Image.jpg")
+							input.block-right__input(type="text" name="img-name")
+				.block-right__form
+					.block-right__form-title Положение
+					.block-right__left
+						table.block-right__table
+							-for (var i=0; i<4; i++)
+								tr.block-right__tr.block-right__tr_#{i}
+									-for (var j=0; j<4; j++)
+										td.block-right__td.block-right__td_#{j}
+					.block-right__right
+						-var items = ['x','y']
+							each item in items
+								.block-right__right_#{item}
+				.block-right__form
+					.block-right__form-title Прозрачность
+					//- p.label(for="amount")Price range:
+					//- input(type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;")
+					//- div#slider-range
+				//- .block-right__form
+				//- 	button.block-right__button Сброс
+				//- 	button.block-right__button Скачать
+		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его

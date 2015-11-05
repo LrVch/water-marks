@@ -1,0 +1,144 @@
+@import "_misc/_mixin.scss";
+$grey: #9eb2c0;
+$pink:#f97e76;
+@import "_misc/_fonts.scss";
+@import "compass";
+@import "_misc/_normalize.scss";
+html{
+	height: 100%;
+	position: relative;
+}
+body{
+	color:#2e3641;
+	background: url('../img/bg/background.png') center center no-repeat;
+	
+}
+
+.wrapper{
+	@include absolute-center;
+	@include clearfix; 
+	width: 960px;
+}
+.block-left{
+	width: 650px;
+	float:left;
+	background:#645e60;
+	padding: 25px;
+}
+.block-right{
+	background:#f1f1f5;
+	width: 260px;
+	float: right;
+	height: 676px;
+}
+.block-left__title{
+	font-size: 36px;
+	line-height: 38px;
+	@include segoe(light);
+	color: #fff;
+	margin-bottom: 53px;
+}
+.block-left__main{
+	width: 654px;
+	height: 535px;
+	background:#fff;
+}
+.block-right__title{
+	@include segoe(light);
+	font-size: 26px;
+	line-height: 28px;
+	color: #2e3641;
+	padding-top: 30px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.block-right__form{
+	position: relative;
+	padding:0 21px; 
+	border-bottom: 1px solid $pink;
+}
+.block-right__lbl{
+	display: block;
+	font-size: 14px;
+	line-height: 16px;
+	color:#2e3641;
+	margin-bottom: 9px;
+}
+.block-right__fileupload{
+	display: block;
+	position: absolute;
+	right: 21px;
+    width: 40px;
+    height: 26px;
+    background: $pink url(../img/img-add.png) no-repeat;
+    background-position-x: 3px;
+    border-radius:  0 4px 4px 0;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.fileupload{/* хак, взятый из html5boilerplate */
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.block-right__input{
+	display: block;
+    margin: 0 auto;
+    height: 26px;
+    width: 100%;
+    border: solid 1px $grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    color: $grey;
+    margin-bottom: 20px;
+}
+.block-right__form-title{
+	padding-top: 18px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #2e3641;
+}
+.block-right__left{
+	margin-top: 15px;
+}
+.block-right__table{
+	width: 100px;
+	height: 100px;
+	background:#9eb2c0;
+	box-sizing: border-box;
+	padding-top: 15px;
+	border-collapse:collapse;
+	@include border-radius(4px);
+	overflow: hidden;
+	border-spacing: 1px 1px;
+}
+@for $i from 1 through 4{
+	@for $j from 1 through 4{
+		.block-right__td_#{$j}{
+			background:#dbe1e8;
+			border: 1px solid #9eb2c0;
+		}
+	}
+}
+.block-right__td{
+		width:33%;
+		height:33%;
+		border:1px solid #9eb2c0;
+}
+.footer{
+	height: 30px;
+	padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
