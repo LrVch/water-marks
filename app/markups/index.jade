@@ -23,7 +23,7 @@ html(lang="ru-RU")
 						each item, indx in items
 							label.block-right__lbl=item
 							label.block-right__fileupload
-									input.fileupload(id="fileupload_"+indx type="file" name="files[]" placeholder="Image.jpg" data-url="server/php/" multiple)
+									input.fileupload(id="fileupload_"+indx +1 type="file" name="files[]" placeholder="Image.jpg" data-url="server/php/" multiple + ())
 									input#fileurl.fileurl(type="hidden" name="fileurl" placeholder="Image.jpg")
 								input.block-right__input(type="text" name="img-name")
 				.block-right__form
