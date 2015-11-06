@@ -4,7 +4,7 @@ html(lang="ru-RU")
 		meta(charser="UTF-8")
 		meta(http-equiv="X-UA-Compatibl",content="IE=edge")
 		meta(name="viewport" content="device-width")
-		title 
+		title Team Dream
 		link(href="fonts/segoe.css" rel='stylesheet' type='text/css')
 		link(rel="stylesheet",href="css/main.css")
 	body
@@ -14,7 +14,7 @@ html(lang="ru-RU")
 				.block-left__main
 					.block-left__wrapper-img
 						.block-left__img
-							img(src='' alt='#')
+							img(src='' alt='')
 			form.block-right
 				.block-right__title Настройки
 				.block-right__form
@@ -27,22 +27,16 @@ html(lang="ru-RU")
 							input.block-right__input(type="text" name="img-name")
 				.block-right__form
 					.block-right__form-title Положение
-					.block-right__left
-						table.block-right__table
-							-for (var i=0; i<4; i++)
-								tr.block-right__tr.block-right__tr_#{i}
-									-for (var j=0; j<4; j++)
-										td.block-right__td.block-right__td_#{j}
-					.block-right__right
-						-var items = ['x','y']
-							each item in items
-								.block-right__right_#{item}
+					.block-right__table
+						-for (var i=0; i<10; i++)
+							input.block-right__radio(type="radio" class="block-right__radio_"+i)
 				.block-right__form
 					.block-right__form-title Прозрачность
 					//- p.label(for="amount")Price range:
 					//- input(type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;")
 					//- div#slider-range
-				//- .block-right__form
-				//- 	button.block-right__button Сброс
-				//- 	button.block-right__button Скачать
+				.block-right__last
+					.block-right__btn
+						button.btn.btn__clear(type='reset') Сброс
+						button.btn.btn__save(type='submit') Скачать
 		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его

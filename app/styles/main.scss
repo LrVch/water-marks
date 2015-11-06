@@ -6,16 +6,18 @@ $pink:#f97e76;
 @import "_misc/_normalize.scss";
 html{
 	height: 100%;
-	position: relative;
+	
 }
 body{
+	height: 100%;
 	color:#2e3641;
-	background: url('../img/bg/background.png') center center no-repeat;
-	
+	@include vertical-gradient(#969292,#a7817b);
 }
 
 .wrapper{
 	@include absolute-center;
+	top: 5%;
+	bottom: 5%;
 	@include clearfix; 
 	width: 960px;
 }
@@ -55,7 +57,7 @@ body{
 .block-right__form{
 	position: relative;
 	padding:0 21px; 
-	border-bottom: 1px solid $pink;
+	border-bottom: 1px solid $pink;	
 }
 .block-right__lbl{
 	display: block;
@@ -70,7 +72,7 @@ body{
 	right: 21px;
     width: 40px;
     height: 26px;
-    background: $pink url(../img/img-add.png) no-repeat;
+    background: $pink url(../img/img-add.png) center center no-repeat;
     background-position-x: 3px;
     border-radius:  0 4px 4px 0;
     box-sizing: border-box;
@@ -110,26 +112,53 @@ body{
 .block-right__table{
 	width: 100px;
 	height: 100px;
-	background:#9eb2c0;
+	background:#dbe1e8;
 	box-sizing: border-box;
-	padding-top: 15px;
-	border-collapse:collapse;
+	padding-top: 15px;;
 	@include border-radius(4px);
 	overflow: hidden;
-	border-spacing: 1px 1px;
 }
-@for $i from 1 through 4{
-	@for $j from 1 through 4{
-		.block-right__td_#{$j}{
-			background:#dbe1e8;
-			border: 1px solid #9eb2c0;
+.block-right__radio{
+	position: absolute;
+	top: 0;
+	left: -9999px;
+	.block-right__radio-elem{
+		border: 1px solid #9eb2c0;
+		display: inline-block;
+		width:33px;
+		height:33px;
+		background:#dbe1e8;
+	}
+	
+}
+.block-right__last{
+	padding: 0 16px;
+}
+.block-right__btn{
+	padding-top: 56px;
+	position: relative;
+	.btn{
+		border: none;
+		@include border-radius(3px);
+		@include clearfix;
+		width: 100px;
+		height: 42px;
+		line-height: 42px;
+		background:$pink;
+		color:#fff;
+		&.btn__clear{
+			background:$grey;
+		}
+		&:focus{
+			overflow: hidden;
 		}
 	}
 }
-.block-right__td{
-		width:33%;
-		height:33%;
-		border:1px solid #9eb2c0;
+.btn__clear{
+	float:left;
+}
+.btn__save{
+	float:right;
 }
 .footer{
 	height: 30px;
