@@ -17,7 +17,7 @@
 				<div class="block-left__title">Генератор водяных знаков</div>
 				<div class="block-left__main">
 					<div class="block-left__wrapper-img">
-						<div class="block-left__img"><img src="" alt=""></div>
+						<div id="draggable" class="block-left__img"><img src="img/watermark.png" alt="" class="watermark"></div>
 					</div>
 				</div>
 			</div>
@@ -39,22 +39,55 @@
 				</div>
 				<div class="block-right__form">
 					<div class="block-right__form-title">Положение</div>
-					<div class="block-right__place"></div>
-					<div class="block-right__table">
-						<input type="radio" class="block-right__radio block-right__radio_0">
-						<input type="radio" class="block-right__radio block-right__radio_1">
-						<input type="radio" class="block-right__radio block-right__radio_2">
-						<input type="radio" class="block-right__radio block-right__radio_3">
-						<input type="radio" class="block-right__radio block-right__radio_4">
-						<input type="radio" class="block-right__radio block-right__radio_5">
-						<input type="radio" class="block-right__radio block-right__radio_6">
-						<input type="radio" class="block-right__radio block-right__radio_7">
-						<input type="radio" class="block-right__radio block-right__radio_8">
-						<input type="radio" class="block-right__radio block-right__radio_9">
+					<div class="block-right-place">
+						<div class="block-right-place__table">
+							<label class="block-right-place__lbl">
+								<input type="radio" checked class="block-right__radio block-right__radio_0">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_1">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_2">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_3">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_4">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_5">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_6">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_7">
+								<div class="block-right__radio-elem"></div>
+							</label>
+							<label class="block-right-place__lbl">
+								<input type="radio" class="block-right__radio block-right__radio_8">
+								<div class="block-right__radio-elem"></div>
+							</label>
+						</div>
+						<div class="block-right-place__left">
+							<label for="spinner">x
+								<input id="spinner" name="value"></label>
+							<label for="spinner">y
+								<input id="spinner" name="value"></label>
+						</div>
 					</div>
 				</div>
 				<div class="block-right__form">
-					<div class="block-right__form-title">Прозрачность</div>
+					<div class="block-right__form-title sidebar">Прозрачность</div>
 					<div id="slider-range" class="slider-elem"></div>
 				</div>
 				<div class="block-right__last">

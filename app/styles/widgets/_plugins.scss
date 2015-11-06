@@ -23,3 +23,28 @@
 .ui-widget-header{
 	background:#9eb2c0;
 }
+//Spinner
+.ui-spinner-input{
+	width:70px;
+	height: 46px;
+	line-height: 44px;
+	box-sizing:border-box;
+	border: 0 none;
+	margin: 0;
+}
+// .ui-widget-content{
+// 	background-color: #fff;
+// }
+.ui-state-default .ui-icon{
+	
+	@include get-sprite($spinner-sprite, up);
+	
+}
+// .ui-spinner-button.ui-state-default .ui-icon{
+// 	.ui-icon-triangle-1-s{
+// 		@include get-sprite($spinner-sprite, down);
+// 	}
+// 	.ui-icon-triangle-1-n{
+// 		@include get-sprite($spinner-sprite, up);
+// 	}
+// }

@@ -16,8 +16,8 @@ html(lang="ru-RU")
 				.block-left__title Генератор водяных знаков
 				.block-left__main
 					.block-left__wrapper-img
-						.block-left__img
-							img(src='' alt='')
+						#draggable.block-left__img
+							img(src='img/watermark.png' alt='').watermark
 			form.block-right
 				.block-right__title Настройки
 				.block-right__form
@@ -32,12 +32,19 @@ html(lang="ru-RU")
 									input.block-right__input(type="text" name="img-name")
 				.block-right__form
 					.block-right__form-title Положение
-					.block-right__place
-					.block-right__table
-						-for (var i=0; i<10; i++)
-							input.block-right__radio(type="radio" class="block-right__radio_"+i)
+					.block-right-place
+						.block-right-place__table
+							-for (var i=0; i<9; i++)
+								label.block-right-place__lbl
+									input.block-right__radio(type="radio" class="block-right__radio_"+i checked=((i==0)? true : false))
+									.block-right__radio-elem
+						.block-right-place__left
+							-var items=['x','y']
+								each item, indx in items
+									label(for="spinner")=item
+										input(id='spinner' name='value')
 				.block-right__form
-					.block-right__form-title Прозрачность
+					.block-right__form-title.sidebar Прозрачность
 					#slider-range.slider-elem
 				.block-right__last
 					.block-right__btn

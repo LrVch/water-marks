@@ -2,6 +2,7 @@
 $grey: #9eb2c0;
 $pink:#f97e76;
 $misc-sprite:sprite-map("icons/*.png", $spacing:70px);
+$spinner-sprite:sprite-map("icons-spinner/*.png", $spacing:70px);
 @import "_misc/_fonts.scss";
 @import "compass";
 @import "_misc/_normalize.scss";
@@ -46,7 +47,16 @@ body{
 .block-left__main{
 	width: 654px;
 	height: 535px;
-	background:#fff;
+	background:#fff url("../img/bg.jpg") center center no-repeat;
+}
+// Блок Изображения
+.block-left__img{
+	width: 220px;
+	height: 220px;
+	.watermark{
+		width: 100%;
+		cursor: pointer;
+	}
 }
 .block-right__title{
 	@include segoe(light);
@@ -103,6 +113,9 @@ body{
     margin-bottom: 20px;
 }
 .block-right__form-title{
+	&.sidebar{
+		margin-bottom: 17px;
+	}
 	padding-top: 18px;
 	margin-bottom: 15px;
 	font-size: 14px;
@@ -111,32 +124,45 @@ body{
 .block-right__left{
 	margin-top: 15px;
 }
-.block-right__table{
-	width: 100px;
-	float:left;
-	height: 100px;
-	background:#dbe1e8;
-	box-sizing: border-box;
-	padding-top: 15px;;
-	@include border-radius(4px);
-}
-.block-right__place{
+
+.block-right-place{
 	@include clearfix;
+	margin-bottom: 32px;
+	display: block;
+}
+.block-right-place__table{
+	width:100px;
+	float:left;
+	height:100px;
+	box-sizing: border-box;
+	@include border-radius(4px);
+	font-size: 0;
+	overflow: hidden;
+	// outline: 1px solid #9eb2c0;
+}
+.block-right-place__lbl{
 	position: relative;
+	@include inlineblock(top);
+	font-size: 0;
 }
 .block-right__radio{
 	position: absolute;
 	top: 0;
 	left: -9999px;
-	 
+	&:checked +	.block-right__radio-elem{
+		border: 1px solid $pink;
+		background:$pink;
+	}
+}
+.block-right-place__table{
 	.block-right__radio-elem{
-		border: 1px solid #9eb2c0;
-		display: inline-block;
+		box-sizing: border-box;
+		border: 1px solid #9eb2c0;;
 		width:33px;
 		height:33px;
 		background:#dbe1e8;
-	}
-	
+		@include inlineblock(top);
+		}
 }
 .slider-elem{
 	margin-bottom: 32px;
@@ -170,6 +196,12 @@ body{
 .btn__save{
 	float:right;
 }
+//спинер
+.block-right-place__left{
+	float: right;
+	width: 94px;
+}
+	
 .footer{
 	height: 30px;
 	padding-top: 10px;
