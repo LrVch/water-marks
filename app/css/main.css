@@ -2416,6 +2416,37 @@ body .ui-tooltip {
   border-radius: 5px;
 }
 
+.ui-slider-horizontal {
+  height: 3px;
+  background: #dbe1e8;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0 none;
+}
+.ui-slider-horizontal * {
+  outline: none !important;
+}
+.ui-slider-horizontal .ui-slider-range {
+  background: #9eb2c0;
+}
+
+.ui-slider-handle.ui-state-default.ui-corner-all {
+  background: 0 none;
+  background: url('../img/icons-s263fdc9ffe.png') 0 0 no-repeat;
+  height: 25px;
+  width: 25px;
+  top: -9px;
+  border: 0 none;
+}
+.ui-slider-handle.ui-state-default.ui-corner-all:first-child span {
+  display: none;
+}
+
+.ui-widget-header {
+  background: #9eb2c0;
+}
+
 html {
   height: 100%;
 }
@@ -2487,7 +2518,6 @@ body {
 }
 
 .block-right__form {
-  position: relative;
   padding: 0 21px;
   border-bottom: 1px solid #f97e76;
 }
@@ -2551,6 +2581,7 @@ body {
 
 .block-right__table {
   width: 100px;
+  float: left;
   height: 100px;
   background: #dbe1e8;
   box-sizing: border-box;
@@ -2558,7 +2589,12 @@ body {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+}
+
+.block-right__place {
   overflow: hidden;
+  *zoom: 1;
+  position: relative;
 }
 
 .block-right__radio {
@@ -2572,6 +2608,10 @@ body {
   width: 33px;
   height: 33px;
   background: #dbe1e8;
+}
+
+.slider-elem {
+  margin-bottom: 32px;
 }
 
 .block-right__last {
