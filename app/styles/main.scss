@@ -4,6 +4,7 @@ $pink:#f97e76;
 @import "_misc/_fonts.scss";
 @import "compass";
 @import "_misc/_normalize.scss";
+@import "_plugins/_jquery-ui.scss";
 html{
 	height: 100%;
 	
@@ -122,6 +123,7 @@ body{
 	position: absolute;
 	top: 0;
 	left: -9999px;
+	 
 	.block-right__radio-elem{
 		border: 1px solid #9eb2c0;
 		display: inline-block;
