@@ -1,0 +1,6 @@
+mixin nav(className, items, activeInd)
+	nav(class=className)
+		ul(class=className + "__lyst")
+			each item, indx in items
+				li(class=className + "__item"+((activeInd==indx) ? " "+className +"__item"+"_active": ""))
+					a(href="#" class=className + "__link")= item

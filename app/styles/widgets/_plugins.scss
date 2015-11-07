@@ -1,0 +1,50 @@
+.ui-slider-horizontal{
+	height: 3px;
+	background:#dbe1e8;
+	@include border-radius(0);
+	border: 0 none;
+	*{
+		outline: none !important;
+	}
+	.ui-slider-range{
+	background:#9eb2c0;
+	}
+}
+
+.ui-slider-handle.ui-state-default.ui-corner-all{
+	background:0 none;
+	@include get-sprite($misc-sprite, slider);
+	top: -9px;
+	border: 0 none;
+	&:first-child span{
+		display: none;
+	}
+}
+.ui-widget-header{
+	background:#9eb2c0;
+}
+//Spinner
+.ui-spinner-input{
+	width:70px;
+	height: 46px;
+	line-height: 44px;
+	box-sizing:border-box;
+	border: 0 none;
+	margin: 0;
+}
+// .ui-widget-content{
+// 	background-color: #fff;
+// }
+.ui-state-default .ui-icon{
+	
+	@include get-sprite($spinner-sprite, up);
+	
+}
+// .ui-spinner-button.ui-state-default .ui-icon{
+// 	.ui-icon-triangle-1-s{
+// 		@include get-sprite($spinner-sprite, down);
+// 	}
+// 	.ui-icon-triangle-1-n{
+// 		@include get-sprite($spinner-sprite, up);
+// 	}
+// }

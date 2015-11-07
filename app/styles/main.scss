@@ -1,0 +1,215 @@
+@import "_misc/_mixin.scss";
+$grey: #9eb2c0;
+$pink:#f97e76;
+$misc-sprite:sprite-map("icons/*.png", $spacing:70px);
+$spinner-sprite:sprite-map("icons-spinner/*.png", $spacing:70px);
+@import "_misc/_fonts.scss";
+@import "compass";
+@import "_misc/_normalize.scss";
+@import "_plugins/_jquery-ui.scss";
+@import "widgets/_plugins.scss";
+html{
+	height: 100%;
+	
+}
+body{
+	height: 100%;
+	color:#2e3641;
+	@include vertical-gradient(#969292,#a7817b);
+}
+
+.wrapper{
+	@include absolute-center;
+	top: 5%;
+	bottom: 5%;
+	@include clearfix; 
+	width: 960px;
+}
+.block-left{
+	width: 650px;
+	float:left;
+	background:#645e60;
+	padding: 25px;
+}
+.block-right{
+	background:#f1f1f5;
+	width: 260px;
+	float: right;
+	height: 676px;
+}
+.block-left__title{
+	font-size: 36px;
+	line-height: 38px;
+	@include segoe(light);
+	color: #fff;
+	margin-bottom: 53px;
+}
+.block-left__main{
+	width: 654px;
+	height: 535px;
+	background:#fff url("../img/bg.jpg") center center no-repeat;
+}
+// Блок Изображения
+.block-left__img{
+	width: 220px;
+	height: 220px;
+	.watermark{
+		width: 100%;
+		cursor: pointer;
+	}
+}
+.block-right__title{
+	@include segoe(light);
+	font-size: 26px;
+	line-height: 28px;
+	color: #2e3641;
+	padding-top: 30px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.block-right__form{
+	padding:0 21px; 
+	border-bottom: 1px solid $pink;	
+}
+.block-right__lbl{
+	display: block;
+	font-size: 14px;
+	line-height: 16px;
+	color:#2e3641;
+	margin-bottom: 9px;
+}
+.block-right__fileupload{
+	display: block;
+	position: absolute;
+	right: 21px;
+    width: 40px;
+    height: 26px;
+    background: $pink url(../img/img-add.png) center center no-repeat;
+    background-position-x: 3px;
+    border-radius:  0 4px 4px 0;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.fileupload{/* хак, взятый из html5boilerplate */
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.block-right__input{
+	display: block;
+    margin: 0 auto;
+    height: 26px;
+    width: 100%;
+    border: solid 1px $grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    color: $grey;
+    margin-bottom: 20px;
+}
+.block-right__form-title{
+	&.sidebar{
+		margin-bottom: 17px;
+	}
+	padding-top: 18px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	color: #2e3641;
+}
+.block-right__left{
+	margin-top: 15px;
+}
+
+.block-right-place{
+	@include clearfix;
+	margin-bottom: 32px;
+	display: block;
+}
+.block-right-place__table{
+	width:100px;
+	float:left;
+	height:100px;
+	box-sizing: border-box;
+	@include border-radius(4px);
+	font-size: 0;
+	overflow: hidden;
+	// outline: 1px solid #9eb2c0;
+}
+.block-right-place__lbl{
+	position: relative;
+	@include inlineblock(top);
+	font-size: 0;
+}
+.block-right__radio{
+	position: absolute;
+	top: 0;
+	left: -9999px;
+	&:checked +	.block-right__radio-elem{
+		border: 1px solid $pink;
+		background:$pink;
+	}
+}
+.block-right-place__table{
+	.block-right__radio-elem{
+		box-sizing: border-box;
+		border: 1px solid #9eb2c0;;
+		width:33px;
+		height:33px;
+		background:#dbe1e8;
+		@include inlineblock(top);
+		}
+}
+.slider-elem{
+	margin-bottom: 32px;
+}
+.block-right__last{
+	padding: 0 16px;
+}
+.block-right__btn{
+	padding-top: 56px;
+	position: relative;
+	.btn{
+		border: none;
+		@include border-radius(3px);
+		@include clearfix;
+		width: 100px;
+		height: 42px;
+		line-height: 42px;
+		background:$pink;
+		color:#fff;
+		&.btn__clear{
+			background:$grey;
+		}
+		&:focus{
+			overflow: hidden;
+		}
+	}
+}
+.btn__clear{
+	float:left;
+}
+.btn__save{
+	float:right;
+}
+//спинер
+.block-right-place__left{
+	float: right;
+	width: 94px;
+}
+	
+.footer{
+	height: 30px;
+	padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
