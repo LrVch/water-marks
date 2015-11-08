@@ -131,7 +131,7 @@ $(document).ready(function () {
 					})
 					.css({
 						"position": "absolute",
-						//"overflow": "hidden",
+						"overflow": "hidden",
 						"top": (containerHeigth - mainImg.data("newhight")) / 2,
 						"left": (containerWidth - mainImg.data("newwidth")) / 2
 					});
@@ -239,6 +239,7 @@ $(document).ready(function () {
 				})
 				.on("load", function () {
 					$(this).fadeIn(500);
+					position.imgDrag($(this));
 				});
 
 			$('.watermark-img-wrapper').remove(); // удаляем старый вотемарк
@@ -290,5 +291,53 @@ $(document).ready(function () {
 
 	// Вызов модуля
 	loadImages.init();
+	
+	// вставил код для проверки совместимости
+	
+	var position = (function () {
+
+		function init() {
+			//_setUpListners();
+			_modules();
+		};
+
+		/*  function _setUpListners() {
+		    $('#id').on('click', _doSome);
+		  };*/
+
+		function _modules() {
+			$("#slider-range").slider();
+		};
+
+		/*function _doSome(e) {
+		  e.preventDefault();
+		};*/
+
+		function imgDrag(elem) {
+			var
+				imgDrag = elem,
+				imgDragWrapper = elem.parent();
+
+			imgDragWrapper.draggable();
+
+			$('#slider-range').on('slide', function () {
+
+				var opacity = $('#slider-range').slider("option", "value") / 100;
+
+				imgDrag.css("opacity", opacity).attr("data-opacity", opacity * 100)
+
+			});
+
+		}
+
+		return {
+			init: init,
+			imgDrag: imgDrag
+		};
+
+	})();
+
+	// Вызов модуля
+	position.init();
 
 });
