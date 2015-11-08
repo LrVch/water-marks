@@ -16,7 +16,7 @@ $(document).ready(function ($) {
         //   " - $" + $( "#slider-range" ).slider( "values", 1 ) );
     });
     $(function () {
-        $("#spinner_0").spinner({
+        /*$("#spinner_0").spinner({
             spin: function (event, ui) {
                 if (ui.value > 10) {
                     $(this).spinner("value", -10);
@@ -26,8 +26,8 @@ $(document).ready(function ($) {
                     return false;
                 }
             }
-        });
-        $("#spinner_1").spinner({
+        });*/
+        /*$("#spinner_1").spinner({
             spin: function (event, ui) {
                 if (ui.value > 10) {
                     $(this).spinner("value", -10);
@@ -37,6 +37,6 @@ $(document).ready(function ($) {
                     return false;
                 }
             }
-        });
+        });*/
     });
 });
