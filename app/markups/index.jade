@@ -36,13 +36,13 @@ html(lang="ru-RU")
 						.block-right-place__table
 							-for (var i=0; i<9; i++)
 								label.block-right-place__lbl
-									input.block-right__radio(type="radio" class="block-right__radio_"+i checked=((i==0)? true : false))
+									input.block-right__radio(type="radio" name="name" class="block-right__radio_"+i checked=((i==0)? true : false))
 									.block-right__radio-elem
 						.block-right-place__left
 							-var items=['x','y']
 								each item, indx in items
 									label(for="spinner")=item
-										input(id='spinner' name='value')
+										input(id='spinner_' + indx name='value')
 				.block-right__form
 					.block-right__form-title.sidebar Прозрачность
 					#slider-range.slider-elem
