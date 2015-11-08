@@ -59,7 +59,8 @@ $(document).ready(function () {
 					//console.log(always);
 				},
 				change: function (e, data) {
-					//console.log("changed");
+					//console.log(data);
+					$(".block-right__input_1").val(data.files[0].name);
 				}
 			});
 		}
@@ -101,6 +102,10 @@ $(document).ready(function () {
 				},
 				always: function (e, data) {
 					//console.log(always);
+				},
+				change: function (e, data) {
+					//console.log(data);
+					$(".block-right__input_2").val(data.files[0].name);
 				}
 			});
 
