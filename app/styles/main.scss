@@ -45,6 +45,7 @@ body{
 	margin-bottom: 53px;
 }
 .block-left__main{
+  position: relative; /*добавил Роман*/
 	width: 654px;
 	height: 535px;
 	background:#fff url("../img/bg.jpg") center center no-repeat;
