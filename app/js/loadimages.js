@@ -1,280 +1,288 @@
-var loadImages = (function () {
+$(document).ready(function () {
 
-    function init() {
-        _modules();
-    }
 
-    //подключение модулей
-    function _modules() {
-        _loadMainImage();
-    }
+	var loadImages = (function () {
 
-    // загрузка основной кртинки
-    function _loadMainImage() {
+		function init() {
+			_modules();
+		}
 
-        var
-            container = $(".block-left__main");
+		//подключение модулей
+		function _modules() {
+			_loadMainImage();
+		}
 
-        $('#fileupload-1').fileupload({
-            dataType: 'json',
-            add: function (e, data) {
-                var
-                    imgType = data.files[0].type,
-                    imgSize = data.files[0].size;
+		// загрузка основной кртинки
+		function _loadMainImage() {
 
-                if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
-                  console.log("isn't image"); // показываем предупреждение что не картинка
-                  //_createQtip($('#fileupload-1'), "Загрузить можно только картинку");
+			var
+				container = $(".block-left__main");
+			console.log("init module");
 
-                  return;
-                }
 
-                if (imgSize > 2000000) {
-                  console.log("to big"); // показываем предупреждение что картинка слишком большая
-                  //_createQtip($('#fileupload-1'), "Максимальный размет 2Мб");
+			$('#fileupload-1').fileupload({
+				dataType: 'json',
+				add: function (e, data) {
+					var
+						imgType = data.files[0].type,
+						imgSize = data.files[0].size;
 
-                  return;
-                }
+					console.log(data);
+					if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
+						console.log("isn't image"); // показываем предупреждение что не картинка
+						//_createQtip($('#fileupload-1'), "Загрузить можно только картинку");
 
-                data.formData = {
-                    img: data.files[0]
-                }; //отправляем то что нам надо          
-                data.submit(); // отправляем данные на сервер
+						return;
+					}
 
-            },
-            done: function (e, data) {
-                $.when($('.block-left__wrapper-img').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
-                    _createMainImg(data, container);
-                });
-            },
-            fail: function (e, data) {
-                console.log("fail");
-            },
-            always: function (e, data) {
-                //console.log(always);
-            },
-            change: function (e, data) {}
+					if (imgSize > 2000000) {
+						console.log("to big"); // показываем предупреждение что картинка слишком большая
+						//_createQtip($('#fileupload-1'), "Максимальный размет 2Мб");
 
-        });
-    }
+						return;
+					}
 
-    // загрузка водянного знака
-    function _loadWaterMark(container) {
-        var mainImg = $(".main-img");
+					data.formData = {
+						img: data.files[0]
+					}; //отправляем то что нам надо          
+					data.submit(); // отправляем данные на сервер
 
-        $('#fileupload-2').removeAttr("disabled");
+				},
+				done: function (e, data) {
+					$.when($('.block-left__wrapper-img').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
+						_createMainImg(data, container);
+					});
+				},
+				fail: function (e, data) {
+					console.log("fail");
+				},
+				always: function (e, data) {
+					//console.log(always);
+				},
+				change: function (e, data) {
+					console.log("changed");
+				}
+			});
+		}
 
-        $('#fileupload-2').fileupload({
-            dataType: 'json',
-            add: function (e, data) {
-                var
-                    imgType = data.files[0].type,
-                    imgSize = data.files[0].size;
+		// загрузка водянного знака
+		function _loadWaterMark(container) {
+			var mainImg = $(".main-img");
 
-                if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
-                  console.log("isn't image"); // показываем предупреждение что не картинка
-                  return;
-                }
+			$('#fileupload-2').removeAttr("disabled");
 
-                if (imgSize > 2000000) {
-                  console.log("to big"); // показываем предупреждение что картинка слишком большая
-                  return;
-                }
+			$('#fileupload-2').fileupload({
+				dataType: 'json',
+				add: function (e, data) {
+					var
+						imgType = data.files[0].type,
+						imgSize = data.files[0].size;
 
-                data.formData = {
-                    img: data.files[0]
-                }; //отправляем то что нам надо          
-                data.submit(); // отправляем данные на сервер
+					if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
+						console.log("isn't image"); // показываем предупреждение что не картинка
+						return;
+					}
 
-            },
-            done: function (e, data) {
-                _creareWaterMark(data, container);
-            },
-            fail: function (e, data) {
-                console.log("fail");
-            },
-            always: function (e, data) {
-                //console.log(always);
-            }
-        });
+					if (imgSize > 2000000) {
+						console.log("to big"); // показываем предупреждение что картинка слишком большая
+						return;
+					}
 
-    }
+					data.formData = {
+						img: data.files[0]
+					}; //отправляем то что нам надо          
+					data.submit(); // отправляем данные на сервер
 
-    // создание главного изображения
-    function _createMainImg(data, container) {
-        var
-            containerWidth = container.innerWidth(),
-            containerHeigth = container.innerHeight(),
-            mainImgName = data.result.imgName,
-            mainImgWidth = data.result.imgWidth,
-            mainImgHeight = data.result.imgHeight,
-            ratioWidth = mainImgWidth / containerWidth,
-            ratioHeight = mainImgHeight / containerHeigth,
-            mainImg = _mainImg(),
-            mainImgWrapper = _mainImgWrapper();
+				},
+				done: function (e, data) {
+					_creareWaterMark(data, container);
+				},
+				fail: function (e, data) {
+					console.log("fail");
+				},
+				always: function (e, data) {
+					//console.log(always);
+				}
+			});
 
-        function _mainImgWrapper() {
-            var
-                mainImgWrapper = $("<div>", {
-                    class: "main-img-wrapper"
-                })
-                .css({
-                    "position": "absolute",
-                    //"overflow": "hidden",
-                    "top": (containerHeigth - mainImg.data("newhight")) / 2,
-                    "left": (containerWidth - mainImg.data("newwidth")) / 2
-                });
-            return mainImgWrapper;
-        }
+		}
 
-        function _mainImg() {
-            var
-                width = mainImgWidth,
-                height = mainImgHeight,
-                dataRatio = 1;
+		// создание главного изображения
+		function _createMainImg(data, container) {
+			var
+				containerWidth = container.innerWidth(),
+				containerHeigth = container.innerHeight(),
+				mainImgName = data.result.imgName,
+				mainImgWidth = data.result.imgWidth,
+				mainImgHeight = data.result.imgHeight,
+				ratioWidth = mainImgWidth / containerWidth,
+				ratioHeight = mainImgHeight / containerHeigth,
+				mainImg = _mainImg(),
+				mainImgWrapper = _mainImgWrapper();
 
-            if (ratioWidth > 1) {
+			function _mainImgWrapper() {
+				var
+					mainImgWrapper = $("<div>", {
+						class: "main-img-wrapper"
+					})
+					.css({
+						"position": "absolute",
+						//"overflow": "hidden",
+						"top": (containerHeigth - mainImg.data("newhight")) / 2,
+						"left": (containerWidth - mainImg.data("newwidth")) / 2
+					});
+				return mainImgWrapper;
+			}
 
-                width = mainImgWidth / ratioWidth;
-                height = mainImgHeight / ratioWidth;
-                dataRatio = mainImgWidth / width;
+			function _mainImg() {
+				var
+					width = mainImgWidth,
+					height = mainImgHeight,
+					dataRatio = 1;
 
-                if (height > containerHeigth) {
+				if (ratioWidth > 1) {
 
-                    dataRatio = height / containerHeigth;
-                    width = width / dataRatio;
-                    height = height / dataRatio;
-                    dataRatio = mainImgWidth / width;
-                }
+					width = mainImgWidth / ratioWidth;
+					height = mainImgHeight / ratioWidth;
+					dataRatio = mainImgWidth / width;
 
-            } else if (ratioHeight > 1) {
+					if (height > containerHeigth) {
 
-                height = mainImgHeight / ratioHeight;
-                width = mainImgWidth / ratioHeight;
-                dataRatio = mainImgWidth / width;
-            }
+						dataRatio = height / containerHeigth;
+						width = width / dataRatio;
+						height = height / dataRatio;
+						dataRatio = mainImgWidth / width;
+					}
 
-            var
-                mainImg = $("<img>", {
-                    "src": "/uploads/" + mainImgName,
-                    "class": "main-img",
-                    "data-srcHtight": mainImgHeight,
-                    "data-srcWidth": mainImgWidth,
-                    "data-ratio": dataRatio,
-                    "data-newWidth": width,
-                    "data-newHight": height
-                })
-                .css({
-                    "width": width,
-                    "height": height,
-                    "display": "none"
-                })
-                .on("load", function () {
-                    $(this).fadeIn(1500);
-                });
-            return mainImg;
-        }
+				} else if (ratioHeight > 1) {
 
-        $.when(mainImgWrapper.fadeOut(1000)).then(function () {
-            container.empty();
-            mainImg.appendTo(mainImgWrapper); // вставка картинки в обетку
-            mainImgWrapper.appendTo(container); // вставка блока главнной картинки в разметкуcontainer.empty();
-        });
+					height = mainImgHeight / ratioHeight;
+					width = mainImgWidth / ratioHeight;
+					dataRatio = mainImgWidth / width;
+				}
 
-        _loadWaterMark(container); // активация загрузки водянного знака
+				var
+					mainImg = $("<img>", {
+						"src": "uploads/" + mainImgName,
+						"class": "main-img",
+						"data-srcHtight": mainImgHeight,
+						"data-srcWidth": mainImgWidth,
+						"data-ratio": dataRatio,
+						"data-newWidth": width,
+						"data-newHight": height
+					})
+					.css({
+						"width": width,
+						"height": height,
+						"display": "none"
+					})
+					.on("load", function () {
+						$(this).fadeIn(1500);
+					});
+				return mainImg;
+			}
 
-    }
+			$.when(mainImgWrapper.fadeOut(1000)).then(function () {
+				container.empty();
+				mainImg.appendTo(mainImgWrapper); // вставка картинки в обетку
+				mainImgWrapper.appendTo(container); // вставка блока главнной картинки в разметкуcontainer.empty();
+			});
 
-    // создание водянного знака
-    function _creareWaterMark(data, container) {
-        var
-            mainImgWrapper = $(".main-img-wrapper"),
-            mainImg = $(".main-img"),
-            containerWidth = container.innerWidth(),
-            containerHeigth = container.innerHeight(),
-            imgName = data.result.imgName,
-            imgWidth = data.result.imgWidth,
-            imgHeight = data.result.imgHeight,
+			_loadWaterMark(container); // активация загрузки водянного знака
 
-            waterImgWrapper = $("<div>", {
-                class: "watermark-img-wrapper"
-            })
-            .css({
-                "position": "absolute",
-                "top": 0,
-                "left": 0
-            });
+		}
 
-        if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
-            console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
-            return;
-        }
+		// создание водянного знака
+		function _creareWaterMark(data, container) {
+			var
+				mainImgWrapper = $(".main-img-wrapper"),
+				mainImg = $(".main-img"),
+				containerWidth = container.innerWidth(),
+				containerHeigth = container.innerHeight(),
+				imgName = data.result.imgName,
+				imgWidth = data.result.imgWidth,
+				imgHeight = data.result.imgHeight,
 
-        var
-            waterImg = $("<img>", {
-                "src": "/uploads/" + imgName,
-                "class": "watermark-img",
-                "data-srcHtight": imgHeight,
-                "data-srcWidth": imgWidth,
-                "data-ratio": mainImg.data("ratio"),
-                "data-newWidth": imgWidth / mainImg.data("ratio"),
-                "data-newHight": imgHeight / mainImg.data("ratio")
-            })
-            .css({
-                "width": imgWidth / mainImg.data("ratio"),
-                "height": imgHeight / mainImg.data("ratio"),
-                "display": "none"
-            })
-            .on("load", function () {
-                $(this).fadeIn(500);
-            });
+				waterImgWrapper = $("<div>", {
+					class: "watermark-img-wrapper"
+				})
+				.css({
+					"position": "absolute",
+					"top": 0,
+					"left": 0
+				});
 
-        $('.watermark-img-wrapper').remove(); // удаляем старый вотемарк
-        waterImg.appendTo(waterImgWrapper); // вставка картинки
-        waterImgWrapper.appendTo(mainImgWrapper); // вставка картинки
-    }
+			if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
+				console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
+				return;
+			}
 
-    // тултипы
-    function _createQtip(element, content) { // Создаёт тултипы
+			var
+				waterImg = $("<img>", {
+					"src": "uploads/" + imgName,
+					"class": "watermark-img",
+					"data-srcHtight": imgHeight,
+					"data-srcWidth": imgWidth,
+					"data-ratio": mainImg.data("ratio"),
+					"data-newWidth": imgWidth / mainImg.data("ratio"),
+					"data-newHight": imgHeight / mainImg.data("ratio")
+				})
+				.css({
+					"width": imgWidth / mainImg.data("ratio"),
+					"height": imgHeight / mainImg.data("ratio"),
+					"display": "none"
+				})
+				.on("load", function () {
+					$(this).fadeIn(500);
+				});
 
-        // позиция тултипа
-        var position = {
-            my: 'right center',
-            at: 'left center',
-            adjust: {
-                method: 'shift none'
-            }
-        };
+			$('.watermark-img-wrapper').remove(); // удаляем старый вотемарк
+			waterImg.appendTo(waterImgWrapper); // вставка картинки
+			waterImgWrapper.appendTo(mainImgWrapper); // вставка картинки
+		}
 
-        // инициализация тултипа
-        element.qtip({
-            content: {
-                text: function () {
-                    return content;
-                }
-            },
-            show: {
-                event: 'show'
-            },
-            hide: {
-                event: 'click hideTooltip'
-            },
-            position: position,
-            style: {
-                classes: 'myclass qtip-rounded',
-                tip: {
-                    height: 10,
-                    width: 16
-                }
-            }
-        }).trigger('show');
-    }
+		// тултипы
+		function _createQtip(element, content) { // Создаёт тултипы
 
-    return {
-        init: init
-    };
+			// позиция тултипа
+			var position = {
+				my: 'right center',
+				at: 'left center',
+				adjust: {
+					method: 'shift none'
+				}
+			};
 
-})();
+			// инициализация тултипа
+			element.qtip({
+				content: {
+					text: function () {
+						return content;
+					}
+				},
+				show: {
+					event: 'show'
+				},
+				hide: {
+					event: 'click hideTooltip'
+				},
+				position: position,
+				style: {
+					classes: 'myclass qtip-rounded',
+					tip: {
+						height: 10,
+						width: 16
+					}
+				}
+			}).trigger('show');
+		}
 
-// Вызов модуля
-loadImages.init();
+		return {
+			init: init
+		};
+
+	})();
+
+	// Вызов модуля
+	loadImages.init();
+});
