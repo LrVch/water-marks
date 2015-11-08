@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
 	var loadImages = (function () {
 
 		function init() {
@@ -17,7 +16,7 @@ $(document).ready(function () {
 
 			var
 				container = $(".block-left__main");
-			console.log("init module");
+			//console.log("init module");
 
 
 			$('#fileupload-1').fileupload({
@@ -27,7 +26,7 @@ $(document).ready(function () {
 						imgType = data.files[0].type,
 						imgSize = data.files[0].size;
 
-					console.log(data);
+					//console.log(data);
 					if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 						console.log("isn't image"); // показываем предупреждение что не картинка
 						//_createQtip($('#fileupload-1'), "Загрузить можно только картинку");
@@ -60,7 +59,7 @@ $(document).ready(function () {
 					//console.log(always);
 				},
 				change: function (e, data) {
-					console.log("changed");
+					//console.log("changed");
 				}
 			});
 		}
@@ -209,7 +208,8 @@ $(document).ready(function () {
 				.css({
 					"position": "absolute",
 					"top": 0,
-					"left": 0
+					"left": 0,
+					"cursor": "all-scroll"
 				});
 
 			if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
@@ -285,4 +285,5 @@ $(document).ready(function () {
 
 	// Вызов модуля
 	loadImages.init();
+
 });
