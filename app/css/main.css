@@ -2568,7 +2568,7 @@ body {
 }
 
 .fileupload {
-  /* ╤Е╨░╨║, ╨▓╨╖╤П╤В╤Л╨╣ ╨╕╨╖ html5boilerplate */
+  /* хак, взятый из html5boilerplate */
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -2707,4 +2707,20 @@ body {
   text-align: center;
   color: #fff;
   font-size: 12px;
+}
+
+/* тултипы  добавил Роман*/
+.myclass {
+  padding: 2px 0px;
+  border-color: #cb6945;
+  border-top-color: #cb6945;
+  font-size: 12px;
+  color: #9a4e32;
+  background-color: #e48e70;
+  background-image: linear-gradient(to bottom, #f3a58b, #d67c5a);
+  box-shadow: inset 1px 1px 0 #f7c0ad;
+}
+
+.myclass .qtip-content {
+  text-shadow: 1px 1px #d4b5b5;
 }
