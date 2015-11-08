@@ -48,16 +48,12 @@ body{
   position: relative; /*добавил Роман*/
 	width: 654px;
 	height: 535px;
-	background:#fff url("../img/bg.jpg") center center no-repeat;
+	background:#fff; /*изменил Роман*/
 }
 // Блок Изображения
 .block-left__img{
-	width: 220px;
-	height: 220px;
-	.watermark{
-		width: 100%;
-		cursor: pointer;
-	}
+    width: 650px; /*изменил Роман*/
+    height: auto;
 }
 .block-right__title{
 	@include segoe(light);
