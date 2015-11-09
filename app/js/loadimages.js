@@ -240,7 +240,6 @@ $(document).ready(function () {
 				.on("load", function () {
 					$(this).fadeIn(500);
 					_returnWatermark($(this));
-
 				});
 
 			$('.watermark-img-wrapper').remove(); // удаляем старый вотемарк
@@ -283,10 +282,9 @@ $(document).ready(function () {
 				}
 			}).trigger('show');
 		}
-
+		// функция передаци сгенерированного элемента
 		function _returnWatermark(elem) {
-			position.imgDrag(elem);
-			//console.log(elem);
+			position.init(); // активируем модуль позиционирования и передаем элемент
 			return;
 		}
 
@@ -299,7 +297,7 @@ $(document).ready(function () {
 	// Вызов модуля
 	loadImages.init();
 
-	// вставил код для проверки совместимости
+	// вставил код для проверки совместимости позиционирования
 
 	var position = (function () {
 
@@ -310,26 +308,24 @@ $(document).ready(function () {
 
 		function _setUpListners() {
 			$(".block-right-place__table").on("click", "input", _checkBox);
-			//$(".block-left__main").on("click", imgDrag); // костыль для поиска созданной картинки
 		};
 
 		function _modules() {
-			$("#slider-range").slider();
-			$('#slider-range').on('slide', function () {
-
-				var opacity = $('#slider-range').slider("option", "value") / 100;
-
-				$(".watermark-img").css("opacity", opacity).attr("data-opacity", opacity * 100)
-
-			});
-			$(".main-img").on("load", function () {
-				console.log("fds");
-			});
+			_unlockCheckbox();
+			_imgDrag();
+			_spiners();
 		};
 
+		// включение чекбоксов
+		function _unlockCheckbox() {
+			$(".block-right-place__table").find("input").removeAttr("disabled");
+		}
+
+		// блок чекбоксов
 		function _checkBox(e) {
 			//e.preventDefault();
 
+			console.log("init check");
 			var
 				target = e.target,
 				$target = $(target),
@@ -410,7 +406,7 @@ $(document).ready(function () {
 
 			}
 		};
-
+		// позиционирование
 		function _imgPos(top, left, watemarkWrapper) {
 			watemarkWrapper.css({
 				"top": top,
@@ -419,26 +415,85 @@ $(document).ready(function () {
 			watemarkWrapper.attr("data-pos-x", left);
 			watemarkWrapper.attr("data-pos-y", top);
 		}
-
-		function imgDrag(elem) {
+		//драг тест
+		function _imgDrag() {
 
 			var
-				watermark = elem,
+				watermark = $(".watermark-img"),
 				watermarkWrapper = watermark.parent();
 
-			console.log("активна");
+			console.log("драг активен");
 			watermarkWrapper.draggable();
 		}
 
+		// спинеры для работы после загрузки картинки - тест
+		function _spiners() {
+      console.log("spiners init"); 
+			
+			var
+			  waterImg = $(".watermark-img"),
+			  waterWrapper = waterImg.parent(),
+			  mainImgWrapper = waterImg.parentsUntil(".block-left__main")[1],
+				$mainImgWrapper = $(mainImgWrapper),
+				mainImg = $mainImgWrapper.find(".main-img");
+			
+			var spinX = $("#spinner_0").spinner({
+				min: 0,
+				max: 10,
+			});
+
+			var spinY = $("#spinner_1").spinner({
+				min: 0,
+				max: 10,
+			});
+			
+			spinX.on("spin", function(event, ui) {
+				var curentVal = ui.value;
+				waterWrapper.css({
+					"left": curentVal
+				})
+			});
+			
+			spinY.on("spin", function(event, ui) {
+				var curentVal = ui.value;
+				waterWrapper.css({
+					"top": curentVal
+				})
+			});
+
+		}
+		// активация спинеров
+		function spinersInit() {
+			$("#spinner_0").spinner();
+			$("#spinner_1").spinner();
+		}
+		
+
 		return {
 			init: init,
-			imgDrag: imgDrag
+			spinersInit: spinersInit
 		};
 
 	})();
 
 	// Вызов модуля
-	position.init();
+	position.spinersInit(); // активация спинеров
 
+
+	// слайдер прозрачности - тест
+	function _slider() {
+		$("#slider-range").slider();
+		$('#slider-range').on('slide', function () {
+
+			var opacity = $('#slider-range').slider("option", "value") / 100;
+
+			$(".watermark-img").css("opacity", opacity).attr("data-opacity", opacity * 100)
+
+		});
+		$(".main-img").on("load", function () {
+			console.log("fds");
+		});
+	}
+	_slider();
 
 });
