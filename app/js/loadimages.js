@@ -205,17 +205,9 @@ $(document).ready(function () {
 				containerHeigth = container.innerHeight(),
 				imgName = data.result.imgName,
 				imgWidth = data.result.imgWidth,
-				imgHeight = data.result.imgHeight,
+				imgHeight = data.result.imgHeight;
 
-				waterImgWrapper = $("<div>", {
-					class: "watermark-img-wrapper"
-				})
-				.css({
-					"position": "absolute",
-					"top": 0,
-					"left": 0,
-					"cursor": "all-scroll"
-				});
+
 
 			if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
 				console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
@@ -223,6 +215,19 @@ $(document).ready(function () {
 			}
 
 			var
+				waterImgWrapper = $("<div>", {
+					class: "watermark-img-wrapper"
+				})
+				.css({
+					"position": "absolute",
+					"top": 0,
+					"left": 0,
+					//"width": imgWidth / mainImg.data("ratio"),
+					//"height": imgHeight / mainImg.data("ratio"),
+					"margin": 0,
+					"padding": 0
+						//"cursor": "all-scroll"
+				}),
 				waterImg = $("<img>", {
 					"src": "uploads/" + imgName,
 					"class": "watermark-img",
@@ -235,7 +240,9 @@ $(document).ready(function () {
 				.css({
 					"width": imgWidth / mainImg.data("ratio"),
 					"height": imgHeight / mainImg.data("ratio"),
-					"display": "none"
+					"display": "none",
+					"margin": 0,
+					"padding": 0
 				})
 				.on("load", function () {
 					$(this).fadeIn(500);
@@ -320,7 +327,6 @@ $(document).ready(function () {
 		function _unlockCheckbox() {
 			$(".block-right-place__table").find("input").removeAttr("disabled");
 		}
-
 		// блок чекбоксов
 		function _checkBox(e) {
 			//e.preventDefault();
@@ -343,8 +349,7 @@ $(document).ready(function () {
 				top = 0;
 				left = 0;
 				_imgPos(top, left, watemarkWrapper);
-				watemark.attr("data-pos-x", left);
-				watemark.attr("data-pos-y", top);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -352,6 +357,7 @@ $(document).ready(function () {
 				top = 0;
 				left = (mainImg.data("newwidth") - watemark.data("newwidth")) / 2;
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -359,6 +365,7 @@ $(document).ready(function () {
 				top = 0;
 				left = (mainImg.data("newwidth") - watemark.data("newwidth"));
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -366,6 +373,7 @@ $(document).ready(function () {
 				top = (mainImg.data("newhight") - watemark.data("newhight")) / 2;
 				left = 0;
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -373,6 +381,7 @@ $(document).ready(function () {
 				top = (mainImg.data("newhight") - watemark.data("newhight")) / 2;
 				left = (mainImg.data("newwidth") - watemark.data("newwidth")) / 2;
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -380,6 +389,7 @@ $(document).ready(function () {
 				top = (mainImg.data("newhight") - watemark.data("newhight")) / 2;
 				left = (mainImg.data("newwidth") - watemark.data("newwidth"));
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -387,6 +397,7 @@ $(document).ready(function () {
 				top = (mainImg.data("newhight") - watemark.data("newhight"));
 				left = 0;
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -394,6 +405,7 @@ $(document).ready(function () {
 				top = (mainImg.data("newhight") - watemark.data("newhight"));
 				left = (mainImg.data("newwidth") - watemark.data("newwidth")) / 2;
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
@@ -401,11 +413,12 @@ $(document).ready(function () {
 				top = (mainImg.data("newhight") - watemark.data("newhight"));
 				left = (mainImg.data("newwidth") - watemark.data("newwidth"));
 				_imgPos(top, left, watemarkWrapper);
+				_spinerSetValue(top, left);
 
 				break;
 
 			}
-		};
+		}
 		// позиционирование
 		function _imgPos(top, left, watemarkWrapper) {
 			watemarkWrapper.css({
@@ -415,7 +428,7 @@ $(document).ready(function () {
 			watemarkWrapper.attr("data-pos-x", left);
 			watemarkWrapper.attr("data-pos-y", top);
 		}
-		//драг тест
+		// драг тест
 		function _imgDrag() {
 
 			var
@@ -423,51 +436,85 @@ $(document).ready(function () {
 				watermarkWrapper = watermark.parent();
 
 			console.log("драг активен");
-			watermarkWrapper.draggable();
+			watermarkWrapper.draggable({
+				containment: ".main-img-wrapper",
+				cursor: "move",
+				drag: function (e) {
+					var
+						target = e.target,
+						$target = $(target),
+						top = $target.position().top,
+						left = $target.position().left;
+					_spinerSetValue(top, left)
+					$(this).attr("data-pos-x", left);
+					$(this).attr("data-pos-y", top);
+					//console.log($(this));
+				}
+			});
 		}
-
 		// спинеры для работы после загрузки картинки - тест
 		function _spiners() {
-      console.log("spiners init"); 
-			
+			console.log("spiners init");
+
 			var
-			  waterImg = $(".watermark-img"),
-			  waterWrapper = waterImg.parent(),
-			  mainImgWrapper = waterImg.parentsUntil(".block-left__main")[1],
+				waterImg = $(".watermark-img"),
+				waterWrapper = waterImg.parent(),
+				mainImgWrapper = waterImg.parentsUntil(".block-left__main")[1],
 				$mainImgWrapper = $(mainImgWrapper),
 				mainImg = $mainImgWrapper.find(".main-img");
-			
+
 			var spinX = $("#spinner_0").spinner({
 				min: 0,
-				max: 10,
+				max: mainImg.width() - waterImg.width(),
+				disabled: false
 			});
 
 			var spinY = $("#spinner_1").spinner({
 				min: 0,
-				max: 10,
+				max: mainImg.height() - waterImg.height(),
+				disabled: false
 			});
-			
-			spinX.on("spin", function(event, ui) {
+
+			spinX.on("spin", function (event, ui) {
 				var curentVal = ui.value;
-				waterWrapper.css({
-					"left": curentVal
-				})
+				waterWrapper
+					.css({
+						"left": curentVal
+					})
+					.attr("data-pos-x", curentVal);
 			});
-			
-			spinY.on("spin", function(event, ui) {
+
+			spinY.on("spin", function (event, ui) {
 				var curentVal = ui.value;
-				waterWrapper.css({
-					"top": curentVal
-				})
+				waterWrapper
+					.css({
+						"top": curentVal
+					})
+					.attr("data-pos-y", curentVal);
 			});
 
 		}
+		// передача значений в снипперы
+		function _spinerSetValue(top, left) {
+			$("#spinner_0").spinner("value", left);
+			$("#spinner_1").spinner("value", top);
+		}
 		// активация спинеров
 		function spinersInit() {
-			$("#spinner_0").spinner();
-			$("#spinner_1").spinner();
+			$("#spinner_0").spinner({
+				disabled: true,
+				create: function (event, ui) {
+					$(this).spinner("value", 0);
+				}
+			});
+			$("#spinner_1").spinner({
+				disabled: true,
+				create: function (event, ui) {
+					$(this).spinner("value", 0);
+				}
+			});
 		}
-		
+
 
 		return {
 			init: init,
@@ -482,7 +529,12 @@ $(document).ready(function () {
 
 	// слайдер прозрачности - тест
 	function _slider() {
-		$("#slider-range").slider();
+		$("#slider-range").slider({
+			min: 0,
+			max: 100,
+			value: 100
+			//range: true
+		});
 		$('#slider-range').on('slide', function () {
 
 			var opacity = $('#slider-range').slider("option", "value") / 100;
