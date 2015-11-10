@@ -16,7 +16,7 @@ $(document).ready(function($) {
     //   " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
   $(function() {
-    $( "#spinner" ).spinner({
+    $( ".spinner" ).spinner({
       spin: function( event, ui ) {
         if ( ui.value > 10 ) {
           $( this ).spinner( "value", -10 );

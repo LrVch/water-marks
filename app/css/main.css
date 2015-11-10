@@ -2433,7 +2433,7 @@ body .ui-tooltip {
 
 .ui-slider-handle.ui-state-default.ui-corner-all {
   background: 0 none;
-  background: url('../img/icons-s263fdc9ffe.png') 0 0 no-repeat;
+  background: url('../img/icons-seb67c0e935.png') 0 -86px no-repeat;
   height: 25px;
   width: 25px;
   top: -9px;
@@ -2454,12 +2454,6 @@ body .ui-tooltip {
   box-sizing: border-box;
   border: 0 none;
   margin: 0;
-}
-
-.ui-state-default .ui-icon {
-  background: url('../img/icons-spinner-s3946c6a847.png') 0 -78px no-repeat;
-  height: 8px;
-  width: 13px;
 }
 
 html {
@@ -2560,11 +2554,23 @@ body {
   right: 21px;
   width: 40px;
   height: 26px;
-  background: #f97e76 url(../img/img-add.png) center center no-repeat;
+  background: #f97e76;
   background-position-x: 3px;
   border-radius: 0 4px 4px 0;
   box-sizing: border-box;
   padding-left: 5px;
+}
+.block-right__fileupload:after {
+  content: '';
+  background: url('../img/icons-seb67c0e935.png') 0 0 no-repeat;
+  height: 16px;
+  width: 21px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
 }
 
 .fileupload {
@@ -2642,7 +2648,7 @@ body {
   background: #f97e76;
 }
 
-.block-right-place__table .block-right__radio-elem {
+input.block-right__radio + .block-right__radio-elem {
   box-sizing: border-box;
   border: 1px solid #9eb2c0;
   width: 33px;
@@ -2658,11 +2664,11 @@ body {
 
 .block-right__last {
   padding: 0 16px;
+  position: relative;
 }
 
 .block-right__btn {
   padding-top: 56px;
-  position: relative;
 }
 .block-right__btn .btn {
   border: none;

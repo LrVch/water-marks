@@ -84,11 +84,16 @@ body{
 	right: 21px;
     width: 40px;
     height: 26px;
-    background: $pink url(../img/img-add.png) center center no-repeat;
+    background: $pink;
     background-position-x: 3px;
     border-radius:  0 4px 4px 0;
     box-sizing: border-box;
     padding-left: 5px;
+    &:after{
+    	content: '';
+    	@include  get-sprite($misc-sprite, img-add);
+    	@include absolute-center;
+    }
 }
 .fileupload{/* хак, взятый из html5boilerplate */
 	border: 0;
@@ -154,25 +159,23 @@ body{
 		background:$pink;
 	}
 }
-.block-right-place__table{
-	.block-right__radio-elem{
-		box-sizing: border-box;
-		border: 1px solid #9eb2c0;;
-		width:33px;
-		height:33px;
-		background:#dbe1e8;
-		@include inlineblock(top);
-		}
+input.block-right__radio +.block-right__radio-elem{
+	box-sizing: border-box;
+	border: 1px solid #9eb2c0;;
+	width:33px;
+	height:33px;
+	background:#dbe1e8;
+	@include inlineblock(top);
 }
 .slider-elem{
 	margin-bottom: 32px;
 }
 .block-right__last{
 	padding: 0 16px;
+	position: relative;
 }
 .block-right__btn{
 	padding-top: 56px;
-	position: relative;
 	.btn{
 		border: none;
 		@include border-radius(3px);
