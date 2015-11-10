@@ -77,10 +77,9 @@ body{
 		left: 0;
 		@include  get-sprite($misc-sprite, border-b);
 	}
-	&:first-child{
-		.block-right__form:after{
-			content:'';
-			background:none;
+	&:nth-child(2){
+		&:after{
+			display: none;
 		}
 	}
 }

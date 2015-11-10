@@ -2446,12 +2446,17 @@ body .ui-tooltip {
 }
 
 .ui-spinner-input {
-  width: 70px;
+  width: 45px;
   height: 45px;
   line-height: 44px;
   box-sizing: border-box;
-  border: 0 none;
-  margin: 0;
+  border: 1px solid #9eb2c0;
+  margin-right: 22px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .ui-state-highlight,
@@ -2612,9 +2617,8 @@ body {
   height: 11px;
   width: 259px;
 }
-.block-right__form:first-child .block-right__form:after {
-  content: '';
-  background: none;
+.block-right__form:nth-child(2):after {
+  display: none;
 }
 
 .block-right__lbl {
