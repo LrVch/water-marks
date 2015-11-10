@@ -47,7 +47,7 @@ body{
 .block-left__main{
 	width: 654px;
 	height: 535px;
-	background:#fff url("../img/bg.jpg") center center no-repeat;
+	background:#fff url("../img/bg.png") center center;
 }
 // Блок Изображения
 .block-left__img{
@@ -69,7 +69,20 @@ body{
 }
 .block-right__form{
 	padding:0 21px; 
-	border-bottom: 1px solid $pink;	
+	position: relative;
+	&:after{
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include  get-sprite($misc-sprite, border-b);
+	}
+	&:first-child{
+		.block-right__form:after{
+			content:'';
+			background:none;
+		}
+	}
 }
 .block-right__lbl{
 	display: block;
@@ -158,10 +171,13 @@ body{
 		border: 1px solid $pink;
 		background:$pink;
 	}
+	&:disabled +.block-right__radio-elem{
+		background:#4f606c;
+	}
 }
 input.block-right__radio +.block-right__radio-elem{
 	box-sizing: border-box;
-	border: 1px solid #9eb2c0;;
+	border: 1px solid #9eb2c0;
 	width:33px;
 	height:33px;
 	background:#dbe1e8;

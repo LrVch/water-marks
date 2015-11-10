@@ -36,7 +36,7 @@ html(lang="ru-RU")
 						.block-right-place__table
 							-for (var i=0; i<9; i++)
 								label.block-right-place__lbl
-									input.block-right__radio(type="radio" class="block-right__radio_"+i checked=((i==0)? true : false))
+									input.block-right__radio(type="radio" name="radio_btn" class="block-right__radio_"+i checked=((i==0)? true : false))
 									.block-right__radio-elem
 						.block-right-place__left
 							-var items=['x','y']
@@ -46,7 +46,7 @@ html(lang="ru-RU")
 				.block-right__form
 					.block-right__form-title.sidebar Прозрачность
 					#slider-range.slider-elem
-				.block-right__last
+				.block-right__last.block-right__form
 					.block-right__btn
 						button.btn.btn__clear(type='reset') Сброс
 						button.btn.btn__save(type='submit') Скачать

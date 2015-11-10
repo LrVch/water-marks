@@ -37,3 +37,71 @@
 	// @include get-sprite($spinner-sprite, up);
 	
 }
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight{
+	background:0 none;
+}
+.ui-state-default .ui-icon{
+	background:none;
+	margin-top: -4px;
+	
+}
+.ui-spinner .ui-icon-triangle-1-s{
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-top: 9px solid #c0ccd6;
+		border-left: 9px solid transparent;
+		border-right: 9px solid transparent;
+		&:hover{
+		  	border-color: red;
+		  }
+		}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 1px;
+		top: 0;
+		border-top: 8px solid #eeeeee;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+
+		&:hover{
+		  	color: red;
+		  }
+		}
+}
+.ui-spinner .ui-icon-triangle-1-n{
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-bottom: 9px solid #c0ccd6;
+		border-left: 9px solid transparent;
+		border-right: 9px solid transparent;
+		}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 1px;
+		top: 1px;
+		border-bottom: 8px solid #eeeeee;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		}
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border:0 none;
+}
+.ui-state-hover{
+	border: 0 none;
+	color: red;
+	background:none;
+}
+// }
