@@ -9,17 +9,7 @@ html(lang="ru-RU")
 		// стили для qtip2
 		link(rel="stylesheet",href="css/vendor/jquery.qtip.min.css")
 		link(rel="stylesheet",href="css/main.css")
-		script(type="text/javascript" src="bower/jquery/jquery.min.js")
-		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
-		// для загрузки картинок
-		script(type="text/javascript" src="js/plugins/jquery.fileupload.js")
-		script(type="text/javascript" src="js/plugins/jquery.iframe-transport.js")
-		script(type="text/javascript" src="js/plugins/jquery.qtip.min.js")
-		script(type="text/javascript" src="js/plugins/jquery.ui.widget.js")
-		script(type="text/javascript" src="js/loadimages.js")
-		// END для загрузки кртинок
-		script(type="text/javascript" src="js/position.js")
-		script(type="text/javascript" src="js/main.js")
+		
 	body
 		.wrapper
 			.block-left
@@ -40,7 +30,7 @@ html(lang="ru-RU")
 								label.block-right__fileupload
 										input.fileupload(id="fileupload-"+count type="file" name="files[]" placeholder="Image.jpg" data-url="php/" multiple disabled=((count == 2) ? true : false))
 										input.fileurl(type="hidden" name="fileurl" placeholder="Image.jpg")
-									input(class="block-right__input block-right__input_" + count type="text" name="img-name" disabled)
+									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg")
 				.block-right__form
 					.block-right__form-title Положение
 					.block-right-place
@@ -53,12 +43,23 @@ html(lang="ru-RU")
 							-var items=['x','y']
 								each item, indx in items
 									label(for="spinner_" + indx)=item
-										input(id='spinner_' + indx name='value')
+										input(id='spinner_' + indx name='value' readonly)
 				.block-right__form
 					.block-right__form-title.sidebar Прозрачность
 					#slider-range.slider-elem
 				.block-right__last
 					.block-right__btn
-						button.btn.btn__clear(type='reset') Сброс
-						button.btn.btn__save(type='submit') Скачать
+						button.btn.btn__clear(type='reset' disabled) Сброс
+						button.btn.btn__save(type='submit' disabled) Скачать
 		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+		script(type="text/javascript" src="bower/jquery/jquery.min.js")
+		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
+		// для загрузки картинок
+		script(type="text/javascript" src="js/plugins/jquery.fileupload.js")
+		script(type="text/javascript" src="js/plugins/jquery.iframe-transport.js")
+		script(type="text/javascript" src="js/plugins/jquery.qtip.min.js")
+		script(type="text/javascript" src="js/plugins/jquery.ui.widget.js")
+		script(type="text/javascript" src="js/loadimages.js")
+		// END для загрузки кртинок
+		script(type="text/javascript" src="js/position.js")
+		script(type="text/javascript" src="js/main.js")

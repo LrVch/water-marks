@@ -9,17 +9,6 @@
 		<!-- стили для qtip2-->
 		<link rel="stylesheet" href="css/vendor/jquery.qtip.min.css">
 		<link rel="stylesheet" href="css/main.css">
-		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
-		<script type="text/javascript" src="js/plugins/jquery-ui.min.js"></script>
-		<!-- для загрузки картинок-->
-		<script type="text/javascript" src="js/plugins/jquery.fileupload.js"></script>
-		<script type="text/javascript" src="js/plugins/jquery.iframe-transport.js"></script>
-		<script type="text/javascript" src="js/plugins/jquery.qtip.min.js"></script>
-		<script type="text/javascript" src="js/plugins/jquery.ui.widget.js"></script>
-		<script type="text/javascript" src="js/loadimages.js"></script>
-		<!-- END для загрузки кртинок-->
-		<script type="text/javascript" src="js/position.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -40,13 +29,13 @@
 						<input id="fileupload-1" type="file" name="files[]" placeholder="Image.jpg" data-url="php/" multiple class="fileupload">
 						<input type="hidden" name="fileurl" placeholder="Image.jpg" class="fileurl">
 					</label>
-					<input type="text" name="img-name" disabled class="block-right__input block-right__input_1">
+					<input type="text" name="img-name" readonly value="image.jpg" class="block-right__input block-right__input_1">
 					<label class="block-right__lbl">Водяной знак</label>
 					<label class="block-right__fileupload">
 						<input id="fileupload-2" type="file" name="files[]" placeholder="Image.jpg" data-url="php/" multiple disabled class="fileupload">
 						<input type="hidden" name="fileurl" placeholder="Image.jpg" class="fileurl">
 					</label>
-					<input type="text" name="img-name" disabled class="block-right__input block-right__input_2">
+					<input type="text" name="img-name" readonly value="image.jpg" class="block-right__input block-right__input_2">
 				</div>
 				<div class="block-right__form">
 					<div class="block-right__form-title">Положение</div>
@@ -91,9 +80,9 @@
 						</div>
 						<div class="block-right-place__left">
 							<label for="spinner_0">x
-								<input id="spinner_0" name="value"></label>
+								<input id="spinner_0" name="value" readonly></label>
 							<label for="spinner_1">y
-								<input id="spinner_1" name="value"></label>
+								<input id="spinner_1" name="value" readonly></label>
 						</div>
 					</div>
 				</div>
@@ -103,12 +92,23 @@
 				</div>
 				<div class="block-right__last">
 					<div class="block-right__btn">
-						<button type="reset" class="btn btn__clear">Сброс</button>
-						<button type="submit" class="btn btn__save">Скачать</button>
+						<button type="reset" disabled class="btn btn__clear">Сброс</button>
+						<button type="submit" disabled class="btn btn__save">Скачать</button>
 					</div>
 				</div>
 			</form>
 		</div>
 		<div class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
+		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/plugins/jquery-ui.min.js"></script>
+		<!-- для загрузки картинок-->
+		<script type="text/javascript" src="js/plugins/jquery.fileupload.js"></script>
+		<script type="text/javascript" src="js/plugins/jquery.iframe-transport.js"></script>
+		<script type="text/javascript" src="js/plugins/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="js/plugins/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/loadimages.js"></script>
+		<!-- END для загрузки кртинок-->
+		<script type="text/javascript" src="js/position.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
