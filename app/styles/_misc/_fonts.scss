@@ -1,10 +1,26 @@
-@mixin segoe($style:regular){
-	font-family: 'segoe';
+// @mixin segoe($style:regular){
+// 	font-family: 'SegoeUI-Light';
+
+// 	@if ($style==light){
+// 		font-weight: 100;
+// 	}
+// 	@if ($style==regular){
+// 		font-weight: 400;
+// 	}
+// 	@if ($style==semibold){
+// 		font-weight: 600;
+// 	}
+// 	@if ($style==bold){
+// 		font-weight: 700;
+// 	}
+// }
+@mixin roboto($style:medium){
+	font-family: 'Roboto', sans-serif;
 
 	@if ($style==light){
 		font-weight: 100;
 	}
-	@if ($style==regular){
+	@if ($style==medium){
 		font-weight: 400;
 	}
 	@if ($style==semibold){
