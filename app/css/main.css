@@ -2447,7 +2447,7 @@ body .ui-tooltip {
 
 .ui-spinner-input {
   width: 70px;
-  height: 46px;
+  height: 45px;
   line-height: 44px;
   box-sizing: border-box;
   border: 0 none;
@@ -2474,9 +2474,6 @@ body .ui-tooltip {
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
 }
-.ui-spinner .ui-icon-triangle-1-s:before:hover {
-  border-color: red;
-}
 .ui-spinner .ui-icon-triangle-1-s:after {
   content: '';
   position: absolute;
@@ -2485,9 +2482,6 @@ body .ui-tooltip {
   border-top: 8px solid #eeeeee;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-}
-.ui-spinner .ui-icon-triangle-1-s:after:hover {
-  color: red;
 }
 
 .ui-spinner .ui-icon-triangle-1-n:before {
@@ -2519,6 +2513,11 @@ body .ui-tooltip {
   border: 0 none;
   color: red;
   background: none;
+}
+
+.block-right-place__left .ui-widget-content, .ui-widget-content .ui-state-default {
+  background: none;
+  border: 0 none;
 }
 
 html {
