@@ -2,7 +2,7 @@ doctype html
 html(lang="ru-RU")
 	head
 		meta(charset="UTF-8")
-		meta(http-equiv="X-UA-Compatibl",content="IE=edge")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="initial-scale=1.0, width=device-width")
 		title Team Dream
 		//- Favicon
@@ -46,7 +46,7 @@ html(lang="ru-RU")
 								label.block-right__lbl=item
 								label.block-right__fileupload
 										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/" multiple disabled=((count == 2) ? true : false))
-										input.fileurl(type="hidden" name="fileurl" placeholder="Image.jpg")
+										input.fileurl(type="hidden" name="fileurl")
 									input.block-right__input(type="text" name="img-name" readonly value="image.jpg")
 				.block-right__form
 					.block-right__form-title Положение
@@ -55,7 +55,7 @@ html(lang="ru-RU")
 							-for (var i=0; i<9; i++)
 								label.block-right-place__lbl
 									input.block-right__radio(type="radio" name="radio_btn" class="block-right__radio_"+i disabled checked=((i==0)? true : false))
-									.block-right__radio-elem
+									span.block-right__radio-elem
 						.block-right-place__left
 							-var items=['X','Y']
 								each item, indx in items

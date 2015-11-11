@@ -2720,15 +2720,6 @@ body {
   font-size: 12px;
   background: #f1f1f5;
 }
-.block-right__input::-webkit-input-placeholder {
-  color: #9eb2c0;
-}
-.block-right__input::-moz-placeholder {
-  color: #9eb2c0;
-}
-.block-right__input::-ms-input-placeholder {
-  color: #9eb2c0;
-}
 .block-right__input:last-child {
   margin-bottom: 31px;
 }

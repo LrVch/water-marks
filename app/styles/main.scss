@@ -141,7 +141,6 @@ body{
     font-family: "SegoeUI-Light";
     font-size: 12px;
     background:#f1f1f5;
-    @include placeholder(#9eb2c0);
     &:last-child{
     	margin-bottom: 31px;
     }
