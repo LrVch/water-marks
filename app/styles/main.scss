@@ -164,6 +164,7 @@ body{
 .block-right-place{
 	@include clearfix;
 	margin-bottom: 27px;
+	margin-right: -2px;
 	display: block;
 }
 .block-right-place__table{
@@ -246,7 +247,7 @@ input.block-right__radio +.block-right__radio-elem{
 //спинер
 .block-right-place__left{
 	float: right;
-	width: 94px;
+	width: 96px;
 	@include  roboto(light);
 	color: #2e3641;
 	// margin-left: -4px;

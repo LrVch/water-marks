@@ -2754,6 +2754,7 @@ body {
   overflow: hidden;
   *zoom: 1;
   margin-bottom: 27px;
+  margin-right: -2px;
   display: block;
 }
 
@@ -2851,7 +2852,7 @@ input.block-right__radio + .block-right__radio-elem {
 
 .block-right-place__left {
   float: right;
-  width: 94px;
+  width: 96px;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   color: #2e3641;
