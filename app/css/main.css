@@ -2454,6 +2454,7 @@ body .ui-tooltip {
   box-sizing: border-box;
   border: 1px solid #9eb2c0;
   margin-right: 22px;
+  font-family: "SegoeUI-Light";
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -2557,6 +2558,12 @@ body .ui-tooltip {
   margin-bottom: 6px;
 }
 
+@font-face {
+  font-family: 'SegoeUI-Light';
+  src: url("../fonts/SegoeUI-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUI-Light.woff") format("woff"), url("../fonts/SegoeUI-Light.ttf") format("truetype"), url("../fonts/SegoeUI-Light.svg#SegoeUI-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   height: 100%;
 }
@@ -2611,18 +2618,16 @@ body {
 }
 
 .block-left__main {
+  position: relative;
   width: 654px;
   height: 533px;
   background: #fff url("../img/bg.png") center center;
 }
 
 .block-left__img {
-  width: 220px;
-  height: 220px;
-}
-.block-left__img .watermark {
-  width: 100%;
-  cursor: pointer;
+  width: 650px;
+  /*╨╕╨╖╨╝╨╡╨╜╨╕╨╗ ╨а╨╛╨╝╨░╨╜*/
+  height: auto;
 }
 
 .block-right__title {
@@ -2687,6 +2692,9 @@ body {
   position: absolute;
   margin: auto;
 }
+.block-right__fileupload:disabled {
+  color: #fbaca7;
+}
 
 .fileupload {
   /* ╤Е╨░╨║, ╨▓╨╖╤П╤В╤Л╨╣ ╨╕╨╖ html5boilerplate */
@@ -2711,6 +2719,9 @@ body {
   padding-left: 5px;
   color: #9eb2c0;
   margin-bottom: 24px;
+  font-family: "SegoeUI-Light";
+  font-size: 12px;
+  background: #f1f1f5;
 }
 .block-right__input::-webkit-input-placeholder {
   color: #9eb2c0;
@@ -2775,7 +2786,8 @@ body {
   background: #f97e76;
 }
 .block-right__radio:disabled + .block-right__radio-elem {
-  background: #4f606c;
+  background: #e5ecf4;
+  border-color: #9eb2c0;
 }
 
 input.block-right__radio + .block-right__radio-elem {
@@ -2826,9 +2838,15 @@ input.block-right__radio + .block-right__radio-elem {
 .btn__clear {
   float: left;
 }
+.btn__clear:disabled {
+  background: #d8e4ed;
+}
 
 .btn__save {
   float: right;
+}
+.btn__save:disabled {
+  background: #fcb1ac;
 }
 
 .block-right-place__left {
@@ -2852,4 +2870,10 @@ input.block-right__radio + .block-right__radio-elem {
   color: #fff;
   font-size: 12px;
   font-family: 'Fira Sans', sans-serif;
+}
+
+input:focus,
+button:focus,
+a:focus {
+  outline: 0;
 }

@@ -1,9 +1,9 @@
 doctype html
 html(lang="ru-RU")
 	head
-		meta(charser="UTF-8")
+		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatibl",content="IE=edge")
-		meta(name="viewport" content="device-width")
+		meta(name="viewport" content="initial-scale=1.0, width=device-width")
 		title Team Dream
 		//- Favicon
 		link(rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png")
@@ -23,13 +23,11 @@ html(lang="ru-RU")
 		meta(name="msapplication-config" content="favicon/browserconfig.xml")
 		meta(name="theme-color" content="#ffffff")
 		link(href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css')
-		link(href="fonts/segoe.css" rel='stylesheet' type='text/css')
-		link(href="fonts/roboto.css" rel='stylesheet' type='text/css')
+		link(href="fonts/styles.css" rel='stylesheet' type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Fira+Sans:300&subset=cyrillic,cyrillic-ext' rel='stylesheet' type='text/css')
+		//- стили для qtip2
+		link(rel="stylesheet",href="css/vendor/jquery.qtip.min.css")
 		link(rel="stylesheet" href="css/main.css")
-		script(type="text/javascript" src="bower/jquery/jquery.min.js")
-		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
-		script(type="text/javascript" src="js/main.js")
 	body
 		.wrapper
 			.block-left
@@ -37,7 +35,7 @@ html(lang="ru-RU")
 				.block-left__main
 					.block-left__wrapper-img
 						#draggable.block-left__img
-							img(src='img/watermark.png' alt='').watermark
+							img(src='img/bg.jpg' alt='').watermark
 			form.block-right
 				.block-right__title Настройки
 				.block-right__form
@@ -47,27 +45,38 @@ html(lang="ru-RU")
 							-var count=indx+i
 								label.block-right__lbl=item
 								label.block-right__fileupload
-										input.fileupload(id="fileupload_"+count type="file" name="files[]" placeholder="Image.jpg" data-url="server/php/" multiple disabled=((count == 2) ? true : false))
-										input#fileurl.fileurl(type="hidden" name="fileurl" placeholder="Image.jpg")
-									input.block-right__input(type="text" name="img-name")
+										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/" multiple disabled=((count == 2) ? true : false))
+										input.fileurl(type="hidden" name="fileurl" placeholder="Image.jpg")
+									input.block-right__input(type="text" name="img-name" readonly value="image.jpg")
 				.block-right__form
 					.block-right__form-title Положение
 					.block-right-place
 						.block-right-place__table
 							-for (var i=0; i<9; i++)
 								label.block-right-place__lbl
-									input.block-right__radio(type="radio" name="radio_btn" class="block-right__radio_"+i checked=((i==0)? true : false))
+									input.block-right__radio(type="radio" name="radio_btn" class="block-right__radio_"+i disabled checked=((i==0)? true : false))
 									.block-right__radio-elem
 						.block-right-place__left
 							-var items=['X','Y']
 								each item, indx in items
-									label(for="spinner")=item
-										input(id='spinner' class='spinner' name='value')
+									label(for="spinner_"+indx)=item
+										input(id='spinner_'+indx class='spinner' name='value' readonly)
 				.block-right__form
 					.block-right__form-title.sidebar Прозрачность
 					#slider-range.slider-elem
 				.block-right__last.block-right__form
 					.block-right__btn
-						button.btn.btn__clear(type='reset') Сброс
-						button.btn.btn__save(type='submit') Скачать
+						button.btn.btn__clear(type='reset' disabled) Сброс
+						button.btn.btn__save(type='submit' disabled) Скачать
 		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+		script(type="text/javascript" src="bower/jquery/jquery.min.js")
+		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
+		//- для загрузки картинок
+		script(type="text/javascript" src="js/plugins/jquery.fileupload.js")
+		script(type="text/javascript" src="js/plugins/jquery.iframe-transport.js")
+		script(type="text/javascript" src="js/plugins/jquery.qtip.min.js")
+		script(type="text/javascript" src="js/plugins/jquery.ui.widget.js")
+		script(type="text/javascript" src="js/loadimages.js")
+		//- END для загрузки кртинок
+		script(type="text/javascript" src="js/position.js")
+		script(type="text/javascript" src="js/main.js")

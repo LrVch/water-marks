@@ -9,9 +9,9 @@ $(document).ready(function($) {
       //   $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
       // }
     });
-     $(function() {
-      $( "#draggable" ).draggable();
-    });
+    //  $(function() {
+    //   $( "#draggable" ).draggable();
+    // });
     // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
     //   " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
