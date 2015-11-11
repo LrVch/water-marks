@@ -29,14 +29,20 @@ var loadImages = (function () {
 				//console.log(data);
 				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 					console.log("isn't image"); // показываем предупреждение что не картинка
-					//_createQtip($('#fileupload-1'), "Загрузить можно только картинку");
+					$(".block-right__input_1").tooltip({
+						content: 'Загрузить можно только картинку',
+						position: 'top'
+					});
 
 					return;
 				}
 
 				if (imgSize > 2000000) {
 					console.log("to big"); // показываем предупреждение что картинка слишком большая
-					//_createQtip($('#fileupload-1'), "Максимальный размет 2Мб");
+					$(".block-right__input_1").tooltip({
+						content: 'Максимальный размер 2Мб',
+						position: 'top'
+					});
 
 					return;
 				}
@@ -50,7 +56,7 @@ var loadImages = (function () {
 			done: function (e, data) {
 				$.when($('.block-left__wrapper-img').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
 					_createMainImg(data, container);
-					reset.startReset();
+					//reset.startReset();
 				});
 			},
 			fail: function (e, data) {
@@ -62,6 +68,7 @@ var loadImages = (function () {
 			change: function (e, data) {
 				//console.log(data);
 				$(".block-right__input_1").val(data.files[0].name);
+				$('.tooltip').remove();
 			}
 		});
 	}
@@ -80,11 +87,21 @@ var loadImages = (function () {
 
 				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 					console.log("isn't image"); // показываем предупреждение что не картинка
+					$(".block-right__input_2").tooltip({
+						content: 'Загрузить можно только картинку',
+						position: 'top'
+					});
+
 					return;
 				}
 
 				if (imgSize > 2000000) {
 					console.log("to big"); // показываем предупреждение что картинка слишком большая
+					$(".block-right__input_2").tooltip({
+						content: 'Максимальный размер 2Мб',
+						position: 'top'
+					});
+
 					return;
 				}
 
@@ -105,6 +122,7 @@ var loadImages = (function () {
 			},
 			change: function (e, data) {
 				//console.log(data);
+				$('.tooltip').remove();
 				$(".block-right__input_2").val(data.files[0].name);
 			}
 		});
@@ -203,11 +221,17 @@ var loadImages = (function () {
 
 		if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
 			console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
+			$(".block-right__input_2").tooltip({
+				content: 'вотемарк больше исходной картинки',
+				position: 'top'
+			});
 			return;
 		}
+		
+		$('.tooltip').remove();
 
 		if ($('.watermark-img-wrapper')) {
-			$.when($('.watermark-img-wrapper').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
+			$.when($('.watermark-img-wrapper').fadeOut()).then(function () {
 				$('.watermark-img-wrapper').remove();
 				var html = _createMarkup();
 				html.appendTo(mainImgWrapper); // вставка картинки в картинку
@@ -254,41 +278,6 @@ var loadImages = (function () {
 			return waterImgWrapper;
 		}
 
-	}
-	// тултипы
-	function _createQtip(element, content) { // Создаёт тултипы
-
-		// позиция тултипа
-		var position = {
-			my: 'right center',
-			at: 'left center',
-			adjust: {
-				method: 'shift none'
-			}
-		};
-
-		// инициализация тултипа
-		element.qtip({
-			content: {
-				text: function () {
-					return content;
-				}
-			},
-			show: {
-				event: 'show'
-			},
-			hide: {
-				event: 'click hideTooltip'
-			},
-			position: position,
-			style: {
-				classes: 'myclass qtip-rounded',
-				tip: {
-					height: 10,
-					width: 16
-				}
-			}
-		}).trigger('show');
 	}
 	// функция передачи сгенерированного элемента
 	function _returnWatermark(elem) {
@@ -539,6 +528,7 @@ var reset = (function () {
 	function _setUpListners() {
 		$('.btn__clear').on('click', reset);
 		$('#fileupload-2').on("change", reset);
+		$('#fileupload-1').on("change", reset);
 	};
 
 	function _modules() {
@@ -551,43 +541,45 @@ var reset = (function () {
 	}
 
 	function reset(e) {
+		e.preventDefault();
 		var
 			startCheck = $(".block-right__radio_0"),
 			waterImgWrapper = $(".watermark-img-wrapper");
 
-		e.preventDefault();
-		$.when(waterImgWrapper.fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
-			waterImgWrapper.css({
-				"top": 0,
-				"left": 0
-			}).fadeIn();
-		});
-		startCheck.attr("checked", "checked");
-		$("#spinner_0").spinner("value", 0);
-		$("#spinner_1").spinner("value", 0);
+		if (this.id != "fileupload-1") {
 
+			$.when(waterImgWrapper.fadeOut()).then(function () {
+				waterImgWrapper.css({
+					"top": 0,
+					"left": 0
+				}).fadeIn();
+			});
+			startCheck.attr("checked", "checked");
+			$("#spinner_0").spinner("value", 0);
+			$("#spinner_1").spinner("value", 0);
+		} else {
+
+			$(".block-right__radio_0").attr("checked", "checked");
+			$(".block-right-place__table").find("input").attr("disabled", "disabled");
+			$('.btn__clear').attr("disabled", "disabled");
+			$('.btn__save').attr("disabled", "disabled");
+			$(".block-right__input_2").val("image.jpg");
+			$("#spinner_0").spinner("value", 0);
+			$("#spinner_1").spinner("value", 0);
+			$("#spinner_0").spinner({
+				disabled: true,
+				value: 0
+			});
+			$("#spinner_1").spinner({
+				disabled: true,
+				value: 0
+			});
+		}
 	};
 
-	function startReset() { // сброс при повторной загрузке большого изображения
-		$(".block-right__radio_0").attr("checked", "checked");
-		$(".block-right-place__table").find("input").attr("disabled", "disabled");
-		$('.btn__clear').attr("disabled", "disabled");
-		$('.btn__save').attr("disabled", "disabled");
-		$("#spinner_0").spinner("value", 0);
-		$("#spinner_1").spinner("value", 0);
-		$("#spinner_0").spinner({
-			disabled: true,
-			value: 0
-		});
-		$("#spinner_1").spinner({
-			disabled: true,
-			value: 0
-		});
-	}
 
 	return {
-		init: init,
-		startReset: startReset
+		init: init
 	};
 
 })();
