@@ -2712,6 +2712,15 @@ body {
   color: #9eb2c0;
   margin-bottom: 24px;
 }
+.block-right__input::-webkit-input-placeholder {
+  color: #9eb2c0;
+}
+.block-right__input::-moz-placeholder {
+  color: #9eb2c0;
+}
+.block-right__input::-ms-input-placeholder {
+  color: #9eb2c0;
+}
 .block-right__input:last-child {
   margin-bottom: 31px;
 }
@@ -2833,7 +2842,7 @@ input.block-right__radio + .block-right__radio-elem {
 }
 
 .footer {
-  height: 30px;
+  height: 40px;
   padding-top: 10px;
   position: absolute;
   bottom: 0;

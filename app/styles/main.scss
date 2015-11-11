@@ -130,6 +130,7 @@ body{
     padding-left: 5px;
     color: $grey;
     margin-bottom: 24px;
+    @include placeholder(#9eb2c0);
     &:last-child{
     	margin-bottom: 31px;
     }
@@ -232,7 +233,7 @@ input.block-right__radio +.block-right__radio-elem{
 }
 	
 .footer{
-	height: 30px;
+	height: 40px;
 	padding-top: 10px;
     position: absolute;
     bottom: 0;
