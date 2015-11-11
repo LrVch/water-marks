@@ -53,7 +53,7 @@ body{
 }
 .block-left__main{
 	position: relative;
-	width: 654px;
+	width: 650px;
 	height: 533px;
 	background:#fff url("../img/bg.png") center center;
 }
@@ -115,9 +115,7 @@ body{
     	@include  get-sprite($misc-sprite, img-add);
     	@include absolute-center;
     }
-    &:disabled{
-		color:lighten($pink, 10%);
-    }
+    
 }
 .fileupload{/* хак, взятый из html5boilerplate */
 	border: 0;
@@ -247,7 +245,7 @@ input.block-right__radio +.block-right__radio-elem{
 //спинер
 .block-right-place__left{
 	float: right;
-	width: 96px;
+	width: 101px;
 	@include  roboto(light);
 	color: #2e3641;
 	// margin-left: -4px;

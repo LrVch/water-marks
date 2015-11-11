@@ -2619,7 +2619,7 @@ body {
 
 .block-left__main {
   position: relative;
-  width: 654px;
+  width: 650px;
   height: 533px;
   background: #fff url("../img/bg.png") center center;
 }
@@ -2691,9 +2691,6 @@ body {
   bottom: 0;
   position: absolute;
   margin: auto;
-}
-.block-right__fileupload:disabled {
-  color: #fbaca7;
 }
 
 .fileupload {
@@ -2852,7 +2849,7 @@ input.block-right__radio + .block-right__radio-elem {
 
 .block-right-place__left {
   float: right;
-  width: 96px;
+  width: 101px;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   color: #2e3641;
