@@ -295,7 +295,7 @@ var loadImages = (function () {
 		position.init(); // активируем модуль позиционирования и передаем элемент
 		reset.init(imgWidth, imgHeight); // активируем ресет
 		opacity.init(); // активируем прозрачность
-	   // ативируем скачивание
+		download.init(); // ативируем скачивание
 		//load(); // ативируем скачивание
 		return;
 	}
