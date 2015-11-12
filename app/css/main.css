@@ -2866,3 +2866,81 @@ button:focus,
 a:focus {
   outline: 0;
 }
+
+.social {
+  position: fixed;
+  font-size: 0;
+}
+
+.social__buttons {
+  display: inline-block;
+  background-color: #d5d2d1;
+}
+
+.buttons-fb-a {
+  display: block;
+  cursor: pointer;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 14px -60px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.buttons-fb-a:hover {
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 14px 7px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.buttons-fb-a:focus, .buttons-fb-a:active {
+  outline: 0;
+}
+
+.buttons-tw-a {
+  display: block;
+  cursor: pointer;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 7.5px -348.5px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.buttons-tw-a:hover {
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 7.5px -286.5px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.buttons-tw-a:focus, .buttons-tw-a:active {
+  outline: 0;
+}
+
+.buttons-vk-a {
+  display: block;
+  cursor: pointer;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 5.5px -466.5px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.buttons-vk-a:hover {
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 5.5px -408.5px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.buttons-vk-a:focus, .buttons-vk-a:active {
+  outline: 0;
+}
+
+.social__show-button {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social__show-button-a {
+  display: block;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 0 -215px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.social__show-button-a:hover {
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 0 -134px no-repeat;
+  width: 43px;
+  height: 41px;
+}
+.social__show-button-a:focus, .social__show-button-a:active {
+  outline: 0;
+}
