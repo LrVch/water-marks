@@ -4,3 +4,15 @@ mixin nav(className, items, activeInd)
 			each item, indx in items
 				li(class=className + "__item"+((activeInd==indx) ? " "+className +"__item"+"_active": ""))
 					a(href="#" class=className + "__link")= item
+
+mixin addSocialButtons(offsetY, Title, pathToImg, text)
+	div(class="social" style="top:" + offsetY + "px;")
+		.social__buttons
+			.buttons-fb
+				a(target="_blank" onclick="return Share.fb();").buttons-fb-a
+			.buttons-tw
+				a(target="_blank" onclick="return Share.tw();").buttons-tw-a
+			.buttons-vk
+				a(target="_blank" onclick="return Share.vk();").buttons-vk-a
+		.social__show-button
+			a(href="#").social__show-button-a

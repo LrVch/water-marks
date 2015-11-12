@@ -1,0 +1,54 @@
+@mixin get-spriteEx ($map, $icon, $element-width, $element-height){
+  $sprite-image: sprite-file($map, $icon);
+  $iw:image-width($sprite-image);
+  $ih: image-height($sprite-image);
+  $sprite-map: sprite-url($map);
+  $ow: ($element-width - $iw)/2;
+  $oh: ($element-height - $ih)/2;
+  $sprite-position: sprite-position($map, $icon, $ow , $oh);
+  background: $sprite-map $sprite-position no-repeat;
+  width: $element-width;
+  height: $element-height;
+}
+
+.social {
+  position: fixed;
+  font-size:0;
+}
+.social__buttons {
+  display: inline-block;
+  background-color: #d5d2d1;
+}
+$socials: fb,tw,vk;
+$socials-map: sprite-map('../img/sbuttons/*.png',$spacing: 40px);
+
+@each $social in $socials {
+  .buttons-#{$social}-a {
+    display: block;
+    cursor: pointer;
+    @include get-spriteEx($socials-map,$social,43px,41px);
+    &:hover {
+      @include get-spriteEx($socials-map,$social+'-hover',43px,41px);
+    }
+    &:focus,&:active {
+      outline:0;
+    }
+  }
+}
+
+.social__show-button {
+  display: inline-block;
+  vertical-align: top;
+}
+.social__show-button-a {
+  display: block;
+  @include get-spriteEx($socials-map,like,43px,41px);
+  &:hover {
+    @include get-spriteEx($socials-map,like-hover,43px, 41px);
+  }
+  &:focus,&:active {
+    outline:0;
+  }
+
+}
+
