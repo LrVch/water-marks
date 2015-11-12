@@ -29,6 +29,8 @@ html(lang="ru-RU")
 		link(rel="stylesheet",href="css/vendor/tooltip.css")
 		link(rel="stylesheet" href="css/main.css")
 	body
+		include _common/mixin
+		+addSocialButtons('200','Сервис для наложения водяного знака',"img/wm480.jpg",'С помощью данного бесплатного онлайн сервиса вы может наложить водяной знак на ваши авторские изображения')
 		.wrapper
 			.block-left
 				.block-left__title Генератор водяных знаков
@@ -79,5 +81,5 @@ html(lang="ru-RU")
 		script(type="text/javascript" src="js/loadimages.js")
 		//- END для загрузки кртинок
 		script(type="text/javascript" src="js/position.js")
-		//
 		script(type="text/javascript" src="js/main.js")
+		script(type="text/javascript" src="js/sbuttons.js")
