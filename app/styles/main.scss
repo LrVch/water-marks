@@ -222,6 +222,9 @@ input.block-right__radio +.block-right__radio-elem{
 		@include  roboto(medium);
 		&.btn__clear{
 			background:$grey;
+			&:disabled{
+		    background:#d8e4ed;	
+	    }
 		}
 		&:focus{
 			overflow: hidden;
@@ -229,12 +232,13 @@ input.block-right__radio +.block-right__radio-elem{
 
 	}
 }
-.btn__clear{
+/*.btn__clear{
 	float:left;
+	background:$grey;
 	&:disabled{
 		background:#d8e4ed;	
 	}
-}
+}*/
 .btn__save{
 	float:right;
 	&:disabled{
