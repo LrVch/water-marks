@@ -47,7 +47,7 @@ html(lang="ru-RU")
 								label.block-right__fileupload
 										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/" multiple disabled=((count == 2) ? true : false))
 										input.fileurl(type="hidden" name="fileurl")
-									input.block-right__input(type="text" name="img-name" readonly value="image.jpg")
+									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg")
 				.block-right__form
 					.block-right__form-title Положение
 					.block-right-place
