@@ -295,7 +295,8 @@ var loadImages = (function () {
 		position.init(); // активируем модуль позиционирования и передаем элемент
 		reset.init(imgWidth, imgHeight); // активируем ресет
 		opacity.init(); // активируем прозрачность
-		load(); // ативируем скачивание
+	   // ативируем скачивание
+		//load(); // ативируем скачивание
 		return;
 	}
 
@@ -679,7 +680,7 @@ var opacity = (function () {
 
 })();
 
-function load() {
+/*function load() {
 	$('.btn__save')
 		.removeAttr("disabled")
 		.on("click", function (e) {
@@ -691,7 +692,7 @@ function load() {
 		  console.log("data-pos-y " + $(".watermark-img-wrapper").data('pos-y'));
 		  console.log("data-ratio " + $(".watermark-img").data('ratio'));
 		});
-}
+}*/
 
 
 
