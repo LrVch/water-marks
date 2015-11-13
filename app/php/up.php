@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   $img_size = $img['size'];
   
   if(!file_exists(__DIR__.'/../uploads/')){
-    mkdir(__DIR__.'/../uploads/', 777);
+    mkdir(__DIR__.'/../uploads/', 0777);
   }
   
   $file_dist = __DIR__.'/../uploads/'.$img_name;
