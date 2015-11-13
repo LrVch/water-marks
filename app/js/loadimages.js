@@ -23,8 +23,6 @@ var loadImages = (function () {
         var
           imgType = data.files[0].type,
           imgSize = data.files[0].size;
-        $('.block-right__fileupload_1').addClass("disabled");
-        $('#fileupload_2').attr("disabled", "disabled");
 
         //console.log(data);
         if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
@@ -47,6 +45,9 @@ var loadImages = (function () {
           return;
         }
 
+        $('.block-right__fileupload_1').addClass("disabled");
+        $('#fileupload_2').attr("disabled", "disabled");
+        
         data.formData = {
           img: data.files[0]
         }; //отправляем то что нам надо          
