@@ -17,7 +17,8 @@ var position = (function () {
 
 	// включение чекбоксов
 	function _unlockCheckbox() {
-		$(".block-right-place__table").find("input").removeAttr("disabled");
+		$(".block-right-place__table").find("input").removeAttr("disabled")
+    $(".block-right-place__lbl").css({"cursor": "pointer"});
 	}
 	// блок чекбоксов
 	function _checkBox(e) {

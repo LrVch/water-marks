@@ -2443,6 +2443,9 @@ body .ui-tooltip {
   display: none;
 }
 
+/*.ui-slider .ui-slider-handle {
+  cursor: pointer;
+}*/
 .ui-widget-header {
   background: #9eb2c0;
 }
@@ -2626,7 +2629,7 @@ body {
 
 .block-left__img {
   width: 650px;
-  /*╨╕╨╖╨╝╨╡╨╜╨╕╨╗ ╨а╨╛╨╝╨░╨╜*/
+  /*изменил Роман*/
   height: auto;
 }
 
@@ -2671,6 +2674,7 @@ body {
 .block-right__fileupload {
   display: block;
   position: absolute;
+  cursor: pointer;
   right: 20px;
   width: 38px;
   height: 27px;
@@ -2694,7 +2698,7 @@ body {
 }
 
 .fileupload {
-  /* ╤Е╨░╨║, ╨▓╨╖╤П╤В╤Л╨╣ ╨╕╨╖ html5boilerplate */
+  /* хак, взятый из html5boilerplate */
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -2820,17 +2824,20 @@ input.block-right__radio + .block-right__radio-elem {
 .block-right__btn .btn.btn__clear {
   background: #9eb2c0;
 }
+.block-right__btn .btn.btn__clear:disabled {
+  background: #d8e4ed;
+}
 .block-right__btn .btn:focus {
   overflow: hidden;
 }
 
-.btn__clear {
-  float: left;
-}
-.btn__clear:disabled {
-  background: #d8e4ed;
-}
-
+/*.btn__clear{
+	float:left;
+	background:$grey;
+	&:disabled{
+		background:#d8e4ed;	
+	}
+}*/
 .btn__save {
   float: right;
 }
@@ -2865,6 +2872,15 @@ input:focus,
 button:focus,
 a:focus {
   outline: 0;
+}
+
+.disabled {
+  background: #fcc3bf;
+  cursor: default;
+}
+
+.ui-slider .ui-slider-handle.ui-state-default.ui-corner-all.pointer {
+  cursor: pointer;
 }
 
 .social {

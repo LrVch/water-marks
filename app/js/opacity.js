@@ -25,6 +25,7 @@ var opacity = (function () {
 				$(".watermark-img").css("opacity", opacity).attr("data-opacity", opacity * 100)
 
 			});
+    $(".ui-slider .ui-slider-handle").addClass("pointer");
 	}
 
 	function sliderInit() {

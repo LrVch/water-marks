@@ -47,6 +47,8 @@ var reset = (function () {
 				disabled: true,
 				value: 100
 			});
+      $(".block-right-place__lbl").css({"cursor": "default"});
+      $(".ui-slider .ui-slider-handle").removeClass("pointer");
 		} else {
       $('.tooltip').remove();
 			$.when(waterImgWrapper.fadeOut()).then(function () {
