@@ -19,10 +19,13 @@ var download = (function () {
 			pos_x: $('.watermark-img-wrapper').attr('data-pos-x'),
 			pos_y: $('.watermark-img-wrapper').attr('data-pos-y'),
 			opacity: $('.watermark-img').attr('data-opacity')
-		}
+		};
+    
 
 		e.preventDefault();
 
+    //console.log(request_data);
+    
 		$.ajax({
 				type: "POST",
 				url: "./php/download.php",
@@ -30,8 +33,9 @@ var download = (function () {
 			})
 			.done(function (data) {
 				console.log("success");
+				console.log(data);
 				var link = document.createElement('a');
-				link.setAttribute('href', './result/result.jpg');
+				link.setAttribute('href', 'result/' + data);
 				link.setAttribute('download', 'download');
 				onload = link.click();
 			})

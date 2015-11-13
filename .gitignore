@@ -4,3 +4,4 @@ dist
 .sass-cache
 app/uploads
 .idea/
+app/result

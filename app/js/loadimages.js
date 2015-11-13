@@ -25,7 +25,7 @@ var loadImages = (function () {
 					imgSize = data.files[0].size;
 
 				//console.log(data);
-				/*if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
+				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 					console.log("isn't image"); // показываем предупреждение что не картинка
 					$(".block-right__input_1").tooltip({
 						content: 'Загрузить можно только картинку',
@@ -33,9 +33,9 @@ var loadImages = (function () {
 					});
 
 					return;
-				}*/
+				}
 
-				/*if (imgSize > 2097152) {
+				if (imgSize > 2097152) {
 					console.log("to big"); // показываем предупреждение что картинка слишком большая
 					$(".block-right__input_1").tooltip({
 						content: 'Максимальный размер 2Мб',
@@ -43,7 +43,7 @@ var loadImages = (function () {
 					});
 
 					return;
-				}*/
+				}
 
 				data.formData = {
 					img: data.files[0]
@@ -52,7 +52,7 @@ var loadImages = (function () {
 
 			},
 			done: function (e, data) {
-				console.log(data);
+				//console.log(data);
 				$.when($('.block-left__wrapper-img').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
 					_createMainImg(data, container);
 					//reset.startReset();
