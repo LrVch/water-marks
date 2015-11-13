@@ -23,9 +23,9 @@ $.fn.tooltip = function (options) {
 
 	_positionIt($this, body.find('.tooltip').last(), options.position);
 
-	/*$(document).on('click', function () {
+	$(document).on('click', function () {
 		$('.tooltip').remove();
-	});*/
+	});
 
 	$(window).resize(function () {
 		var

@@ -1,38 +1,91 @@
 <?php
-header('Content-type: application/json; charset=utf-8');
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){  
     
-  $img = $_FILES['img'];
+  $img = empty($_FILES['img']) ? null : $_FILES['img'];
+	
+	if ($img) {
+		
+    $img_name = $img['name'];
+    $img_type = $img['type'];
+    $img_size = $img['size'];
+    $max_img_size = 2097152;
+    $answer = array();
     
-  $img_name = $img['name'];
-  $img_type = $img['type'];
-  $img_size = $img['size'];
-  
-  if(!file_exists(__DIR__.'/../uploads/')){
-    mkdir(__DIR__.'/../uploads/', 0777);
-  }
-  
-  $file_dist = __DIR__.'/../uploads/'.$img_name;
-  
-  if(move_uploaded_file($img['tmp_name'], $file_dist)){
-    $img_dist = '../uploads/'.$img_name;
-  } else {
-    $answer = "Возникла ошибка при загрузке файла на сервер";
-  }
+    if(!file_exists(__DIR__.'/../uploads/')){
+      mkdir(__DIR__.'/../uploads/', 0755);
+    }
     
-  $img_extension = getimagesize ($img_dist);
+    $file_dist = __DIR__.'/../uploads/'.$img_name;
+    
+    function get_ext($file_dist) {
+      return strtolower(pathinfo($file_dist, PATHINFO_EXTENSION));
+    }
+    
+    function is_image($file_dist) {
+      $exts = array('jpeg', 'jpg', 'png', 'gif');
+      return in_array(get_ext($file_dist), $exts);
+    }
+    
+    if (!is_image($file_dist)) {
+      $answer = "Загрузили не картинку";
+      header('Content-type: application/json; charset=utf-8');
+      die(json_encode($answer));
+    }
+    
+    if ($img_size > $max_img_size) {
+      $answer = "Максимальный размер 2Мб";
+      header('Content-type: application/json; charset=utf-8');
+      die(json_encode($answer));
+    }
+    
+    if ($img['error'] != UPLOAD_ERR_OK) {
+      send_with_error($answer, 'Произошла ошибка');
+    }
+    
+    function generate_name($file, $path, $prefix = '') {
+      $name = $prefix.md5(uniqid()).'-'.time().'.'.get_ext($file);
 
-  $answer = array(
-    'imgName' => $img_name,
-    'imgType' => $img_type,
-    'imgSize' => $img_size,
-    'imgWidth' => $img_extension[0],  
-    'imgHeight' => $img_extension[1]  
-  );    
+      while (file_exists($path.$name)) {
+        $name = generate_name($name, $path, $prefix);
+      }
+
+      return $name;
+    }
     
+    $new_name = generate_name($img_name, __DIR__.'/../uploads/');
+    $new_path = __DIR__.'/../uploads/'.$new_name;
+
+    if(move_uploaded_file($img['tmp_name'], $new_path)){
+      $img_dist = '../uploads/'.$new_name;
+      #$answer = $img_dist;
+      #header('Content-type: application/json; charset=utf-8');
+      #die(json_encode($answer));
+    } else {
+      $answer = "Возникла ошибка при загрузке файла на сервер";
+      header('Content-type: application/json; charset=utf-8');
+      die(json_encode($answer));
+    }
+      
+    $img_extension = getimagesize($img_dist);
+  
+    $answer = array(
+      'imgName' => $new_name,
+      'imgType' => $img_type,
+      'imgSize' => $img_size,
+      'imgWidth' => $img_extension[0],  
+      'imgHeight' => $img_extension[1]  
+      );    
+  } else {
+	  $answer = "Вы не загрузили картинку";
+    header('Content-type: application/json; charset=utf-8');
+    die(json_encode($answer));
+  }
 } else {
   $answer = "У вас нет доступа на данную страницу";
+  header('Content-type: application/json; charset=utf-8');
+  die(json_encode($answer));
 }
-
+  
+header('Content-type: application/json; charset=utf-8');
 die(json_encode($answer));
