@@ -27,6 +27,10 @@ var reset = (function () {
 			waterImgWrapper = $(".watermark-img-wrapper");
 	
 		if (this.id === "fileupload_1") {
+      
+      if (this.files[0].size > 2097152 || !this.files[0].type.match(/^image\/(gif|jpeg|png)$/)) {
+        return;
+      }
 
 			$(".block-right__radio_0").attr("checked", "checked");
 			$(".block-right-place__table").find("input").attr("disabled", "disabled");
