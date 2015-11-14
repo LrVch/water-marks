@@ -23,7 +23,6 @@ var loadImages = (function () {
 					imgType = data.files[0].type,
 					imgSize = data.files[0].size;
 
-				//console.log(data);
 				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 					//console.log("isn't image"); // показываем предупреждение что не картинка
 					var key = "notImage";
@@ -34,6 +33,8 @@ var loadImages = (function () {
 
 					return;
 				}
+
+				//console.log(upload());
 
 				if (imgSize > 2097152) {
 					console.log("to big"); // показываем предупреждение что картинка слишком большая
@@ -63,15 +64,25 @@ var loadImages = (function () {
 				data.submit(); // отправляем данные на сервер
 
 			},
+			submit: function (e, data) {
+				//console.log(e);
+			},
 			done: function (e, data) {
-				//console.log(data);
 				$(this).removeAttr("disabled");
 				$('#fileupload_2').removeAttr("disabled");
 				$('.block-right__fileupload_0').removeClass("disabled");
-				$.when($('.block-left__wrapper-img').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
-					_createMainImg(data, container);
-				});
-				//$('.progress').fadeOut();
+
+				if (!data.result.error) {
+					$.when($('.block-left__wrapper-img').fadeOut()).then(function () { // скрытие заставки и активация создания главной катинки
+						_createMainImg(data, container);
+					});
+				} else {
+					//console.log(data.result.error);
+					$(".block-right__input_1").tooltip({
+						content: contentToltip($(".block-right__input_1"), data.result.error),
+						position: 'top'
+					});
+				}
 			},
 			fail: function (e, data) {
 				console.log("fail");
@@ -108,7 +119,10 @@ var loadImages = (function () {
 			add: function (e, data) {
 				var
 					imgType = data.files[0].type,
-					imgSize = data.files[0].size;
+					imgSize = data.files[0].size,
+					mainImgWidth = $(".main-img").data("srcwidth"),
+					mainImgHeight = $(".main-img").data("srchtight");
+
 
 				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 					//console.log("isn't image"); // показываем предупреждение что не картинка
@@ -132,18 +146,66 @@ var loadImages = (function () {
 					return;
 				}
 
-				$('.progress_1').fadeIn();
+				/*$('.progress_1').fadeIn();
 				$('.progress_1 .bar').css(
 					'width', 0
 				);
 				$(this).attr("disabled", "disabled");
 				$('#fileupload_1').attr("disabled", "disabled");
 				$('.block-right__fileupload_1').addClass("disabled");
-				$('.block-right__fileupload_0').addClass("disabled");
-				data.formData = {
-					img: data.files[0]
-				}; //отправляем то что нам надо          
-				data.submit(); // отправляем данные на сервер
+				$('.block-right__fileupload_0').addClass("disabled");*/
+
+
+				var
+					reader = new FileReader(),
+					isvalid = true;
+
+				reader.readAsDataURL(data.files[0]);
+				return reader.onload = function (e) {
+					var image = new Image();
+
+					image.src = e.target.result;
+					return image.onload = function () {
+
+						var
+							height = this.height,
+							width = this.width;
+
+						if (height > mainImgHeight || width > mainImgWidth) {
+							var key = "bigger";
+							$(".block-right__input_2").tooltip({
+								content: contentToltip($(".block-right__input_2"), key),
+								position: 'top'
+							});
+
+
+							return false;
+							console.log(false);
+						}
+
+						console.log(true);
+
+						$('.progress_1').fadeIn();
+						$('.progress_1 .bar').css(
+							'width', 0
+						);
+						$(this).attr("disabled", "disabled");
+						$('#fileupload_1').attr("disabled", "disabled");
+						$('.block-right__fileupload_1').addClass("disabled");
+						$('.block-right__fileupload_0').addClass("disabled");
+						data.formData = {
+							img: data.files[0]
+						}; //отправляем то что нам надо          
+						data.submit(); // отправляем данные на сервер
+						return true;
+					};
+				}
+
+
+				//data.formData = {
+				//	img: data.files[0]
+				//}; //отправляем то что нам надо          
+				//data.submit(); // отправляем данные на сервер
 
 			},
 			done: function (e, data) {
@@ -151,7 +213,16 @@ var loadImages = (function () {
 				$('#fileupload_1').removeAttr("disabled");
 				$('.block-right__fileupload_1').removeClass("disabled");
 				$('.block-right__fileupload_0').removeClass("disabled");
-				_creareWaterMark(data, container);
+
+				if (!data.result.error) {
+					_creareWaterMark(data, container); // проверить размер и запретить 
+				} else {
+					console.log(data.result.error);
+					$(".block-right__input_2").tooltip({
+						content: contentToltip($(".block-right__input_2"), data.result.error),
+						position: 'top'
+					});
+				}
 			},
 			fail: function (e, data) {
 				console.log("fail");
@@ -264,7 +335,7 @@ var loadImages = (function () {
 			imgWidth = data.result.imgWidth,
 			imgHeight = data.result.imgHeight;
 
-		if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
+		/*if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
 			//console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
 			var key = "bigger";
 			$(".block-right__input_2").tooltip({
@@ -272,15 +343,15 @@ var loadImages = (function () {
 				position: 'top'
 			});
 			return;
-		}
-		
-		console.log(data);
+		}*/
+
+		//console.log(data);
 
 		$(".block-right__input_2").val(data.files[0].name);
 
 		$('.tooltip').remove();
 
-		if ($('.watermark-img-wrapper')) {
+		if (!$('.watermark-img-wrapper').lenght) {
 			$.when($('.watermark-img-wrapper').fadeOut()).then(function () {
 				$('.watermark-img-wrapper').remove();
 				var html = _createMarkup();
@@ -330,7 +401,7 @@ var loadImages = (function () {
 					$("#spinner_0").spinner("value", 0);
 					$("#spinner_1").spinner("value", 0);
 					$('.btn__save').removeAttr('disabled');
-					_returnWatermark(imgWidth, imgHeight);
+					_returnWatermark();
 				});
 
 			waterImg.appendTo(waterImgWrapper); // вставка картинки  в обертку
@@ -371,10 +442,16 @@ var loadImages = (function () {
 			content = elem.attr("tooltip-bigger");
 			break;
 
+		case "error":
+			content = elem.attr("tooltip-error");
+			break;
+
 		}
 
 		return content;
 	}
+
+
 
 	return {
 		init: init
@@ -393,4 +470,33 @@ if ($("#spinner_0").length && $("#spinner_1").length) {
 // активация слайдера
 if ($('#slider-range').length) {
 	opacity.sliderInit();
+}
+
+
+/*s*/
+function _upload(data, mainImgWidth, mainImgHeight) {
+	var
+		reader = new FileReader(),
+		isvalid = true;
+
+	reader.readAsDataURL(data.files[0]);
+	return reader.onload = function (e) {
+		var image = new Image();
+
+		image.src = e.target.result;
+		return image.onload = function () {
+
+			var
+				height = this.height,
+				width = this.width;
+
+			if (height > mainImgHeight || width > mainImgWidth) {
+				return false;
+				console.log(false);
+			}
+
+			console.log(true);
+			return true;
+		};
+	}
 }

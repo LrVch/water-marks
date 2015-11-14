@@ -53,7 +53,7 @@ html(lang="ru-RU")
 								label(class = "block-right__fileupload block-right__fileupload_" + indx + ((indx==1) ? " disabled" : ""))
 										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/up.php" multiple disabled=((count == 2) ? true : false))
 										input.fileurl(type="hidden" name="fileurl")
-									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg" tooltip-not-image = "Загрузить можно только картинку" tooltip-too-big = "Максимальный размер 2Мб" tooltip-bigger = "Вотемарк больше исходной картинки") 
+									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg" tooltip-not-image = "Вы загрузили не картинку" tooltip-too-big = "Вы загрузили картинку больше 2Мб" tooltip-bigger = "Вотемарк больше исходной картинки" tooltip-error = "Произошла ошибка!") 
 				.block-right__form
 					.block-right__form-title Положение
 					.block-right-place
