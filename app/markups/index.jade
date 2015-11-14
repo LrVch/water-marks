@@ -41,12 +41,16 @@ html(lang="ru-RU")
 			form.block-right
 				.block-right__title Настройки
 				.block-right__form
+					.progress.progress_0 
+						div(class="bar bar_0" style="width: 0%")
+					.progress.progress_1
+						div(class="bar bar_1" style="width: 0%")
 					-var items=['Исходное изображение','Водяной знак']
 						each item, indx in items
 							-var i=1
 							-var count=indx+i
 								label.block-right__lbl=item
-								label(class = "block-right__fileupload " + ((indx == 1) ? "disabled block-right__fileupload_" + indx : ""))
+								label(class = "block-right__fileupload block-right__fileupload_" + indx + ((indx==1) ? " disabled" : ""))
 										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/up.php" multiple disabled=((count == 2) ? true : false))
 										input.fileurl(type="hidden" name="fileurl")
 									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg")

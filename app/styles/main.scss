@@ -284,4 +284,23 @@ a:focus {
   cursor: pointer;
 }
 
+.progress {
+	display: none;
+	width: 181px;
+  background: transparent;
+  position: absolute;
+  left: 21px;
+  border-radius: 4px 0 0 4px;
+}
+.progress_0 {
+  top: 26px;
+}
+.progress_1 {
+  top: 102px;
+}
+.bar {
+  height: 25px;
+	background: rgba(59, 242, 4, 0.3);
+ }
+
 @import "widgets/sbuttons.scss";
