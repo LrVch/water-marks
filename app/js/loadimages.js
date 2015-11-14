@@ -273,8 +273,10 @@ var loadImages = (function () {
 			});
 			return;
 		}
+		
+		console.log(data);
 
-		$(".block-right__input_2").val(imgName);
+		$(".block-right__input_2").val(data.files[0].name);
 
 		$('.tooltip').remove();
 
