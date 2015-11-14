@@ -14,7 +14,6 @@ var loadImages = (function () {
 
 		var
 			container = $(".block-left__main");
-
 		//console.log("init module");
 
 		$('#fileupload_1').fileupload({
@@ -26,9 +25,10 @@ var loadImages = (function () {
 
 				//console.log(data);
 				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
-					console.log("isn't image"); // показываем предупреждение что не картинка
+					//console.log("isn't image"); // показываем предупреждение что не картинка
+					var key = "notImage";
 					$(".block-right__input_1").tooltip({
-						content: 'Загрузить можно только картинку',
+						content: contentToltip($(".block-right__input_1"), key),
 						position: 'top'
 					});
 
@@ -37,14 +37,15 @@ var loadImages = (function () {
 
 				if (imgSize > 2097152) {
 					console.log("to big"); // показываем предупреждение что картинка слишком большая
+					var key = "tooBig";
 					$(".block-right__input_1").tooltip({
-						content: 'Максимальный размер 2Мб',
+						content: contentToltip($(".block-right__input_1"), key),
 						position: 'top'
 					});
 
 					return;
 				}
-        
+
 				$('.progress_0').fadeIn();
 				$('.progress_0 .bar').css(
 					'width', 0
@@ -111,8 +112,9 @@ var loadImages = (function () {
 
 				if (!(imgType.match(/^image\/(gif|jpeg|png)$/))) {
 					//console.log("isn't image"); // показываем предупреждение что не картинка
+					var key = "notImage";
 					$(".block-right__input_2").tooltip({
-						content: 'Загрузить можно только картинку',
+						content: contentToltip($(".block-right__input_2"), key),
 						position: 'top'
 					});
 
@@ -121,19 +123,20 @@ var loadImages = (function () {
 
 				if (imgSize > 2097152) {
 					//console.log("to big"); // показываем предупреждение что картинка слишком большая
+					var key = "tooBig";
 					$(".block-right__input_2").tooltip({
-						content: 'Максимальный размер 2Мб',
+						content: contentToltip($(".block-right__input_2"), key),
 						position: 'top'
 					});
 
 					return;
 				}
-				
+
 				$('.progress_1').fadeIn();
 				$('.progress_1 .bar').css(
 					'width', 0
 				);
-        $(this).attr("disabled", "disabled");
+				$(this).attr("disabled", "disabled");
 				$('#fileupload_1').attr("disabled", "disabled");
 				$('.block-right__fileupload_1').addClass("disabled");
 				$('.block-right__fileupload_0').addClass("disabled");
@@ -263,8 +266,9 @@ var loadImages = (function () {
 
 		if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
 			//console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
+			var key = "bigger";
 			$(".block-right__input_2").tooltip({
-				content: 'вотемарк больше исходной картинки',
+				content: contentToltip($(".block-right__input_2"), key),
 				position: 'top'
 			});
 			return;
@@ -339,6 +343,29 @@ var loadImages = (function () {
 		reset.init(); // активируем ресет
 		opacity.init(); // активируем прозрачность
 		return;
+	}
+  // контент тултипов
+	function contentToltip(elem, key) {
+
+		var content = "";
+
+		switch (key) {
+
+		case "notImage":
+			content = elem.attr("tooltip-not-image");
+			break;
+
+		case "tooBig":
+			content = elem.attr("tooltip-too-big"); 
+			break;
+				
+		case "bigger":
+			content = elem.attr("tooltip-bigger"); 
+			break;		
+
+		}
+
+		return content;
 	}
 
 	return {

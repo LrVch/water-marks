@@ -55,6 +55,29 @@ $.fn.tooltip = function (options) {
 	});
 
 
+	function contentToltip(elem, key) {
+
+		var content = "";
+
+		switch (key) {
+
+		case "notImage":
+			content = elem.attr("tooltip-not-image");
+			break;
+
+		case "tooBig":
+			content = elem.attr("tooltip-too-big"); 
+			break;
+				
+		case "bigger":
+			content = elem.attr("tooltip-bigger"); 
+			break;		
+
+		}
+
+		return content;
+	}
+	
 	function _positionIt(elem, tooltip, position) {
 
 		// измеряем элемент
