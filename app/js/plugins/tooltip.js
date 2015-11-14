@@ -12,7 +12,7 @@ $.fn.tooltip = function (options) {
 		'</div>';
 
 	var
-		$this = this,
+		$this = $(this),
 		body = $('body');
 
 	$this
@@ -27,23 +27,31 @@ $.fn.tooltip = function (options) {
 		$('.tooltip').remove();
 	});
 
+
+
 	$(window).resize(function () {
-		var
-			tooltips = $('.tooltip');
 
-		var
-			tooltipsArray = [];
+		if ($('.tooltip').length) {
 
-		tooltips.each(function () {
-			tooltipsArray.push($(this));
-		});
-
-		$('.tooltipstered').each(function (index) {
 			var
-				position = $(this).data('tooltip-position');
+				tooltips = $('.tooltip');
 
-			_positionIt($(this), tooltipsArray[index], position);
-		});
+			var
+				tooltipsArray = [];
+
+			tooltips.each(function () {
+				tooltipsArray.push($(this));
+			});
+
+			$('.tooltipstered').each(function (index) {
+				var
+					position = $(this).data('tooltip-position');
+
+				_positionIt($(this), tooltipsArray[index], position);
+			});
+		} else {
+			//console.log("нет тутипа");
+		}
 	});
 
 
