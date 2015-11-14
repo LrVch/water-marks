@@ -339,12 +339,18 @@ var loadImages = (function () {
 	}
 	// функция передачи сгенерированного элемента
 	function _returnWatermark() {
-		position.init(); // активируем модуль позиционирования и передаем элемент
-		reset.init(); // активируем ресет
-		opacity.init(); // активируем прозрачность
+		if ($(".block-right__form").length) {
+			position.init(); // активируем модуль позиционирования и передаем элемент
+		}
+		if ($(".btn__clear").length) {
+			reset.init(); // активируем ресет
+		}
+		if ($("#slider-range").length) {
+			opacity.init(); // активируем прозрачность
+		}
 		return;
 	}
-  // контент тултипов
+	// контент тултипов
 	function contentToltip(elem, key) {
 
 		var content = "";
@@ -356,12 +362,12 @@ var loadImages = (function () {
 			break;
 
 		case "tooBig":
-			content = elem.attr("tooltip-too-big"); 
+			content = elem.attr("tooltip-too-big");
 			break;
-				
+
 		case "bigger":
-			content = elem.attr("tooltip-bigger"); 
-			break;		
+			content = elem.attr("tooltip-bigger");
+			break;
 
 		}
 
@@ -374,16 +380,15 @@ var loadImages = (function () {
 
 })();
 
-
 // Вызов модуля загрузки
-if ($('#fileupload_1') && $('#fileupload_2')) {
+if ($('#fileupload_1').length && $('#fileupload_2').length) {
 	loadImages.init();
 }
 // активация спинеров
-if ($("#spinner_0") && $("#spinner_1")) {
+if ($("#spinner_0").length && $("#spinner_1").length) {
 	position.spinersInit();
 }
 // активация слайдера
-if ($('#slider-range')) {
+if ($('#slider-range').length) {
 	opacity.sliderInit();
 }
