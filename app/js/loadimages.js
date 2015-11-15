@@ -431,19 +431,19 @@ var loadImages = (function () {
 		switch (key) {
 
 		case "notImage":
-			content = elem.attr("tooltip-not-image");
+			content = elem.attr("data-tooltip-not-image");
 			break;
 
 		case "tooBig":
-			content = elem.attr("tooltip-too-big");
+			content = elem.attr("data-tooltip-too-big");
 			break;
 
 		case "bigger":
-			content = elem.attr("tooltip-bigger");
+			content = elem.attr("data-tooltip-bigger");
 			break;
 
 		case "error":
-			content = elem.attr("tooltip-error");
+			content = elem.attr("data-tooltip-error");
 			break;
 
 		}
