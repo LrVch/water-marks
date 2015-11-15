@@ -161,11 +161,11 @@ var loadImages = (function () {
 					isvalid = true;
 
 				reader.readAsDataURL(data.files[0]);
-				return reader.onload = function (e) {
+				reader.onload = function (e) {
 					var image = new Image();
 
 					image.src = e.target.result;
-					return image.onload = function () {
+					image.onload = function () {
 
 						var
 							height = this.height,
@@ -180,10 +180,10 @@ var loadImages = (function () {
 
 
 							return false;
-							console.log(false);
+							//console.log(false);
 						}
 
-						console.log(true);
+						//console.log(true);
 
 						$('.progress_1').fadeIn();
 						$('.progress_1 .bar').css(
@@ -470,33 +470,4 @@ if ($("#spinner_0").length && $("#spinner_1").length) {
 // активация слайдера
 if ($('#slider-range').length) {
 	opacity.sliderInit();
-}
-
-
-/*s*/
-function _upload(data, mainImgWidth, mainImgHeight) {
-	var
-		reader = new FileReader(),
-		isvalid = true;
-
-	reader.readAsDataURL(data.files[0]);
-	return reader.onload = function (e) {
-		var image = new Image();
-
-		image.src = e.target.result;
-		return image.onload = function () {
-
-			var
-				height = this.height,
-				width = this.width;
-
-			if (height > mainImgHeight || width > mainImgWidth) {
-				return false;
-				console.log(false);
-			}
-
-			console.log(true);
-			return true;
-		};
-	}
 }
