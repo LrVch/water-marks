@@ -68,7 +68,7 @@ var loadImages = (function () {
 				//console.log(e);
 			},
 			done: function (e, data) {
-				console.log(data);
+				//console.log(data);
 				$(this).removeAttr("disabled");
 				$('#fileupload_2').removeAttr("disabled");
 				$('.block-right__fileupload_0').removeClass("disabled");
