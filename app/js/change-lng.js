@@ -6,6 +6,9 @@ $(function () {
 
 	$('.icons__language-link_rus').on('click', function () {
 
+		$('#eng').removeClass('active');
+		$('#rus').addClass('active');
+
 		$('.block-left__title').html('Генератор водяных знаков');
 		$('.block-right__title').html('Настройки');
 		$('.block-right__lbl').html('Исходное изображение');
@@ -25,6 +28,9 @@ $(function () {
 	});
 
 	$('.icons__language-link_eng').on('click', function () {
+
+		$('#rus').removeClass('active');
+		$('#eng').addClass('active');
 
 		$('.block-left__title').html('Watermarks generator');
 		$('.block-right__title').html('Settings');
