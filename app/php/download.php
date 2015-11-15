@@ -6,7 +6,8 @@
 	$image = WideImage::loadFromFile('../'.$_POST['bg_img']);
 	$watermark = WideImage::loadFromFile('../'.$_POST['wm_img']);
 
-  $name = "".md5(uniqid()).'-'.time().'.jpg';
+  //$name = "".md5(uniqid()).'-'.time().'.jpg';
+  $name = "result-".date("His").'.jpg';
 
 	$dir='../result';
 	

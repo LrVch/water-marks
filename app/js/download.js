@@ -36,7 +36,7 @@ var download = (function () {
 				console.log(data);
 				var link = document.createElement('a');
 				link.setAttribute('href', 'result/' + data);
-				link.setAttribute('download', 'download');
+				link.setAttribute('download', data);
 				onload = link.click();
 			})
 			.fail(function () {
