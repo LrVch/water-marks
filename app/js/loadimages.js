@@ -336,7 +336,7 @@ var loadImages = (function () {
 			imgWidth = data.result.imgWidth,
 			imgHeight = data.result.imgHeight;
 
-		/*if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
+		if (imgWidth > mainImg.data("srcwidth") || imgHeight > mainImg.data("srchtight")) {
 			//console.log("вотемарк больше исходной картинки загрузите картинку поменьше");
 			var key = "bigger";
 			$(".block-right__input_2").tooltip({
@@ -344,7 +344,7 @@ var loadImages = (function () {
 				position: 'top'
 			});
 			return;
-		}*/
+		}
 
 		//console.log(data);
 
