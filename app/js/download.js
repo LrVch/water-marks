@@ -38,16 +38,16 @@ var download = (function () {
 				link.setAttribute('href', 'result/' + data);
 				link.setAttribute('download', data);
 				document.body.appendChild(link);
-				//onload = link.click();
-				var script = document.createElement('script');
-				script.src = "js/loader.js";
-				document.body.appendChild(script);
-
-				script.onload = function (data) {
-
-					link.click();
-					console.log(data);
-				}
+				onload = link.click();
+				//var script = document.createElement('script');
+				//script.src = "js/loader.js";
+				//document.body.appendChild(script);
+//
+//				script.onload = function (data) {
+//
+//					link.click();
+//					console.log(data);
+//				}
 
 			})
 			.fail(function () {
