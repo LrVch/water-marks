@@ -189,7 +189,7 @@ var loadImages = (function () {
 						$('.progress_1 .bar').css(
 							'width', 0
 						);
-						$(this).attr("disabled", "disabled");
+						$('#fileupload_2').attr("disabled", "disabled");
 						$('#fileupload_1').attr("disabled", "disabled");
 						$('.block-right__fileupload_1').addClass("disabled");
 						$('.block-right__fileupload_0').addClass("disabled");
