@@ -35,8 +35,9 @@ var download = (function () {
 				console.log("success");
 				console.log(data);
 				var link = document.createElement('a');
-				link.setAttribute('href', 'result/' + data);
-				link.setAttribute('download', data);
+				//link.setAttribute('href', 'result/' + data);
+				link.setAttribute('href', 'php/file.php?filename=' + data.imgName);
+				//link.setAttribute('download', data);
 				document.body.appendChild(link);
 				//onload = link.click();
 				var script = document.createElement('script');
