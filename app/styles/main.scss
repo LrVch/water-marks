@@ -39,6 +39,7 @@ body {
 	
 }
 .wrapper-content{
+	@include clearfix;
 	margin-top: 15px;
 	padding-bottom: 50px;
 }
