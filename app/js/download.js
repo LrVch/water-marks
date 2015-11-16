@@ -32,8 +32,8 @@ var download = (function () {
 				data: request_data
 			})
 			.done(function (data) {
-				console.log("success");
-				console.log(data);
+				//console.log("success");
+				//console.log(data);
 				var link = document.createElement('a');
 				//link.setAttribute('href', 'result/' + data);
 				link.setAttribute('href', 'php/file.php?filename=' + data.imgName);
@@ -55,11 +55,11 @@ var download = (function () {
 				console.log("error");
 			})
 			.always(function (data) {
-				console.log("complete");
+				//console.log("complete");
 			});
 
-		console.log('hit!');
-		console.log();
+		//console.log('hit!');
+		//console.log();
 
 	};
 

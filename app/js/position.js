@@ -24,7 +24,7 @@ var position = (function () {
 	function _checkBox(e) {
 		//e.preventDefault();
 
-		console.log("init check");
+		//console.log("init check");
 		var
 			target = e.target,
 			$target = $(target),

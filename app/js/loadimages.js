@@ -37,7 +37,7 @@ var loadImages = (function () {
 				//console.log(upload());
 
 				if (imgSize > 2097152) {
-					console.log("to big"); // показываем предупреждение что картинка слишком большая
+					//console.log("to big"); // показываем предупреждение что картинка слишком большая
 					var key = "tooBig";
 					$(".block-right__input_1").tooltip({
 						content: contentToltip($(".block-right__input_1"), key),
@@ -218,7 +218,7 @@ var loadImages = (function () {
 				if (!data.result.error) {
 					_creareWaterMark(data, container); // проверить размер и запретить 
 				} else {
-					console.log(data.result.error);
+					//console.log(data.result.error);
 					$(".block-right__input_2").tooltip({
 						content: contentToltip($(".block-right__input_2"), data.result.error),
 						position: 'top'
