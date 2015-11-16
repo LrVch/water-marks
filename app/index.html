@@ -45,89 +45,91 @@
 					<div class="social__show-button"><a href="#" class="social__show-button-a"></a></div>
 				</div>
 		<div class="wrapper">
-			<div class="block-left">
-				<div class="block-left__title">Генератор водяных знаков</div>
-				<div class="block-left__main">
-					<div class="block-left__wrapper-img">
-						<div id="draggable" class="block-left__img"><img src="img/img-w.jpg" alt="" class="watermark"></div>
+			<div class="wrapper-content">
+				<div class="block-left">
+					<div class="block-left__title">Генератор водяных знаков</div>
+					<div class="block-left__main">
+						<div class="block-left__wrapper-img">
+							<div id="draggable" class="block-left__img"><img src="img/img-w.jpg" alt="" class="watermark"></div>
+						</div>
 					</div>
 				</div>
+				<form class="block-right">
+					<div class="block-right__title">Настройки</div>
+					<div class="block-right__form">
+						<div class="progress progress_0"> 
+							<div style="width: 0%" class="bar bar_0"></div>
+						</div>
+						<div class="progress progress_1">
+							<div style="width: 0%" class="bar bar_1"></div>
+						</div>
+						<label class="block-right__lbl">Исходное изображение</label>
+						<label class="block-right__fileupload block-right__fileupload_0">
+							<input id="fileupload_1" type="file" name="files[]" data-url="php/up.php" multiple class="fileupload">
+							<input type="hidden" name="fileurl" class="fileurl">
+						</label>
+						<input type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image="Вы загрузили не картинку" data-tooltip-too-big="Вы загрузили картинку больше 2Мб" data-tooltip-bigger="Вотемарк больше исходной картинки" data-tooltip-error="Произошла ошибка!" class="block-right__input block-right__input_1">
+						<label class="block-right__lbl">Водяной знак</label>
+						<label class="block-right__fileupload block-right__fileupload_1 disabled">
+							<input id="fileupload_2" type="file" name="files[]" data-url="php/up.php" multiple disabled class="fileupload">
+							<input type="hidden" name="fileurl" class="fileurl">
+						</label>
+						<input type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image="Вы загрузили не картинку" data-tooltip-too-big="Вы загрузили картинку больше 2Мб" data-tooltip-bigger="Вотемарк больше исходной картинки" data-tooltip-error="Произошла ошибка!" class="block-right__input block-right__input_2">
+					</div>
+					<div class="block-right__form">
+						<div class="block-right__form-title">Положение</div>
+						<div class="block-right-place">
+							<div class="block-right-place__table">
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled checked class="block-right__radio block-right__radio_0"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_1"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_2"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_3"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_4"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_5"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_6"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_7"><span class="block-right__radio-elem"></span>
+								</label>
+								<label class="block-right-place__lbl">
+									<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_8"><span class="block-right__radio-elem"></span>
+								</label>
+							</div>
+							<div class="block-right-place__left">
+								<label for="spinner_0">X
+									<input id="spinner_0" name="value" readonly class="spinner"></label>
+								<label for="spinner_1">Y
+									<input id="spinner_1" name="value" readonly class="spinner"></label>
+							</div>
+						</div>
+					</div>
+					<div class="block-right__form">
+						<div class="block-right__form-title sidebar">Прозрачность</div>
+						<div id="slider-range" class="slider-elem"></div>
+					</div>
+					<div class="block-right__last block-right__form">
+						<div class="block-right__btn">
+							<button type="reset" disabled class="btn btn__clear">Сброс</button>
+							<button type="submit" disabled class="btn btn__save">Скачать</button>
+						</div>
+					</div>
+				</form>
 			</div>
-			<form class="block-right">
-				<div class="block-right__title">Настройки</div>
-				<div class="block-right__form">
-					<div class="progress progress_0"> 
-						<div style="width: 0%" class="bar bar_0"></div>
-					</div>
-					<div class="progress progress_1">
-						<div style="width: 0%" class="bar bar_1"></div>
-					</div>
-					<label class="block-right__lbl">Исходное изображение</label>
-					<label class="block-right__fileupload block-right__fileupload_0">
-						<input id="fileupload_1" type="file" name="files[]" data-url="php/up.php" multiple class="fileupload">
-						<input type="hidden" name="fileurl" class="fileurl">
-					</label>
-					<input type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image="Вы загрузили не картинку" data-tooltip-too-big="Вы загрузили картинку больше 2Мб" data-tooltip-bigger="Вотемарк больше исходной картинки" data-tooltip-error="Произошла ошибка!" class="block-right__input block-right__input_1">
-					<label class="block-right__lbl">Водяной знак</label>
-					<label class="block-right__fileupload block-right__fileupload_1 disabled">
-						<input id="fileupload_2" type="file" name="files[]" data-url="php/up.php" multiple disabled class="fileupload">
-						<input type="hidden" name="fileurl" class="fileurl">
-					</label>
-					<input type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image="Вы загрузили не картинку" data-tooltip-too-big="Вы загрузили картинку больше 2Мб" data-tooltip-bigger="Вотемарк больше исходной картинки" data-tooltip-error="Произошла ошибка!" class="block-right__input block-right__input_2">
-				</div>
-				<div class="block-right__form">
-					<div class="block-right__form-title">Положение</div>
-					<div class="block-right-place">
-						<div class="block-right-place__table">
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled checked class="block-right__radio block-right__radio_0"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_1"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_2"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_3"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_4"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_5"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_6"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_7"><span class="block-right__radio-elem"></span>
-							</label>
-							<label class="block-right-place__lbl">
-								<input type="radio" name="radio_btn" disabled class="block-right__radio block-right__radio_8"><span class="block-right__radio-elem"></span>
-							</label>
-						</div>
-						<div class="block-right-place__left">
-							<label for="spinner_0">X
-								<input id="spinner_0" name="value" readonly class="spinner"></label>
-							<label for="spinner_1">Y
-								<input id="spinner_1" name="value" readonly class="spinner"></label>
-						</div>
-					</div>
-				</div>
-				<div class="block-right__form">
-					<div class="block-right__form-title sidebar">Прозрачность</div>
-					<div id="slider-range" class="slider-elem"></div>
-				</div>
-				<div class="block-right__last block-right__form">
-					<div class="block-right__btn">
-						<button type="reset" disabled class="btn btn__clear">Сброс</button>
-						<button type="submit" disabled class="btn btn__save">Скачать</button>
-					</div>
-				</div>
-			</form>
+			<div class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 		</div>
-		<div class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
 		<!-- build:js js/vendor.min.js -->
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="js/plugins/jquery-ui.min.js"></script>
