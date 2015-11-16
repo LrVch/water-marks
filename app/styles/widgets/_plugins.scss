@@ -79,6 +79,8 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		//top: 0;
+		//left: -1px;
 		border-top: 9px solid #c0ccd6;
 		border-left: 9px solid transparent;
 		border-right: 9px solid transparent;
@@ -89,6 +91,8 @@
 		position: absolute;
 		left: 1px;
 		top: 0;
+		//left: 0px;
+		//top: 1px;
 		border-top: 8px solid #eeeeee;
 		border-left: 8px solid transparent;
 		border-right: 8px solid transparent;
