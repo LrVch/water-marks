@@ -29,6 +29,12 @@ html(lang="ru-RU")
 		link(rel="stylesheet",href="css/vendor/tooltip.css")
 		link(rel="stylesheet" href="css/main.css")
 	body
+		ul.icons__language
+			li#rus.icons__language-item.active
+				a.icons__language-link.icons__language-link_rus(href="#") РУС
+			li#eng.icons__language-item
+				a.icons__language-link.icons__language-link_eng(href="#") ENG
+
 		include _common/mixin
 		+addSocialButtons('200','Сервис для наложения водяного знака',"img/wm480.jpg",'С помощью данного бесплатного онлайн сервиса вы может наложить водяной знак на ваши авторские изображения')
 		.wrapper
@@ -40,20 +46,25 @@ html(lang="ru-RU")
 							img(src='img/img-w.jpg' alt='').watermark
 			form.block-right
 				.block-right__title Настройки
-				.block-right__form
+				.block-right__form-1
 					.progress.progress_0 
 						div(class="bar bar_0" style="width: 0%")
 					.progress.progress_1
 						div(class="bar bar_1" style="width: 0%")
-					-var items=['Исходное изображение','Водяной знак']
-						each item, indx in items
-							-var i=1
-							-var count=indx+i
-								label.block-right__lbl=item
-								label(class = "block-right__fileupload block-right__fileupload_" + indx + ((indx==1) ? " disabled" : ""))
-										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/up.php" multiple disabled=((count == 2) ? true : false))
-										input.fileurl(type="hidden" name="fileurl")
-									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image = "Вы загрузили не картинку" data-tooltip-too-big = "Вы загрузили картинку больше 2Мб" data-tooltip-bigger = "Вотемарк больше исходной картинки" data-tooltip-error = "Произошла ошибка!") 
+
+					label.block-right__lbl Исходное изображение
+					label.block-right__fileupload.block-right__fileupload_0
+						input#fileupload_1.fileupload(type="file" name="files[]" data-url="php/up.php" multiple)
+						input.fileurl(type="hidden" name="fileurl")
+					input(type="text" name="img-name" readonly value="image.jpg" tooltip-not-image="Вы загрузили не картинку" tooltip-too-big="Вы загрузили картинку больше 2Мб" tooltip-bigger="Вотемарк больше исходной картинки" tooltip-error="Произошла ошибка!" class="block-right__input block-right__input_1")
+
+					label.block-right__lbl Водяной знак
+					label.block-right__fileupload.block-right__fileupload_1.disabled
+						input#fileupload_2(type="file" name="files[]" data-url="php/up.php" multiple disabled class="fileupload")
+						input(type="hidden" name="fileurl" class="fileurl")
+					input(type="text" name="img-name" readonly value="image.jpg" tooltip-not-image="Вы загрузили не картинку" tooltip-too-big="Вы загрузили картинку больше 2Мб" tooltip-bigger="Вотемарк больше исходной картинки" tooltip-error="Произошла ошибка!" class="block-right__input block-right__input_2")
+
+
 				.block-right__form
 					.block-right__form-title Положение
 					.block-right-place
@@ -74,7 +85,7 @@ html(lang="ru-RU")
 					.block-right__btn
 						button.btn.btn__clear(type='reset' disabled) Сброс
 						button.btn.btn__save(type='submit' disabled) Скачать
-		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+		.footer © 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его
 		script(type="text/javascript" src="bower/jquery/jquery.min.js")
 		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
 		//- для загрузки картинок
@@ -90,3 +101,4 @@ html(lang="ru-RU")
 		script(type="text/javascript" src="js/download.js")
 		script(type="text/javascript" src="js/reset.js")
 		script(type="text/javascript" src="js/loadimages.js")
+		script(type="text/javascript" src="js/change-lng.js")

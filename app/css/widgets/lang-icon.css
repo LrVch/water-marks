@@ -1,0 +1,26 @@
+.icons__language {
+  margin: 0 0 18px;
+  font-family: SegoeUILight;
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 5;
+}
+
+.icons__language-link {
+  display: block;
+  padding: 4px 2px;
+  margin-bottom: 1px;
+  text-align: center;
+  color: #999ca1;
+  background: #d7d5d7;
+  text-decoration: none;
+}
+
+.icons__language-item.active .icons__language-link {
+  color: #fff;
+  background: #b2b0b2;
+}

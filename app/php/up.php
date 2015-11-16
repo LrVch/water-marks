@@ -20,15 +20,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
       $exts = array('jpeg', 'jpg', 'png', 'gif');
       return in_array(get_ext($file_dist), $exts);
     }
-
-    function is_mimeimage($file) {
-      $mime_str = strpos(mime_content_type($file), "/");
-      $mime_result = substr(mime_content_type($file), 0, $mime_str);
-      if ($mime_result == 'image')
-        return true;
-      else
-        return false;
-    }
     
 		function generate_name($file, $path, $prefix = '') {
       $name = $prefix.md5(uniqid()).'-'.time().'.'.get_ext($file);
@@ -51,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
       header('Content-type: application/json; charset=utf-8');
       die(json_encode($answer));
     }
-
+    
     if ($img_size > $max_img_size) {
       $answer = array( "error" => "tooBig");
       header('Content-type: application/json; charset=utf-8');
@@ -69,12 +60,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if(move_uploaded_file($img['tmp_name'], $new_path)){
       $img_dist = '../uploads/'.$new_name;
-
-      if (!is_mimeimage($img_dist)) {
-        $answer = array( "error" => "notImage" );
-        header('Content-type: application/json; charset=utf-8');
-        die(json_encode($answer));
-      }
     } else {
       $answer = array( "error" => "Возникла ошибка при загрузке файла на сервер");
       header('Content-type: application/json; charset=utf-8');
