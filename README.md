@@ -12,9 +12,10 @@
 
 * $ git clone https://github.com/LrVch/water-marks.git water-marks
 * $ cd water-marks
+* $ gem install sass
+* $ gem install compass
 * $ npm i
 * $ bower i
-* $ compass init
 * $ gulp
 
 >Сервис разработан по однооименному техническом заданию онлайн школы образования http://loftschool.com/
