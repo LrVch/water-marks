@@ -2836,7 +2836,7 @@ input.block-right__radio + .block-right__radio-elem {
 	float:left;
 	background:$grey;
 	&:disabled{
-		background:#d8e4ed;	
+		background:#d8e4ed;
 	}
 }*/
 .btn__save {
@@ -2982,4 +2982,35 @@ a:focus {
 }
 .social__show-button-a:focus, .social__show-button-a:active {
   outline: 0;
+}
+
+.icons__language {
+  margin: 0 0 18px;
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 5;
+  font-family: 'SegoeUI-Light';
+}
+
+.icons__language-link {
+  display: block;
+  padding: 4px 2px;
+  margin-bottom: 1px;
+  text-align: center;
+  color: #999ca1;
+  background: #d7d5d7;
+  text-decoration: none;
+}
+
+.icons__language-link:hover {
+  color: #444a53;
+}
+
+.icons__language-item.active .icons__language-link {
+  color: #fff;
+  background: #b2b0b2;
 }
