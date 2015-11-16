@@ -15,7 +15,7 @@ html(lang="ru-RU")
 		link(rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32")
 		link(rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96")
 		link(rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16")
-		link(rel="manifest" href="favicon/manifest.json")
+		link(rel="manifest" href="favicon/manifest.json") 
 		link(rel="shortcut icon" href="favicon/favicon.ico")
 		meta(name="apple-mobile-web-app-title" content="TeamDream")
 		meta(name="application-name" content="Мой первый сайт")
@@ -23,11 +23,14 @@ html(lang="ru-RU")
 		meta(name="msapplication-config" content="favicon/browserconfig.xml")
 		meta(name="theme-color" content="#ffffff")
 		link(href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css')
-		link(href="fonts/styles.css" rel='stylesheet' type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Fira+Sans:300&subset=cyrillic,cyrillic-ext' rel='stylesheet' type='text/css')
-		//- стили для тултипов
+		// build:css css/vendor.min.css 
+		link(href="fonts/styles.css" rel='stylesheet' type='text/css') 
 		link(rel="stylesheet",href="css/vendor/tooltip.css")
+		// endbuild 
+		// build:css css/style.min.css 
 		link(rel="stylesheet" href="css/main.css")
+		// endbuild 
 	body
 		ul.icons__language
 			li#rus.icons__language-item.active
@@ -80,15 +83,16 @@ html(lang="ru-RU")
 						button.btn.btn__clear(type='reset' disabled) Сброс
 						button.btn.btn__save(type='submit' disabled) Скачать
 		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+		// build:js js/vendor.min.js 
 		script(type="text/javascript" src="bower/jquery/jquery.min.js")
 		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
-		//- для загрузки картинок
 		script(type="text/javascript" src="js/plugins/jquery.fileupload.js")
 		script(type="text/javascript" src="js/plugins/jquery.iframe-transport.js")
 		script(type="text/javascript" src="js/plugins/tooltip.js")
 		script(type="text/javascript" src="js/plugins/jquery.ui.widget.js")
-		//- END для загрузки кртинок
-		//script(type="text/javascript" src="js/main.js")
+		// endbuild 
+		
+		// build:js js/script.min.js 
 		script(type="text/javascript" src="js/sbuttons.js")
 		script(type="text/javascript" src="js/position.js")
 		script(type="text/javascript" src="js/opacity.js")
@@ -96,3 +100,4 @@ html(lang="ru-RU")
 		script(type="text/javascript" src="js/reset.js")
 		script(type="text/javascript" src="js/loadimages.js")
 		script(type="text/javascript" src="js/change-lng.js")
+		// endbuild 
