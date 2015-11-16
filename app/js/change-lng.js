@@ -1,10 +1,17 @@
-$(function () {
+var translate = (function () {
 
-	$('.icons__language-link').on('click', function (e) {
+	function init() {
+		_setUpListners();
+	};
+
+	function _setUpListners() {
+		$('.icons__language-link_rus').on('click', _changeToRus);
+		$('.icons__language-link_eng').on('click', _changeToEng);
+	};
+
+	function _changeToRus(e) {
+
 		e.preventDefault();
-	});
-
-	$('.icons__language-link_rus').on('click', function () {
 
 		$('#eng').removeClass('active');
 		$('#rus').addClass('active');
@@ -25,9 +32,11 @@ $(function () {
 			'data-tooltip-bigger': 'Вотемарк больше исходной картинки',
 			'data-tooltip-error': 'Произошла ошибка!'
 		});
-	});
+	}
 
-	$('.icons__language-link_eng').on('click', function () {
+	function _changeToEng(e) {
+
+		e.preventDefault();
 
 		$('#rus').removeClass('active');
 		$('#eng').addClass('active');
@@ -48,5 +57,12 @@ $(function () {
 			'data-tooltip-bigger': 'Watemark larger than image',
 			'data-tooltip-error': 'An error has occurred!'
 		});
-	})
-});
+	}
+
+	return {
+		init: init
+	};
+
+})();
+
+translate.init();
