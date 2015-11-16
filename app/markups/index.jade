@@ -37,49 +37,50 @@ html(lang="ru-RU")
 		include _common/mixin
 		+addSocialButtons('200','Сервис для наложения водяного знака',"img/wm480.jpg",'С помощью данного бесплатного онлайн сервиса вы может наложить водяной знак на ваши авторские изображения')
 		.wrapper
-			.block-left
-				.block-left__title Генератор водяных знаков
-				.block-left__main
-					.block-left__wrapper-img
-						#draggable.block-left__img
-							img(src='img/img-w.jpg' alt='').watermark
-			form.block-right
-				.block-right__title Настройки
-				.block-right__form
-					.progress.progress_0 
-						div(class="bar bar_0" style="width: 0%")
-					.progress.progress_1
-						div(class="bar bar_1" style="width: 0%")
-					-var items=['Исходное изображение','Водяной знак']
-						each item, indx in items
-							-var i=1
-							-var count=indx+i
-								label.block-right__lbl=item
-								label(class = "block-right__fileupload block-right__fileupload_" + indx + ((indx==1) ? " disabled" : ""))
-										input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/up.php" multiple disabled=((count == 2) ? true : false))
-										input.fileurl(type="hidden" name="fileurl")
-									input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image = "Вы загрузили не картинку" data-tooltip-too-big = "Вы загрузили картинку больше 2Мб" data-tooltip-bigger = "Вотемарк больше исходной картинки" data-tooltip-error = "Произошла ошибка!") 
-				.block-right__form
-					.block-right__form-title Положение
-					.block-right-place
-						.block-right-place__table
-							-for (var i=0; i<9; i++)
-								label.block-right-place__lbl
-									input.block-right__radio(type="radio" name="radio_btn" class="block-right__radio_"+i disabled checked=((i==0)? true : false))
-									span.block-right__radio-elem
-						.block-right-place__left
-							-var items=['X','Y']
-								each item, indx in items
-									label(for="spinner_"+indx)=item
-										input(id='spinner_'+indx class='spinner' name='value' readonly)
-				.block-right__form
-					.block-right__form-title.sidebar Прозрачность
-					#slider-range.slider-elem
-				.block-right__last.block-right__form
-					.block-right__btn
-						button.btn.btn__clear(type='reset' disabled) Сброс
-						button.btn.btn__save(type='submit' disabled) Скачать
-		.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
+			.wrapper-content
+				.block-left
+					.block-left__title Генератор водяных знаков
+					.block-left__main
+						.block-left__wrapper-img
+							#draggable.block-left__img
+								img(src='img/img-w.jpg' alt='').watermark
+				form.block-right
+					.block-right__title Настройки
+					.block-right__form
+						.progress.progress_0 
+							div(class="bar bar_0" style="width: 0%")
+						.progress.progress_1
+							div(class="bar bar_1" style="width: 0%")
+						-var items=['Исходное изображение','Водяной знак']
+							each item, indx in items
+								-var i=1
+								-var count=indx+i
+									label.block-right__lbl=item
+									label(class = "block-right__fileupload block-right__fileupload_" + indx + ((indx==1) ? " disabled" : ""))
+											input.fileupload(id="fileupload_"+count type="file" name="files[]" data-url="php/up.php" multiple disabled=((count == 2) ? true : false))
+											input.fileurl(type="hidden" name="fileurl")
+										input(class="block-right__input block-right__input_" + count type="text" name="img-name" readonly value="image.jpg" data-tooltip-not-image = "Вы загрузили не картинку" data-tooltip-too-big = "Вы загрузили картинку больше 2Мб" data-tooltip-bigger = "Вотемарк больше исходной картинки" data-tooltip-error = "Произошла ошибка!") 
+					.block-right__form
+						.block-right__form-title Положение
+						.block-right-place
+							.block-right-place__table
+								-for (var i=0; i<9; i++)
+									label.block-right-place__lbl
+										input.block-right__radio(type="radio" name="radio_btn" class="block-right__radio_"+i disabled checked=((i==0)? true : false))
+										span.block-right__radio-elem
+							.block-right-place__left
+								-var items=['X','Y']
+									each item, indx in items
+										label(for="spinner_"+indx)=item
+											input(id='spinner_'+indx class='spinner' name='value' readonly)
+					.block-right__form
+						.block-right__form-title.sidebar Прозрачность
+						#slider-range.slider-elem
+					.block-right__last.block-right__form
+						.block-right__btn
+							button.btn.btn__clear(type='reset' disabled) Сброс
+							button.btn.btn__save(type='submit' disabled) Скачать
+			.footer © 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его
 		script(type="text/javascript" src="bower/jquery/jquery.min.js")
 		script(type="text/javascript" src="js/plugins/jquery-ui.min.js")
 		//- для загрузки картинок
