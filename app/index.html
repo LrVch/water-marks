@@ -22,10 +22,14 @@
 		<meta name="msapplication-config" content="favicon/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin,cyrillic-ext,cyrillic" rel="stylesheet" type="text/css">
-		<link href="fonts/styles.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+		<!-- build:css css/vendor.min.css -->
+		<link href="fonts/styles.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="css/vendor/tooltip.css">
+		<!-- endbuild -->
+		<!-- build:css css/style.min.css -->
 		<link rel="stylesheet" href="css/main.css">
+		<!-- endbuild -->
 	</head>
 	<body>
 		<ul class="icons__language">
@@ -124,13 +128,15 @@
 			</form>
 		</div>
 		<div class="footer">© 2014, Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
+		<!-- build:js js/vendor.min.js -->
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="js/plugins/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/plugins/jquery.fileupload.js"></script>
 		<script type="text/javascript" src="js/plugins/jquery.iframe-transport.js"></script>
 		<script type="text/javascript" src="js/plugins/tooltip.js"></script>
 		<script type="text/javascript" src="js/plugins/jquery.ui.widget.js"></script>
-		<!--script(type="text/javascript" src="js/main.js")-->
+		<!-- endbuild -->
+		<!-- build:js js/script.min.js -->
 		<script type="text/javascript" src="js/sbuttons.js"></script>
 		<script type="text/javascript" src="js/position.js"></script>
 		<script type="text/javascript" src="js/opacity.js"></script>
@@ -138,5 +144,6 @@
 		<script type="text/javascript" src="js/reset.js"></script>
 		<script type="text/javascript" src="js/loadimages.js"></script>
 		<script type="text/javascript" src="js/change-lng.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>
