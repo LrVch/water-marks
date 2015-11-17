@@ -8,7 +8,6 @@
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 11, ../styles/_misc/_normalize.scss */
 article,
 aside,
 details,
@@ -27,7 +26,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-/* line 30, ../styles/_misc/_normalize.scss */
 audio,
 canvas,
 video {
@@ -40,7 +38,6 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 43, ../styles/_misc/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -50,7 +47,6 @@ audio:not([controls]) {
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
-/* line 53, ../styles/_misc/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -64,7 +60,6 @@ audio:not([controls]) {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 68, ../styles/_misc/_normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -78,7 +73,6 @@ html {
  * Address `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-/* line 79, ../styles/_misc/_normalize.scss */
 html,
 button,
 input,
@@ -90,7 +84,6 @@ textarea {
 /**
  * Address margins handled incorrectly in IE 6/7.
  */
-/* line 91, ../styles/_misc/_normalize.scss */
 body {
   margin: 0;
 }
@@ -101,7 +94,6 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 103, ../styles/_misc/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -109,7 +101,6 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 111, ../styles/_misc/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -123,37 +114,31 @@ a:hover {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-/* line 126, ../styles/_misc/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* line 131, ../styles/_misc/_normalize.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-/* line 136, ../styles/_misc/_normalize.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 141, ../styles/_misc/_normalize.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 146, ../styles/_misc/_normalize.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-/* line 151, ../styles/_misc/_normalize.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
@@ -162,7 +147,6 @@ h6 {
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-/* line 160, ../styles/_misc/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -170,13 +154,11 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 168, ../styles/_misc/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 173, ../styles/_misc/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -184,7 +166,6 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 181, ../styles/_misc/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -193,7 +174,6 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-/* line 190, ../styles/_misc/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -203,7 +183,6 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-/* line 200, ../styles/_misc/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -212,7 +191,6 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 209, ../styles/_misc/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -221,7 +199,6 @@ pre {
 /**
  * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-/* line 218, ../styles/_misc/_normalize.scss */
 code,
 kbd,
 pre,
@@ -234,7 +211,6 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 231, ../styles/_misc/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -244,7 +220,6 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-/* line 241, ../styles/_misc/_normalize.scss */
 q {
   quotes: none;
 }
@@ -252,7 +227,6 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 249, ../styles/_misc/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -262,7 +236,6 @@ q:after {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 259, ../styles/_misc/_normalize.scss */
 small {
   font-size: 80%;
 }
@@ -270,7 +243,6 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 267, ../styles/_misc/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -279,12 +251,10 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 275, ../styles/_misc/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 279, ../styles/_misc/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -295,7 +265,6 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 291, ../styles/_misc/_normalize.scss */
 dl,
 menu,
 ol,
@@ -303,7 +272,6 @@ ul {
   margin: 1em 0;
 }
 
-/* line 298, ../styles/_misc/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -311,7 +279,6 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 306, ../styles/_misc/_normalize.scss */
 menu,
 ol,
 ul {
@@ -321,7 +288,6 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 316, ../styles/_misc/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -335,7 +301,6 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-/* line 331, ../styles/_misc/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -346,7 +311,6 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 340, ../styles/_misc/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -357,7 +321,6 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-/* line 352, ../styles/_misc/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -368,7 +331,6 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-/* line 364, ../styles/_misc/_normalize.scss */
 form {
   margin: 0;
 }
@@ -376,7 +338,6 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 372, ../styles/_misc/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -388,7 +349,6 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 384, ../styles/_misc/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -405,7 +365,6 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 398, ../styles/_misc/_normalize.scss */
 button,
 input,
 select,
@@ -424,7 +383,6 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 413, ../styles/_misc/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -436,7 +394,6 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 425, ../styles/_misc/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -451,7 +408,6 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 440, ../styles/_misc/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -467,7 +423,6 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 453, ../styles/_misc/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -479,7 +434,6 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 465, ../styles/_misc/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -497,7 +451,6 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 479, ../styles/_misc/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -511,7 +464,6 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 491, ../styles/_misc/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -520,7 +472,6 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 500, ../styles/_misc/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -531,7 +482,6 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 511, ../styles/_misc/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -545,7 +495,6 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 524, ../styles/_misc/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -558,12 +507,10 @@ table {
 * Copyright 2015 jQuery Foundation and other contributors; Licensed MIT */
 /* Layout helpers
 ----------------------------------*/
-/* line 9, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-hidden {
   display: none;
 }
 
-/* line 12, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-hidden-accessible {
   border: 0;
   clip: rect(0 0 0 0);
@@ -575,7 +522,6 @@ table {
   width: 1px;
 }
 
-/* line 22, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-reset {
   margin: 0;
   padding: 0;
@@ -587,7 +533,6 @@ table {
   list-style: none;
 }
 
-/* line 32, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-clearfix:before,
 .ui-helper-clearfix:after {
   content: "";
@@ -595,18 +540,15 @@ table {
   border-collapse: collapse;
 }
 
-/* line 38, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-clearfix:after {
   clear: both;
 }
 
-/* line 41, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-clearfix {
   min-height: 0;
   /* support: IE7 */
 }
 
-/* line 44, ../styles/_plugins/_jquery-ui.scss */
 .ui-helper-zfix {
   width: 100%;
   height: 100%;
@@ -618,14 +560,12 @@ table {
   /* support: IE8 */
 }
 
-/* line 54, ../styles/_plugins/_jquery-ui.scss */
 .ui-front {
   z-index: 100;
 }
 
 /* Interaction Cues
 ----------------------------------*/
-/* line 61, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-disabled {
   cursor: default !important;
 }
@@ -633,7 +573,6 @@ table {
 /* Icons
 ----------------------------------*/
 /* states and images */
-/* line 70, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon {
   display: block;
   text-indent: -99999px;
@@ -644,7 +583,6 @@ table {
 /* Misc visuals
 ----------------------------------*/
 /* Overlays */
-/* line 82, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-overlay {
   position: fixed;
   top: 0;
@@ -653,7 +591,6 @@ table {
   height: 100%;
 }
 
-/* line 89, ../styles/_plugins/_jquery-ui.scss */
 .ui-accordion .ui-accordion-header {
   display: block;
   cursor: pointer;
@@ -665,17 +602,14 @@ table {
   font-size: 100%;
 }
 
-/* line 98, ../styles/_plugins/_jquery-ui.scss */
 .ui-accordion .ui-accordion-icons {
   padding-left: 2.2em;
 }
 
-/* line 101, ../styles/_plugins/_jquery-ui.scss */
 .ui-accordion .ui-accordion-icons .ui-accordion-icons {
   padding-left: 2.2em;
 }
 
-/* line 104, ../styles/_plugins/_jquery-ui.scss */
 .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
   position: absolute;
   left: .5em;
@@ -683,14 +617,12 @@ table {
   margin-top: -8px;
 }
 
-/* line 110, ../styles/_plugins/_jquery-ui.scss */
 .ui-accordion .ui-accordion-content {
   padding: 1em 2.2em;
   border-top: 0;
   overflow: auto;
 }
 
-/* line 115, ../styles/_plugins/_jquery-ui.scss */
 .ui-autocomplete {
   position: absolute;
   top: 0;
@@ -698,7 +630,6 @@ table {
   cursor: default;
 }
 
-/* line 121, ../styles/_plugins/_jquery-ui.scss */
 .ui-button {
   display: inline-block;
   position: relative;
@@ -712,7 +643,6 @@ table {
   /* removes extra width in IE */
 }
 
-/* line 132, ../styles/_plugins/_jquery-ui.scss */
 .ui-button,
 .ui-button:link,
 .ui-button:visited,
@@ -722,72 +652,60 @@ table {
 }
 
 /* to make room for the icon, a width needs to be set here */
-/* line 140, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-icon-only {
   width: 2.2em;
 }
 
 /* button elements seem to need a little more width */
-/* line 144, ../styles/_plugins/_jquery-ui.scss */
 button.ui-button-icon-only {
   width: 2.4em;
 }
 
-/* line 147, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-icons-only {
   width: 3.4em;
 }
 
-/* line 150, ../styles/_plugins/_jquery-ui.scss */
 button.ui-button-icons-only {
   width: 3.7em;
 }
 
 /* button text element */
-/* line 155, ../styles/_plugins/_jquery-ui.scss */
 .ui-button .ui-button-text {
   display: block;
   line-height: normal;
 }
 
-/* line 159, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-text-only .ui-button-text {
   padding: .4em 1em;
 }
 
-/* line 162, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-icon-only .ui-button-text,
 .ui-button-icons-only .ui-button-text {
   padding: .4em;
   text-indent: -9999999px;
 }
 
-/* line 167, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-text-icon-primary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
   padding: .4em 1em .4em 2.1em;
 }
 
-/* line 171, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-text-icon-secondary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
   padding: .4em 2.1em .4em 1em;
 }
 
-/* line 175, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-text-icons .ui-button-text {
   padding-left: 2.1em;
   padding-right: 2.1em;
 }
 
 /* no icon support for input elements, provide padding by default */
-/* line 180, ../styles/_plugins/_jquery-ui.scss */
 input.ui-button {
   padding: .4em 1em;
 }
 
 /* button icon element(s) */
-/* line 185, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-icon-only .ui-icon,
 .ui-button-text-icon-primary .ui-icon,
 .ui-button-text-icon-secondary .ui-icon,
@@ -798,20 +716,17 @@ input.ui-button {
   margin-top: -8px;
 }
 
-/* line 194, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-icon-only .ui-icon {
   left: 50%;
   margin-left: -8px;
 }
 
-/* line 198, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-text-icon-primary .ui-button-icon-primary,
 .ui-button-text-icons .ui-button-icon-primary,
 .ui-button-icons-only .ui-button-icon-primary {
   left: .5em;
 }
 
-/* line 203, ../styles/_plugins/_jquery-ui.scss */
 .ui-button-text-icon-secondary .ui-button-icon-secondary,
 .ui-button-text-icons .ui-button-icon-secondary,
 .ui-button-icons-only .ui-button-icon-secondary {
@@ -819,12 +734,10 @@ input.ui-button {
 }
 
 /* button sets */
-/* line 210, ../styles/_plugins/_jquery-ui.scss */
 .ui-buttonset {
   margin-right: 7px;
 }
 
-/* line 213, ../styles/_plugins/_jquery-ui.scss */
 .ui-buttonset .ui-button {
   margin-left: 0;
   margin-right: -.3em;
@@ -832,27 +745,23 @@ input.ui-button {
 
 /* workarounds */
 /* reset extra padding in Firefox, see h5bp.com/l */
-/* line 220, ../styles/_plugins/_jquery-ui.scss */
 input.ui-button::-moz-focus-inner,
 button.ui-button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 225, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker {
   width: 17em;
   padding: .2em .2em 0;
   display: none;
 }
 
-/* line 230, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-header {
   position: relative;
   padding: .2em 0;
 }
 
-/* line 234, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
   position: absolute;
@@ -861,33 +770,27 @@ button.ui-button::-moz-focus-inner {
   height: 1.8em;
 }
 
-/* line 241, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
   top: 1px;
 }
 
-/* line 245, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-prev {
   left: 2px;
 }
 
-/* line 248, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-next {
   right: 2px;
 }
 
-/* line 251, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-prev-hover {
   left: 1px;
 }
 
-/* line 254, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-next-hover {
   right: 1px;
 }
 
-/* line 257, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
   display: block;
@@ -898,26 +801,22 @@ button.ui-button::-moz-focus-inner {
   margin-top: -8px;
 }
 
-/* line 266, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-title {
   margin: 0 2.3em;
   line-height: 1.8em;
   text-align: center;
 }
 
-/* line 271, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-title select {
   font-size: 1em;
   margin: 1px 0;
 }
 
-/* line 275, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
   width: 45%;
 }
 
-/* line 279, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker table {
   width: 100%;
   font-size: .9em;
@@ -925,7 +824,6 @@ button.ui-button::-moz-focus-inner {
   margin: 0 0 .4em;
 }
 
-/* line 285, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker th {
   padding: .7em .3em;
   text-align: center;
@@ -933,13 +831,11 @@ button.ui-button::-moz-focus-inner {
   border: 0;
 }
 
-/* line 291, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker td {
   border: 0;
   padding: 1px;
 }
 
-/* line 295, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker td span,
 .ui-datepicker td a {
   display: block;
@@ -948,7 +844,6 @@ button.ui-button::-moz-focus-inner {
   text-decoration: none;
 }
 
-/* line 302, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-buttonpane {
   background-image: none;
   margin: .7em 0 0 0;
@@ -958,7 +853,6 @@ button.ui-button::-moz-focus-inner {
   border-bottom: 0;
 }
 
-/* line 310, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-buttonpane button {
   float: right;
   margin: .5em .2em .4em;
@@ -968,55 +862,45 @@ button.ui-button::-moz-focus-inner {
   overflow: visible;
 }
 
-/* line 318, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left;
 }
 
 /* with multiple calendars */
-/* line 323, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker.ui-datepicker-multi {
   width: auto;
 }
 
-/* line 326, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi .ui-datepicker-group {
   float: left;
 }
 
-/* line 329, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi .ui-datepicker-group table {
   width: 95%;
   margin: 0 auto .4em;
 }
 
-/* line 333, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi-2 .ui-datepicker-group {
   width: 50%;
 }
 
-/* line 336, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi-3 .ui-datepicker-group {
   width: 33.3%;
 }
 
-/* line 339, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi-4 .ui-datepicker-group {
   width: 25%;
 }
 
-/* line 342, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
 .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
   border-left-width: 0;
 }
 
-/* line 346, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-multi .ui-datepicker-buttonpane {
   clear: left;
 }
 
-/* line 349, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-row-break {
   clear: both;
   width: 100%;
@@ -1024,59 +908,49 @@ button.ui-button::-moz-focus-inner {
 }
 
 /* RTL support */
-/* line 356, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl {
   direction: rtl;
 }
 
-/* line 359, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-prev {
   right: 2px;
   left: auto;
 }
 
-/* line 363, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-next {
   left: 2px;
   right: auto;
 }
 
-/* line 367, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-prev:hover {
   right: 1px;
   left: auto;
 }
 
-/* line 371, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-next:hover {
   left: 1px;
   right: auto;
 }
 
-/* line 375, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-buttonpane {
   clear: right;
 }
 
-/* line 378, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-buttonpane button {
   float: left;
 }
 
-/* line 381, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
 .ui-datepicker-rtl .ui-datepicker-group {
   float: right;
 }
 
-/* line 385, ../styles/_plugins/_jquery-ui.scss */
 .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
 .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
   border-right-width: 0;
   border-left-width: 1px;
 }
 
-/* line 390, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog {
   overflow: hidden;
   position: absolute;
@@ -1086,13 +960,11 @@ button.ui-button::-moz-focus-inner {
   outline: 0;
 }
 
-/* line 398, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-titlebar {
   padding: .4em 1em;
   position: relative;
 }
 
-/* line 402, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-title {
   float: left;
   margin: .1em 0;
@@ -1102,7 +974,6 @@ button.ui-button::-moz-focus-inner {
   text-overflow: ellipsis;
 }
 
-/* line 410, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-titlebar-close {
   position: absolute;
   right: .3em;
@@ -1113,7 +984,6 @@ button.ui-button::-moz-focus-inner {
   height: 20px;
 }
 
-/* line 419, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-content {
   position: relative;
   border: 0;
@@ -1122,7 +992,6 @@ button.ui-button::-moz-focus-inner {
   overflow: auto;
 }
 
-/* line 426, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-buttonpane {
   text-align: left;
   border-width: 1px 0 0 0;
@@ -1131,18 +1000,15 @@ button.ui-button::-moz-focus-inner {
   padding: .3em 1em .5em .4em;
 }
 
-/* line 433, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
   float: right;
 }
 
-/* line 436, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-dialog-buttonpane button {
   margin: .5em .4em .5em 0;
   cursor: pointer;
 }
 
-/* line 440, ../styles/_plugins/_jquery-ui.scss */
 .ui-dialog .ui-resizable-se {
   width: 12px;
   height: 12px;
@@ -1151,18 +1017,15 @@ button.ui-button::-moz-focus-inner {
   background-position: 16px 16px;
 }
 
-/* line 447, ../styles/_plugins/_jquery-ui.scss */
 .ui-draggable .ui-dialog-titlebar {
   cursor: move;
 }
 
-/* line 450, ../styles/_plugins/_jquery-ui.scss */
 .ui-draggable-handle {
   -ms-touch-action: none;
   touch-action: none;
 }
 
-/* line 454, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu {
   list-style: none;
   padding: 0;
@@ -1171,12 +1034,10 @@ button.ui-button::-moz-focus-inner {
   outline: none;
 }
 
-/* line 461, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu .ui-menu {
   position: absolute;
 }
 
-/* line 464, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu .ui-menu-item {
   position: relative;
   margin: 0;
@@ -1188,7 +1049,6 @@ button.ui-button::-moz-focus-inner {
   list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 }
 
-/* line 473, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu .ui-menu-divider {
   margin: 5px 0;
   height: 0;
@@ -1197,25 +1057,21 @@ button.ui-button::-moz-focus-inner {
   border-width: 1px 0 0 0;
 }
 
-/* line 480, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
   margin: -1px;
 }
 
 /* icon support */
-/* line 486, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu-icons {
   position: relative;
 }
 
-/* line 489, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu-icons .ui-menu-item {
   padding-left: 2em;
 }
 
 /* left-aligned */
-/* line 494, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu .ui-icon {
   position: absolute;
   top: 0;
@@ -1225,26 +1081,22 @@ button.ui-button::-moz-focus-inner {
 }
 
 /* right-aligned */
-/* line 503, ../styles/_plugins/_jquery-ui.scss */
 .ui-menu .ui-menu-icon {
   left: auto;
   right: 0;
 }
 
-/* line 507, ../styles/_plugins/_jquery-ui.scss */
 .ui-progressbar {
   height: 2em;
   text-align: left;
   overflow: hidden;
 }
 
-/* line 512, ../styles/_plugins/_jquery-ui.scss */
 .ui-progressbar .ui-progressbar-value {
   margin: -1px;
   height: 100%;
 }
 
-/* line 516, ../styles/_plugins/_jquery-ui.scss */
 .ui-progressbar .ui-progressbar-overlay {
   background: url("data:image/gif;base64,R0lGODlhKAAoAIABAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAQABACwAAAAAKAAoAAACkYwNqXrdC52DS06a7MFZI+4FHBCKoDeWKXqymPqGqxvJrXZbMx7Ttc+w9XgU2FB3lOyQRWET2IFGiU9m1frDVpxZZc6bfHwv4c1YXP6k1Vdy292Fb6UkuvFtXpvWSzA+HycXJHUXiGYIiMg2R6W459gnWGfHNdjIqDWVqemH2ekpObkpOlppWUqZiqr6edqqWQAAIfkECQEAAQAsAAAAACgAKAAAApSMgZnGfaqcg1E2uuzDmmHUBR8Qil95hiPKqWn3aqtLsS18y7G1SzNeowWBENtQd+T1JktP05nzPTdJZlR6vUxNWWjV+vUWhWNkWFwxl9VpZRedYcflIOLafaa28XdsH/ynlcc1uPVDZxQIR0K25+cICCmoqCe5mGhZOfeYSUh5yJcJyrkZWWpaR8doJ2o4NYq62lAAACH5BAkBAAEALAAAAAAoACgAAAKVDI4Yy22ZnINRNqosw0Bv7i1gyHUkFj7oSaWlu3ovC8GxNso5fluz3qLVhBVeT/Lz7ZTHyxL5dDalQWPVOsQWtRnuwXaFTj9jVVh8pma9JjZ4zYSj5ZOyma7uuolffh+IR5aW97cHuBUXKGKXlKjn+DiHWMcYJah4N0lYCMlJOXipGRr5qdgoSTrqWSq6WFl2ypoaUAAAIfkECQEAAQAsAAAAACgAKAAAApaEb6HLgd/iO7FNWtcFWe+ufODGjRfoiJ2akShbueb0wtI50zm02pbvwfWEMWBQ1zKGlLIhskiEPm9R6vRXxV4ZzWT2yHOGpWMyorblKlNp8HmHEb/lCXjcW7bmtXP8Xt229OVWR1fod2eWqNfHuMjXCPkIGNileOiImVmCOEmoSfn3yXlJWmoHGhqp6ilYuWYpmTqKUgAAIfkECQEAAQAsAAAAACgAKAAAApiEH6kb58biQ3FNWtMFWW3eNVcojuFGfqnZqSebuS06w5V80/X02pKe8zFwP6EFWOT1lDFk8rGERh1TTNOocQ61Hm4Xm2VexUHpzjymViHrFbiELsefVrn6XKfnt2Q9G/+Xdie499XHd2g4h7ioOGhXGJboGAnXSBnoBwKYyfioubZJ2Hn0RuRZaflZOil56Zp6iioKSXpUAAAh+QQJAQABACwAAAAAKAAoAAACkoQRqRvnxuI7kU1a1UU5bd5tnSeOZXhmn5lWK3qNTWvRdQxP8qvaC+/yaYQzXO7BMvaUEmJRd3TsiMAgswmNYrSgZdYrTX6tSHGZO73ezuAw2uxuQ+BbeZfMxsexY35+/Qe4J1inV0g4x3WHuMhIl2jXOKT2Q+VU5fgoSUI52VfZyfkJGkha6jmY+aaYdirq+lQAACH5BAkBAAEALAAAAAAoACgAAAKWBIKpYe0L3YNKToqswUlvznigd4wiR4KhZrKt9Upqip61i9E3vMvxRdHlbEFiEXfk9YARYxOZZD6VQ2pUunBmtRXo1Lf8hMVVcNl8JafV38aM2/Fu5V16Bn63r6xt97j09+MXSFi4BniGFae3hzbH9+hYBzkpuUh5aZmHuanZOZgIuvbGiNeomCnaxxap2upaCZsq+1kAACH5BAkBAAEALAAAAAAoACgAAAKXjI8By5zf4kOxTVrXNVlv1X0d8IGZGKLnNpYtm8Lr9cqVeuOSvfOW79D9aDHizNhDJidFZhNydEahOaDH6nomtJjp1tutKoNWkvA6JqfRVLHU/QUfau9l2x7G54d1fl995xcIGAdXqMfBNadoYrhH+Mg2KBlpVpbluCiXmMnZ2Sh4GBqJ+ckIOqqJ6LmKSllZmsoq6wpQAAAh+QQJAQABACwAAAAAKAAoAAAClYx/oLvoxuJDkU1a1YUZbJ59nSd2ZXhWqbRa2/gF8Gu2DY3iqs7yrq+xBYEkYvFSM8aSSObE+ZgRl1BHFZNr7pRCavZ5BW2142hY3AN/zWtsmf12p9XxxFl2lpLn1rseztfXZjdIWIf2s5dItwjYKBgo9yg5pHgzJXTEeGlZuenpyPmpGQoKOWkYmSpaSnqKileI2FAAACH5BAkBAAEALAAAAAAoACgAAAKVjB+gu+jG4kORTVrVhRlsnn2dJ3ZleFaptFrb+CXmO9OozeL5VfP99HvAWhpiUdcwkpBH3825AwYdU8xTqlLGhtCosArKMpvfa1mMRae9VvWZfeB2XfPkeLmm18lUcBj+p5dnN8jXZ3YIGEhYuOUn45aoCDkp16hl5IjYJvjWKcnoGQpqyPlpOhr3aElaqrq56Bq7VAAAOw==");
   height: 100%;
@@ -1253,17 +1105,14 @@ button.ui-button::-moz-focus-inner {
   opacity: 0.25;
 }
 
-/* line 522, ../styles/_plugins/_jquery-ui.scss */
 .ui-progressbar-indeterminate .ui-progressbar-value {
   background-image: none;
 }
 
-/* line 525, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable {
   position: relative;
 }
 
-/* line 528, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-handle {
   position: absolute;
   font-size: 0.1px;
@@ -1272,13 +1121,11 @@ button.ui-button::-moz-focus-inner {
   touch-action: none;
 }
 
-/* line 535, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
   display: none;
 }
 
-/* line 539, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-n {
   cursor: n-resize;
   height: 7px;
@@ -1287,7 +1134,6 @@ button.ui-button::-moz-focus-inner {
   left: 0;
 }
 
-/* line 546, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-s {
   cursor: s-resize;
   height: 7px;
@@ -1296,7 +1142,6 @@ button.ui-button::-moz-focus-inner {
   left: 0;
 }
 
-/* line 553, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-e {
   cursor: e-resize;
   width: 7px;
@@ -1305,7 +1150,6 @@ button.ui-button::-moz-focus-inner {
   height: 100%;
 }
 
-/* line 560, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-w {
   cursor: w-resize;
   width: 7px;
@@ -1314,7 +1158,6 @@ button.ui-button::-moz-focus-inner {
   height: 100%;
 }
 
-/* line 567, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-se {
   cursor: se-resize;
   width: 12px;
@@ -1323,7 +1166,6 @@ button.ui-button::-moz-focus-inner {
   bottom: 1px;
 }
 
-/* line 574, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-sw {
   cursor: sw-resize;
   width: 9px;
@@ -1332,7 +1174,6 @@ button.ui-button::-moz-focus-inner {
   bottom: -5px;
 }
 
-/* line 581, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-nw {
   cursor: nw-resize;
   width: 9px;
@@ -1341,7 +1182,6 @@ button.ui-button::-moz-focus-inner {
   top: -5px;
 }
 
-/* line 588, ../styles/_plugins/_jquery-ui.scss */
 .ui-resizable-ne {
   cursor: ne-resize;
   width: 9px;
@@ -1350,20 +1190,17 @@ button.ui-button::-moz-focus-inner {
   top: -5px;
 }
 
-/* line 595, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectable {
   -ms-touch-action: none;
   touch-action: none;
 }
 
-/* line 599, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectable-helper {
   position: absolute;
   z-index: 100;
   border: 1px dotted black;
 }
 
-/* line 604, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-menu {
   padding: 0;
   margin: 0;
@@ -1373,7 +1210,6 @@ button.ui-button::-moz-focus-inner {
   display: none;
 }
 
-/* line 612, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-menu .ui-menu {
   overflow: auto;
   /* Support: IE7 */
@@ -1381,7 +1217,6 @@ button.ui-button::-moz-focus-inner {
   padding-bottom: 1px;
 }
 
-/* line 618, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
   font-size: 1em;
   font-weight: bold;
@@ -1392,12 +1227,10 @@ button.ui-button::-moz-focus-inner {
   border: 0;
 }
 
-/* line 627, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-open {
   display: block;
 }
 
-/* line 630, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-button {
   display: inline-block;
   overflow: hidden;
@@ -1406,7 +1239,6 @@ button.ui-button::-moz-focus-inner {
   cursor: pointer;
 }
 
-/* line 637, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-button span.ui-icon {
   right: 0.5em;
   left: auto;
@@ -1415,7 +1247,6 @@ button.ui-button::-moz-focus-inner {
   top: 50%;
 }
 
-/* line 644, ../styles/_plugins/_jquery-ui.scss */
 .ui-selectmenu-button span.ui-selectmenu-text {
   text-align: left;
   padding: 0.4em 2.1em 0.4em 1em;
@@ -1426,13 +1257,11 @@ button.ui-button::-moz-focus-inner {
   white-space: nowrap;
 }
 
-/* line 653, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider {
   position: relative;
   text-align: left;
 }
 
-/* line 657, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider .ui-slider-handle {
   position: absolute;
   z-index: 2;
@@ -1443,7 +1272,6 @@ button.ui-button::-moz-focus-inner {
   touch-action: none;
 }
 
-/* line 666, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider .ui-slider-range {
   position: absolute;
   z-index: 1;
@@ -1454,75 +1282,62 @@ button.ui-button::-moz-focus-inner {
 }
 
 /* support: IE8 - See #6727 */
-/* line 676, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
   filter: inherit;
 }
 
-/* line 681, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-horizontal {
   height: .8em;
 }
 
-/* line 684, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-horizontal .ui-slider-handle {
   top: -.3em;
   margin-left: -.6em;
 }
 
-/* line 688, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-horizontal .ui-slider-range {
   top: 0;
   height: 100%;
 }
 
-/* line 692, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-horizontal .ui-slider-range-min {
   left: 0;
 }
 
-/* line 695, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-horizontal .ui-slider-range-max {
   right: 0;
 }
 
-/* line 699, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-vertical {
   width: .8em;
   height: 100px;
 }
 
-/* line 703, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-vertical .ui-slider-handle {
   left: -.3em;
   margin-left: 0;
   margin-bottom: -.6em;
 }
 
-/* line 708, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-vertical .ui-slider-range {
   left: 0;
   width: 100%;
 }
 
-/* line 712, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-vertical .ui-slider-range-min {
   bottom: 0;
 }
 
-/* line 715, ../styles/_plugins/_jquery-ui.scss */
 .ui-slider-vertical .ui-slider-range-max {
   top: 0;
 }
 
-/* line 718, ../styles/_plugins/_jquery-ui.scss */
 .ui-sortable-handle {
   -ms-touch-action: none;
   touch-action: none;
 }
 
-/* line 722, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner {
   position: relative;
   display: inline-block;
@@ -1531,7 +1346,6 @@ button.ui-button::-moz-focus-inner {
   vertical-align: middle;
 }
 
-/* line 729, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner-input {
   border: none;
   background: none;
@@ -1543,7 +1357,6 @@ button.ui-button::-moz-focus-inner {
   margin-right: 22px;
 }
 
-/* line 739, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner-button {
   width: 16px;
   height: 50%;
@@ -1559,7 +1372,6 @@ button.ui-button::-moz-focus-inner {
 }
 
 /* more specificity required here to override default borders */
-/* line 753, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner a.ui-spinner-button {
   border-top: none;
   border-bottom: none;
@@ -1567,7 +1379,6 @@ button.ui-button::-moz-focus-inner {
 }
 
 /* vertically center icon */
-/* line 759, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner .ui-icon {
   position: absolute;
   margin-top: -8px;
@@ -1575,37 +1386,31 @@ button.ui-button::-moz-focus-inner {
   left: 0;
 }
 
-/* line 765, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner-up {
   top: 0;
 }
 
-/* line 768, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner-down {
   bottom: 0;
 }
 
 /* TR overrides */
-/* line 773, ../styles/_plugins/_jquery-ui.scss */
 .ui-spinner .ui-icon-triangle-1-s {
   /* need to fix icons sprite */
   background-position: -65px -16px;
 }
 
-/* line 777, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs {
   position: relative;
   /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
   padding: .2em;
 }
 
-/* line 781, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs .ui-tabs-nav {
   margin: 0;
   padding: .2em .2em 0;
 }
 
-/* line 785, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs .ui-tabs-nav li {
   list-style: none;
   float: left;
@@ -1617,32 +1422,27 @@ button.ui-button::-moz-focus-inner {
   white-space: nowrap;
 }
 
-/* line 795, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
   float: left;
   padding: .5em 1em;
   text-decoration: none;
 }
 
-/* line 800, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   margin-bottom: -1px;
   padding-bottom: 1px;
 }
 
-/* line 804, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
   cursor: text;
 }
 
-/* line 809, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
   cursor: pointer;
 }
 
-/* line 812, ../styles/_plugins/_jquery-ui.scss */
 .ui-tabs .ui-tabs-panel {
   display: block;
   border-width: 0;
@@ -1650,7 +1450,6 @@ button.ui-button::-moz-focus-inner {
   background: none;
 }
 
-/* line 818, ../styles/_plugins/_jquery-ui.scss */
 .ui-tooltip {
   padding: 8px;
   position: absolute;
@@ -1660,25 +1459,21 @@ button.ui-button::-moz-focus-inner {
   box-shadow: 0 0 5px #aaa;
 }
 
-/* line 826, ../styles/_plugins/_jquery-ui.scss */
 body .ui-tooltip {
   border-width: 2px;
 }
 
 /* Component containers
 ----------------------------------*/
-/* line 832, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget {
   font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
   font-size: 1.1em;
 }
 
-/* line 836, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget .ui-widget {
   font-size: 1em;
 }
 
-/* line 839, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
@@ -1687,19 +1482,16 @@ body .ui-tooltip {
   font-size: 1em;
 }
 
-/* line 846, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-content {
   border: 1px solid #dddddd;
   background: #eeeeee url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
   color: #333333;
 }
 
-/* line 851, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-content a {
   color: #333333;
 }
 
-/* line 854, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-header {
   border: 1px solid #e78f08;
   background: #f6a828 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
@@ -1707,14 +1499,12 @@ body .ui-tooltip {
   font-weight: bold;
 }
 
-/* line 860, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-header a {
   color: #ffffff;
 }
 
 /* Interaction states
 ----------------------------------*/
-/* line 866, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
@@ -1724,7 +1514,6 @@ body .ui-tooltip {
   color: #1c94c4;
 }
 
-/* line 874, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {
@@ -1732,7 +1521,6 @@ body .ui-tooltip {
   text-decoration: none;
 }
 
-/* line 880, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
 .ui-widget-header .ui-state-hover,
@@ -1745,7 +1533,6 @@ body .ui-tooltip {
   color: #c77405;
 }
 
-/* line 891, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-hover a,
 .ui-state-hover a:hover,
 .ui-state-hover a:link,
@@ -1758,7 +1545,6 @@ body .ui-tooltip {
   text-decoration: none;
 }
 
-/* line 902, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
@@ -1768,7 +1554,6 @@ body .ui-tooltip {
   color: #eb8f00;
 }
 
-/* line 910, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
@@ -1778,7 +1563,6 @@ body .ui-tooltip {
 
 /* Interaction Cues
 ----------------------------------*/
-/* line 919, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
@@ -1787,14 +1571,12 @@ body .ui-tooltip {
   color: #363636;
 }
 
-/* line 926, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-highlight a,
 .ui-widget-content .ui-state-highlight a,
 .ui-widget-header .ui-state-highlight a {
   color: #363636;
 }
 
-/* line 931, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
@@ -1803,28 +1585,24 @@ body .ui-tooltip {
   color: #ffffff;
 }
 
-/* line 938, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-error a,
 .ui-widget-content .ui-state-error a,
 .ui-widget-header .ui-state-error a {
   color: #ffffff;
 }
 
-/* line 943, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-error-text,
 .ui-widget-content .ui-state-error-text,
 .ui-widget-header .ui-state-error-text {
   color: #ffffff;
 }
 
-/* line 948, ../styles/_plugins/_jquery-ui.scss */
 .ui-priority-primary,
 .ui-widget-content .ui-priority-primary,
 .ui-widget-header .ui-priority-primary {
   font-weight: bold;
 }
 
-/* line 953, ../styles/_plugins/_jquery-ui.scss */
 .ui-priority-secondary,
 .ui-widget-content .ui-priority-secondary,
 .ui-widget-header .ui-priority-secondary {
@@ -1834,7 +1612,6 @@ body .ui-tooltip {
   font-weight: normal;
 }
 
-/* line 960, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
@@ -1844,7 +1621,6 @@ body .ui-tooltip {
   background-image: none;
 }
 
-/* line 967, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-disabled .ui-icon {
   filter: Alpha(Opacity=35);
   /* support: IE8 - See #6059 */
@@ -1853,923 +1629,740 @@ body .ui-tooltip {
 /* Icons
 ----------------------------------*/
 /* states and images */
-/* line 975, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon {
   width: 16px;
   height: 16px;
 }
 
-/* line 979, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon,
 .ui-widget-content .ui-icon {
   background-image: url("images/ui-icons_222222_256x240.png");
 }
 
-/* line 983, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-header .ui-icon {
   background-image: url("images/ui-icons_ffffff_256x240.png");
 }
 
-/* line 986, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-default .ui-icon {
   background-image: url("images/ui-icons_ef8c08_256x240.png");
 }
 
-/* line 989, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
   background-image: url("images/ui-icons_ef8c08_256x240.png");
 }
 
-/* line 993, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-active .ui-icon {
   background-image: url("images/ui-icons_ef8c08_256x240.png");
 }
 
-/* line 996, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-highlight .ui-icon {
   background-image: url("images/ui-icons_228ef1_256x240.png");
 }
 
-/* line 999, ../styles/_plugins/_jquery-ui.scss */
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
   background-image: url("images/ui-icons_ffd27a_256x240.png");
 }
 
 /* positioning */
-/* line 1005, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-blank {
   background-position: 16px 16px;
 }
 
-/* line 1006, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-n {
   background-position: 0 0;
 }
 
-/* line 1007, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-ne {
   background-position: -16px 0;
 }
 
-/* line 1008, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-e {
   background-position: -32px 0;
 }
 
-/* line 1009, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-se {
   background-position: -48px 0;
 }
 
-/* line 1010, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-s {
   background-position: -64px 0;
 }
 
-/* line 1011, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-sw {
   background-position: -80px 0;
 }
 
-/* line 1012, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-w {
   background-position: -96px 0;
 }
 
-/* line 1013, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-1-nw {
   background-position: -112px 0;
 }
 
-/* line 1014, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-2-n-s {
   background-position: -128px 0;
 }
 
-/* line 1015, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-carat-2-e-w {
   background-position: -144px 0;
 }
 
-/* line 1016, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-n {
   background-position: 0 -16px;
 }
 
-/* line 1017, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-ne {
   background-position: -16px -16px;
 }
 
-/* line 1018, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-e {
   background-position: -32px -16px;
 }
 
-/* line 1019, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-se {
   background-position: -48px -16px;
 }
 
-/* line 1020, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-s {
   background-position: -64px -16px;
 }
 
-/* line 1021, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-sw {
   background-position: -80px -16px;
 }
 
-/* line 1022, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-w {
   background-position: -96px -16px;
 }
 
-/* line 1023, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-1-nw {
   background-position: -112px -16px;
 }
 
-/* line 1024, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-2-n-s {
   background-position: -128px -16px;
 }
 
-/* line 1025, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-triangle-2-e-w {
   background-position: -144px -16px;
 }
 
-/* line 1026, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-n {
   background-position: 0 -32px;
 }
 
-/* line 1027, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-ne {
   background-position: -16px -32px;
 }
 
-/* line 1028, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-e {
   background-position: -32px -32px;
 }
 
-/* line 1029, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-se {
   background-position: -48px -32px;
 }
 
-/* line 1030, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-s {
   background-position: -64px -32px;
 }
 
-/* line 1031, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-sw {
   background-position: -80px -32px;
 }
 
-/* line 1032, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-w {
   background-position: -96px -32px;
 }
 
-/* line 1033, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-1-nw {
   background-position: -112px -32px;
 }
 
-/* line 1034, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-2-n-s {
   background-position: -128px -32px;
 }
 
-/* line 1035, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-2-ne-sw {
   background-position: -144px -32px;
 }
 
-/* line 1036, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-2-e-w {
   background-position: -160px -32px;
 }
 
-/* line 1037, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-2-se-nw {
   background-position: -176px -32px;
 }
 
-/* line 1038, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowstop-1-n {
   background-position: -192px -32px;
 }
 
-/* line 1039, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowstop-1-e {
   background-position: -208px -32px;
 }
 
-/* line 1040, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowstop-1-s {
   background-position: -224px -32px;
 }
 
-/* line 1041, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowstop-1-w {
   background-position: -240px -32px;
 }
 
-/* line 1042, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-n {
   background-position: 0 -48px;
 }
 
-/* line 1043, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-ne {
   background-position: -16px -48px;
 }
 
-/* line 1044, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-e {
   background-position: -32px -48px;
 }
 
-/* line 1045, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-se {
   background-position: -48px -48px;
 }
 
-/* line 1046, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-s {
   background-position: -64px -48px;
 }
 
-/* line 1047, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-sw {
   background-position: -80px -48px;
 }
 
-/* line 1048, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-w {
   background-position: -96px -48px;
 }
 
-/* line 1049, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-1-nw {
   background-position: -112px -48px;
 }
 
-/* line 1050, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-2-n-s {
   background-position: -128px -48px;
 }
 
-/* line 1051, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-2-ne-sw {
   background-position: -144px -48px;
 }
 
-/* line 1052, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-2-e-w {
   background-position: -160px -48px;
 }
 
-/* line 1053, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthick-2-se-nw {
   background-position: -176px -48px;
 }
 
-/* line 1054, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthickstop-1-n {
   background-position: -192px -48px;
 }
 
-/* line 1055, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthickstop-1-e {
   background-position: -208px -48px;
 }
 
-/* line 1056, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthickstop-1-s {
   background-position: -224px -48px;
 }
 
-/* line 1057, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowthickstop-1-w {
   background-position: -240px -48px;
 }
 
-/* line 1058, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturnthick-1-w {
   background-position: 0 -64px;
 }
 
-/* line 1059, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturnthick-1-n {
   background-position: -16px -64px;
 }
 
-/* line 1060, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturnthick-1-e {
   background-position: -32px -64px;
 }
 
-/* line 1061, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturnthick-1-s {
   background-position: -48px -64px;
 }
 
-/* line 1062, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturn-1-w {
   background-position: -64px -64px;
 }
 
-/* line 1063, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturn-1-n {
   background-position: -80px -64px;
 }
 
-/* line 1064, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturn-1-e {
   background-position: -96px -64px;
 }
 
-/* line 1065, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowreturn-1-s {
   background-position: -112px -64px;
 }
 
-/* line 1066, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowrefresh-1-w {
   background-position: -128px -64px;
 }
 
-/* line 1067, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowrefresh-1-n {
   background-position: -144px -64px;
 }
 
-/* line 1068, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowrefresh-1-e {
   background-position: -160px -64px;
 }
 
-/* line 1069, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrowrefresh-1-s {
   background-position: -176px -64px;
 }
 
-/* line 1070, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-4 {
   background-position: 0 -80px;
 }
 
-/* line 1071, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-arrow-4-diag {
   background-position: -16px -80px;
 }
 
-/* line 1072, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-extlink {
   background-position: -32px -80px;
 }
 
-/* line 1073, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-newwin {
   background-position: -48px -80px;
 }
 
-/* line 1074, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-refresh {
   background-position: -64px -80px;
 }
 
-/* line 1075, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-shuffle {
   background-position: -80px -80px;
 }
 
-/* line 1076, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-transfer-e-w {
   background-position: -96px -80px;
 }
 
-/* line 1077, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-transferthick-e-w {
   background-position: -112px -80px;
 }
 
-/* line 1078, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-folder-collapsed {
   background-position: 0 -96px;
 }
 
-/* line 1079, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-folder-open {
   background-position: -16px -96px;
 }
 
-/* line 1080, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-document {
   background-position: -32px -96px;
 }
 
-/* line 1081, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-document-b {
   background-position: -48px -96px;
 }
 
-/* line 1082, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-note {
   background-position: -64px -96px;
 }
 
-/* line 1083, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-mail-closed {
   background-position: -80px -96px;
 }
 
-/* line 1084, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-mail-open {
   background-position: -96px -96px;
 }
 
-/* line 1085, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-suitcase {
   background-position: -112px -96px;
 }
 
-/* line 1086, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-comment {
   background-position: -128px -96px;
 }
 
-/* line 1087, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-person {
   background-position: -144px -96px;
 }
 
-/* line 1088, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-print {
   background-position: -160px -96px;
 }
 
-/* line 1089, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-trash {
   background-position: -176px -96px;
 }
 
-/* line 1090, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-locked {
   background-position: -192px -96px;
 }
 
-/* line 1091, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-unlocked {
   background-position: -208px -96px;
 }
 
-/* line 1092, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-bookmark {
   background-position: -224px -96px;
 }
 
-/* line 1093, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-tag {
   background-position: -240px -96px;
 }
 
-/* line 1094, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-home {
   background-position: 0 -112px;
 }
 
-/* line 1095, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-flag {
   background-position: -16px -112px;
 }
 
-/* line 1096, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-calendar {
   background-position: -32px -112px;
 }
 
-/* line 1097, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-cart {
   background-position: -48px -112px;
 }
 
-/* line 1098, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-pencil {
   background-position: -64px -112px;
 }
 
-/* line 1099, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-clock {
   background-position: -80px -112px;
 }
 
-/* line 1100, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-disk {
   background-position: -96px -112px;
 }
 
-/* line 1101, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-calculator {
   background-position: -112px -112px;
 }
 
-/* line 1102, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-zoomin {
   background-position: -128px -112px;
 }
 
-/* line 1103, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-zoomout {
   background-position: -144px -112px;
 }
 
-/* line 1104, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-search {
   background-position: -160px -112px;
 }
 
-/* line 1105, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-wrench {
   background-position: -176px -112px;
 }
 
-/* line 1106, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-gear {
   background-position: -192px -112px;
 }
 
-/* line 1107, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-heart {
   background-position: -208px -112px;
 }
 
-/* line 1108, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-star {
   background-position: -224px -112px;
 }
 
-/* line 1109, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-link {
   background-position: -240px -112px;
 }
 
-/* line 1110, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-cancel {
   background-position: 0 -128px;
 }
 
-/* line 1111, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-plus {
   background-position: -16px -128px;
 }
 
-/* line 1112, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-plusthick {
   background-position: -32px -128px;
 }
 
-/* line 1113, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-minus {
   background-position: -48px -128px;
 }
 
-/* line 1114, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-minusthick {
   background-position: -64px -128px;
 }
 
-/* line 1115, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-close {
   background-position: -80px -128px;
 }
 
-/* line 1116, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-closethick {
   background-position: -96px -128px;
 }
 
-/* line 1117, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-key {
   background-position: -112px -128px;
 }
 
-/* line 1118, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-lightbulb {
   background-position: -128px -128px;
 }
 
-/* line 1119, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-scissors {
   background-position: -144px -128px;
 }
 
-/* line 1120, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-clipboard {
   background-position: -160px -128px;
 }
 
-/* line 1121, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-copy {
   background-position: -176px -128px;
 }
 
-/* line 1122, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-contact {
   background-position: -192px -128px;
 }
 
-/* line 1123, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-image {
   background-position: -208px -128px;
 }
 
-/* line 1124, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-video {
   background-position: -224px -128px;
 }
 
-/* line 1125, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-script {
   background-position: -240px -128px;
 }
 
-/* line 1126, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-alert {
   background-position: 0 -144px;
 }
 
-/* line 1127, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-info {
   background-position: -16px -144px;
 }
 
-/* line 1128, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-notice {
   background-position: -32px -144px;
 }
 
-/* line 1129, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-help {
   background-position: -48px -144px;
 }
 
-/* line 1130, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-check {
   background-position: -64px -144px;
 }
 
-/* line 1131, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-bullet {
   background-position: -80px -144px;
 }
 
-/* line 1132, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-radio-on {
   background-position: -96px -144px;
 }
 
-/* line 1133, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-radio-off {
   background-position: -112px -144px;
 }
 
-/* line 1134, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-pin-w {
   background-position: -128px -144px;
 }
 
-/* line 1135, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-pin-s {
   background-position: -144px -144px;
 }
 
-/* line 1136, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-play {
   background-position: 0 -160px;
 }
 
-/* line 1137, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-pause {
   background-position: -16px -160px;
 }
 
-/* line 1138, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-seek-next {
   background-position: -32px -160px;
 }
 
-/* line 1139, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-seek-prev {
   background-position: -48px -160px;
 }
 
-/* line 1140, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-seek-end {
   background-position: -64px -160px;
 }
 
-/* line 1141, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-seek-start {
   background-position: -80px -160px;
 }
 
 /* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
-/* line 1143, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-seek-first {
   background-position: -80px -160px;
 }
 
-/* line 1144, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-stop {
   background-position: -96px -160px;
 }
 
-/* line 1145, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-eject {
   background-position: -112px -160px;
 }
 
-/* line 1146, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-volume-off {
   background-position: -128px -160px;
 }
 
-/* line 1147, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-volume-on {
   background-position: -144px -160px;
 }
 
-/* line 1148, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-power {
   background-position: 0 -176px;
 }
 
-/* line 1149, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-signal-diag {
   background-position: -16px -176px;
 }
 
-/* line 1150, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-signal {
   background-position: -32px -176px;
 }
 
-/* line 1151, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-battery-0 {
   background-position: -48px -176px;
 }
 
-/* line 1152, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-battery-1 {
   background-position: -64px -176px;
 }
 
-/* line 1153, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-battery-2 {
   background-position: -80px -176px;
 }
 
-/* line 1154, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-battery-3 {
   background-position: -96px -176px;
 }
 
-/* line 1155, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-plus {
   background-position: 0 -192px;
 }
 
-/* line 1156, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-minus {
   background-position: -16px -192px;
 }
 
-/* line 1157, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-close {
   background-position: -32px -192px;
 }
 
-/* line 1158, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-triangle-e {
   background-position: -48px -192px;
 }
 
-/* line 1159, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-triangle-s {
   background-position: -64px -192px;
 }
 
-/* line 1160, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-triangle-w {
   background-position: -80px -192px;
 }
 
-/* line 1161, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-triangle-n {
   background-position: -96px -192px;
 }
 
-/* line 1162, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-arrow-e {
   background-position: -112px -192px;
 }
 
-/* line 1163, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-arrow-s {
   background-position: -128px -192px;
 }
 
-/* line 1164, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-arrow-w {
   background-position: -144px -192px;
 }
 
-/* line 1165, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-arrow-n {
   background-position: -160px -192px;
 }
 
-/* line 1166, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-zoomin {
   background-position: -176px -192px;
 }
 
-/* line 1167, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-zoomout {
   background-position: -192px -192px;
 }
 
-/* line 1168, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circle-check {
   background-position: -208px -192px;
 }
 
-/* line 1169, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circlesmall-plus {
   background-position: 0 -208px;
 }
 
-/* line 1170, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circlesmall-minus {
   background-position: -16px -208px;
 }
 
-/* line 1171, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-circlesmall-close {
   background-position: -32px -208px;
 }
 
-/* line 1172, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-squaresmall-plus {
   background-position: -48px -208px;
 }
 
-/* line 1173, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-squaresmall-minus {
   background-position: -64px -208px;
 }
 
-/* line 1174, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-squaresmall-close {
   background-position: -80px -208px;
 }
 
-/* line 1175, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-grip-dotted-vertical {
   background-position: 0 -224px;
 }
 
-/* line 1176, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-grip-dotted-horizontal {
   background-position: -16px -224px;
 }
 
-/* line 1177, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-grip-solid-vertical {
   background-position: -32px -224px;
 }
 
-/* line 1178, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-grip-solid-horizontal {
   background-position: -48px -224px;
 }
 
-/* line 1179, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-gripsmall-diagonal-se {
   background-position: -64px -224px;
 }
 
-/* line 1180, ../styles/_plugins/_jquery-ui.scss */
 .ui-icon-grip-diagonal-se {
   background-position: -80px -224px;
 }
@@ -2777,7 +2370,6 @@ body .ui-tooltip {
 /* Misc visuals
 ----------------------------------*/
 /* Corner radius */
-/* line 1187, ../styles/_plugins/_jquery-ui.scss */
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-left,
@@ -2785,7 +2377,6 @@ body .ui-tooltip {
   border-top-left-radius: 4px;
 }
 
-/* line 1193, ../styles/_plugins/_jquery-ui.scss */
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-right,
@@ -2793,7 +2384,6 @@ body .ui-tooltip {
   border-top-right-radius: 4px;
 }
 
-/* line 1199, ../styles/_plugins/_jquery-ui.scss */
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-left,
@@ -2801,7 +2391,6 @@ body .ui-tooltip {
   border-bottom-left-radius: 4px;
 }
 
-/* line 1205, ../styles/_plugins/_jquery-ui.scss */
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-right,
@@ -2810,7 +2399,6 @@ body .ui-tooltip {
 }
 
 /* Overlays */
-/* line 1213, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-overlay {
   background: #666666 url("images/ui-bg_diagonals-thick_20_666666_40x40.png") 50% 50% repeat;
   opacity: .5;
@@ -2818,7 +2406,6 @@ body .ui-tooltip {
   /* support: IE8 */
 }
 
-/* line 1218, ../styles/_plugins/_jquery-ui.scss */
 .ui-widget-shadow {
   margin: -5px 0 0 -5px;
   padding: 5px;
@@ -2829,7 +2416,6 @@ body .ui-tooltip {
   border-radius: 5px;
 }
 
-/* line 1, ../styles/widgets/_plugins.scss */
 .ui-slider-horizontal {
   height: 3px;
   background: #dbe1e8;
@@ -2838,25 +2424,21 @@ body .ui-tooltip {
   border-radius: 0;
   border: 0 none;
 }
-/* line 6, ../styles/widgets/_plugins.scss */
 .ui-slider-horizontal * {
   outline: none !important;
 }
-/* line 9, ../styles/widgets/_plugins.scss */
 .ui-slider-horizontal .ui-slider-range {
   background: #9eb2c0;
 }
 
-/* line 14, ../styles/widgets/_plugins.scss */
 .ui-slider-handle.ui-state-default.ui-corner-all {
   background: 0 none;
-  background: url('/app/app/img/icons-s4a589c850c.png') 0 -167px no-repeat;
+  background: url('../img/icons-s4a589c850c.png') 0 -167px no-repeat;
   height: 25px;
   width: 25px;
   top: -9px;
   border: 0 none;
 }
-/* line 19, ../styles/widgets/_plugins.scss */
 .ui-slider-handle.ui-state-default.ui-corner-all:first-child span {
   display: none;
 }
@@ -2864,12 +2446,10 @@ body .ui-tooltip {
 /*.ui-slider .ui-slider-handle {
   cursor: pointer;
 }*/
-/* line 26, ../styles/widgets/_plugins.scss */
 .ui-widget-header {
   background: #9eb2c0;
 }
 
-/* line 30, ../styles/widgets/_plugins.scss */
 .ui-spinner-input {
   width: 45px;
   height: 45px;
@@ -2885,20 +2465,17 @@ body .ui-tooltip {
   vertical-align: middle;
 }
 
-/* line 43, ../styles/widgets/_plugins.scss */
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
   background: 0 none;
 }
 
-/* line 48, ../styles/widgets/_plugins.scss */
 .ui-state-default .ui-icon {
   background: none;
   margin-top: -4px;
 }
 
-/* line 53, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-s:hover:before {
   content: '';
   position: absolute;
@@ -2909,7 +2486,6 @@ body .ui-tooltip {
   border-right: 9px solid transparent;
 }
 
-/* line 62, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-n:hover:before {
   content: '';
   position: absolute;
@@ -2920,11 +2496,9 @@ body .ui-tooltip {
   border-right: 9px solid transparent;
 }
 
-/* line 75, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-s {
   cursor: pointer;
 }
-/* line 77, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-s:before {
   content: '';
   position: absolute;
@@ -2934,7 +2508,6 @@ body .ui-tooltip {
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
 }
-/* line 89, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-s:after {
   content: '';
   position: absolute;
@@ -2945,11 +2518,9 @@ body .ui-tooltip {
   border-right: 8px solid transparent;
 }
 
-/* line 101, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-n {
   cursor: pointer;
 }
-/* line 103, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-n:before {
   content: '';
   position: absolute;
@@ -2959,7 +2530,6 @@ body .ui-tooltip {
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
 }
-/* line 112, ../styles/widgets/_plugins.scss */
 .ui-spinner .ui-icon-triangle-1-n:after {
   content: '';
   position: absolute;
@@ -2970,27 +2540,23 @@ body .ui-tooltip {
   border-right: 8px solid transparent;
 }
 
-/* line 122, ../styles/widgets/_plugins.scss */
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
   border: 0 none;
 }
 
-/* line 127, ../styles/widgets/_plugins.scss */
 .ui-state-hover {
   border: 0 none;
   color: red;
   background: none;
 }
 
-/* line 136, ../styles/widgets/_plugins.scss */
 .block-right-place__left .ui-widget-content, .ui-widget-content .ui-state-default {
   background: none;
   border: 0 none;
 }
 
-/* line 140, ../styles/widgets/_plugins.scss */
 .ui-spinner.ui-widget.ui-widget-content.ui-corner-all {
   margin-bottom: 6px;
 }
@@ -3001,12 +2567,10 @@ body .ui-tooltip {
   font-weight: normal;
   font-style: normal;
 }
-/* line 18, ../styles/main.scss */
 html {
   height: 100%;
 }
 
-/* line 23, ../styles/main.scss */
 body {
   background-color: #969292;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#969292), to(#a7817b));
@@ -3019,7 +2583,6 @@ body {
   color: #2e3641;
 }
 
-/* line 31, ../styles/main.scss */
 .wrapper {
   min-height: 100%;
   position: relative;
@@ -3029,7 +2592,6 @@ body {
   width: 960px;
 }
 
-/* line 41, ../styles/main.scss */
 .wrapper-content {
   overflow: hidden;
   *zoom: 1;
@@ -3037,7 +2599,6 @@ body {
   padding-bottom: 50px;
 }
 
-/* line 47, ../styles/main.scss */
 .block-left {
   width: 652px;
   float: left;
@@ -3046,7 +2607,6 @@ body {
   padding-top: 17px;
 }
 
-/* line 55, ../styles/main.scss */
 .block-right {
   background: #f1f1f5;
   width: 260px;
@@ -3054,7 +2614,6 @@ body {
   height: 670px;
 }
 
-/* line 62, ../styles/main.scss */
 .block-left__title {
   font-size: 36px;
   line-height: 38px;
@@ -3063,7 +2622,6 @@ body {
   font-family: 'SegoeUI-Light';
 }
 
-/* line 70, ../styles/main.scss */
 .block-left__main {
   position: relative;
   width: 650px;
@@ -3071,14 +2629,12 @@ body {
   background: #fff url("../img/bg.png") center center;
 }
 
-/* line 78, ../styles/main.scss */
 .block-left__img {
   width: 650px;
-  /*╨╕╨╖╨╝╨╡╨╜╨╕╨╗ ╨а╨╛╨╝╨░╨╜*/
+  /*изменил Роман*/
   height: auto;
 }
 
-/* line 88, ../styles/main.scss */
 .block-right__title {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
@@ -3090,27 +2646,23 @@ body {
   text-align: center;
 }
 
-/* line 98, ../styles/main.scss */
 .block-right__form {
   padding: 0 20px;
   position: relative;
 }
-/* line 101, ../styles/main.scss */
 .block-right__form:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  background: url('/app/app/img/icons-s4a589c850c.png') 0 0 no-repeat;
+  background: url('../img/icons-s4a589c850c.png') 0 0 no-repeat;
   height: 11px;
   width: 259px;
 }
-/* line 110, ../styles/main.scss */
 .block-right__form:nth-child(2):after {
   display: none;
 }
 
-/* line 116, ../styles/main.scss */
 .block-right__lbl {
   display: block;
   font-size: 14px;
@@ -3121,7 +2673,6 @@ body {
   font-weight: 100;
 }
 
-/* line 125, ../styles/main.scss */
 .block-right__fileupload {
   display: block;
   position: absolute;
@@ -3135,10 +2686,9 @@ body {
   box-sizing: border-box;
   padding-left: 5px;
 }
-/* line 137, ../styles/main.scss */
 .block-right__fileupload:after {
   content: '';
-  background: url('/app/app/img/icons-s4a589c850c.png') 0 -81px no-repeat;
+  background: url('../img/icons-s4a589c850c.png') 0 -81px no-repeat;
   height: 16px;
   width: 21px;
   top: 0;
@@ -3149,9 +2699,8 @@ body {
   margin: auto;
 }
 
-/* line 145, ../styles/main.scss */
 .fileupload {
-  /* ╤Е╨░╨║, ╨▓╨╖╤П╤В╤Л╨╣ ╨╕╨╖ html5boilerplate */
+  /* хак, взятый из html5boilerplate */
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -3162,7 +2711,6 @@ body {
   width: 1px;
 }
 
-/* line 157, ../styles/main.scss */
 .block-right__input {
   display: block;
   margin: 0 auto;
@@ -3178,29 +2726,24 @@ body {
   font-size: 12px;
   background: #f1f1f5;
 }
-/* line 171, ../styles/main.scss */
 .block-right__input:last-child {
   margin-bottom: 31px;
 }
 
-/* line 176, ../styles/main.scss */
 .block-right__form-title {
   padding-top: 16px;
   margin-bottom: 35px;
   font-size: 14px;
   color: #2e3641;
 }
-/* line 177, ../styles/main.scss */
 .block-right__form-title.sidebar {
   margin-bottom: 29px;
 }
 
-/* line 186, ../styles/main.scss */
 .block-right__left {
   margin-top: 15px;
 }
 
-/* line 190, ../styles/main.scss */
 .block-right-place {
   overflow: hidden;
   *zoom: 1;
@@ -3210,7 +2753,6 @@ body {
   padding-top: 2px;
 }
 
-/* line 198, ../styles/main.scss */
 .block-right-place__table {
   width: 102px;
   float: left;
@@ -3223,7 +2765,6 @@ body {
   overflow: hidden;
 }
 
-/* line 209, ../styles/main.scss */
 .block-right-place__lbl {
   position: relative;
   display: inline-block;
@@ -3231,24 +2772,20 @@ body {
   font-size: 0;
 }
 
-/* line 216, ../styles/main.scss */
 .block-right__radio {
   position: absolute;
   top: 0;
   left: -9999px;
 }
-/* line 220, ../styles/main.scss */
 .block-right__radio:checked + .block-right__radio-elem {
   border: 1px solid #f97e76;
   background: #f97e76;
 }
-/* line 224, ../styles/main.scss */
 .block-right__radio:disabled + .block-right__radio-elem {
   background: #e5ecf4;
   border-color: #9eb2c0;
 }
 
-/* line 230, ../styles/main.scss */
 input.block-right__radio + .block-right__radio-elem {
   box-sizing: border-box;
   border: 1px solid #9eb2c0;
@@ -3259,22 +2796,18 @@ input.block-right__radio + .block-right__radio-elem {
   vertical-align: top;
 }
 
-/* line 239, ../styles/main.scss */
 .slider-elem {
   margin-bottom: 32px;
 }
 
-/* line 243, ../styles/main.scss */
 .block-right__last {
   padding: 2px 10px;
   position: relative;
 }
 
-/* line 248, ../styles/main.scss */
 .block-right__btn {
   padding-top: 56px;
 }
-/* line 250, ../styles/main.scss */
 .block-right__btn .btn {
   border: none;
   -moz-border-radius: 3px;
@@ -3291,15 +2824,12 @@ input.block-right__radio + .block-right__radio-elem {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
-/* line 261, ../styles/main.scss */
 .block-right__btn .btn.btn__clear {
   background: #9eb2c0;
 }
-/* line 263, ../styles/main.scss */
 .block-right__btn .btn.btn__clear:disabled {
   background: #d8e4ed;
 }
-/* line 267, ../styles/main.scss */
 .block-right__btn .btn:focus {
   overflow: hidden;
 }
@@ -3311,16 +2841,13 @@ input.block-right__radio + .block-right__radio-elem {
 		background:#d8e4ed;	
 	}
 }*/
-/* line 282, ../styles/main.scss */
 .btn__save {
   float: right;
 }
-/* line 284, ../styles/main.scss */
 .btn__save:disabled {
   background: #fcb1ac;
 }
 
-/* line 290, ../styles/main.scss */
 .block-right-place__left {
   float: right;
   width: 101px;
@@ -3331,7 +2858,6 @@ input.block-right__radio + .block-right__radio-elem {
   margin-top: -4px;
 }
 
-/* line 300, ../styles/main.scss */
 .footer {
   position: absolute;
   bottom: 0;
@@ -3344,25 +2870,21 @@ input.block-right__radio + .block-right__radio-elem {
   font-family: 'Fira Sans', sans-serif;
 }
 
-/* line 313, ../styles/main.scss */
 input:focus,
 button:focus,
 a:focus {
   outline: 0;
 }
 
-/* line 319, ../styles/main.scss */
 .disabled {
   background: #fcc3bf;
   cursor: default;
 }
 
-/* line 324, ../styles/main.scss */
 .ui-slider .ui-slider-handle.ui-state-default.ui-corner-all.pointer {
   cursor: pointer;
 }
 
-/* line 328, ../styles/main.scss */
 .progress {
   display: none;
   width: 181px;
@@ -3372,116 +2894,97 @@ a:focus {
   border-radius: 4px 0 0 4px;
 }
 
-/* line 337, ../styles/main.scss */
 .progress_0 {
   top: 26px;
 }
 
-/* line 341, ../styles/main.scss */
 .progress_1 {
   top: 102px;
 }
 
-/* line 345, ../styles/main.scss */
 .bar {
   height: 25px;
   background: rgba(148, 166, 168, 0.23);
 }
 
-/* line 14, ../styles/widgets/sbuttons.scss */
 .social {
   position: fixed;
   font-size: 0;
 }
 
-/* line 18, ../styles/widgets/sbuttons.scss */
 .social__buttons {
   display: inline-block;
   background-color: #d5d2d1;
 }
 
-/* line 26, ../styles/widgets/sbuttons.scss */
 .buttons-fb-a {
   display: block;
   cursor: pointer;
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 14px -60px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 14px -60px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 30, ../styles/widgets/sbuttons.scss */
 .buttons-fb-a:hover {
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 14px 7px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 14px 7px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 33, ../styles/widgets/sbuttons.scss */
 .buttons-fb-a:focus, .buttons-fb-a:active {
   outline: 0;
 }
 
-/* line 26, ../styles/widgets/sbuttons.scss */
 .buttons-tw-a {
   display: block;
   cursor: pointer;
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 7.5px -348.5px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 7.5px -348.5px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 30, ../styles/widgets/sbuttons.scss */
 .buttons-tw-a:hover {
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 7.5px -286.5px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 7.5px -286.5px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 33, ../styles/widgets/sbuttons.scss */
 .buttons-tw-a:focus, .buttons-tw-a:active {
   outline: 0;
 }
 
-/* line 26, ../styles/widgets/sbuttons.scss */
 .buttons-vk-a {
   display: block;
   cursor: pointer;
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 5.5px -466.5px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 5.5px -466.5px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 30, ../styles/widgets/sbuttons.scss */
 .buttons-vk-a:hover {
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 5.5px -408.5px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 5.5px -408.5px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 33, ../styles/widgets/sbuttons.scss */
 .buttons-vk-a:focus, .buttons-vk-a:active {
   outline: 0;
 }
 
-/* line 39, ../styles/widgets/sbuttons.scss */
 .social__show-button {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 43, ../styles/widgets/sbuttons.scss */
 .social__show-button-a {
   display: block;
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 0 -215px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 0 -215px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 46, ../styles/widgets/sbuttons.scss */
 .social__show-button-a:hover {
-  background: url('/app/app/img/../img/sbuttons-s6ec7592bdc.png') 0 -134px no-repeat;
+  background: url('../img/../img/sbuttons-s6ec7592bdc.png') 0 -134px no-repeat;
   width: 43px;
   height: 41px;
 }
-/* line 49, ../styles/widgets/sbuttons.scss */
 .social__show-button-a:focus, .social__show-button-a:active {
   outline: 0;
 }
 
-/* line 1, ../styles/widgets/_lang-icon.scss */
 .icons__language {
   margin: 0 0 18px;
   font-size: 20px;
@@ -3494,7 +2997,6 @@ a:focus {
   font-family: 'SegoeUI-Light';
 }
 
-/* line 13, ../styles/widgets/_lang-icon.scss */
 .icons__language-link {
   display: block;
   padding: 4px 2px;
@@ -3505,12 +3007,10 @@ a:focus {
   text-decoration: none;
 }
 
-/* line 23, ../styles/widgets/_lang-icon.scss */
 .icons__language-link:hover {
   color: #444a53;
 }
 
-/* line 27, ../styles/widgets/_lang-icon.scss */
 .icons__language-item.active .icons__language-link {
   color: #fff;
   background: #b2b0b2;
