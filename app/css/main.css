@@ -2568,35 +2568,22 @@ body .ui-tooltip {
   font-style: normal;
 }
 html {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-  background-color: #969292;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#969292), to(#a7817b));
-  background-image: -webkit-linear-gradient(top, #969292, #a7817b);
-  background-image: -moz-linear-gradient(top, #969292, #a7817b);
-  background-image: -o-linear-gradient(top, #969292, #a7817b);
-  background-image: linear-gradient(to bottom, #969292, #a7817b);
-  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
-  height: 100%;
-  color: #2e3641;
-}
-
-.wrapper {
   min-height: 100%;
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  width: 960px;
+  background-image: linear-gradient(to bottom, #969292, #a7817b);
+  color: #2e3641;
 }
 
 .wrapper-content {
   overflow: hidden;
   *zoom: 1;
-  margin-top: 15px;
-  padding-bottom: 50px;
+  width: 960px;
+  margin: 0 auto;
+  padding: 50px;
 }
 
 .block-left {
@@ -2863,7 +2850,7 @@ input.block-right__radio + .block-right__radio-elem {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  padding: 18px 0;
   text-align: center;
   color: #fff;
   font-size: 12px;
